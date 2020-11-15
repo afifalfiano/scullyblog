@@ -7,3 +7,4 @@ slugs:
 ---
 
 # Angular tutorial
+<img src="../assets/img.jpg" width="200">

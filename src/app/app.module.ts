@@ -4,10 +4,12 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ScullyLibModule } from '@scullyio/ng-lib';
+import { HTTP404Component } from './http404/http404.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HTTP404Component
   ],
   imports: [
     BrowserModule,

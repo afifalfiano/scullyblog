@@ -104,3 +104,81 @@ Using stored unhandled routes!.
               Scully will exitTypeError: frag.trim is not a function
 
 No configuration for route "/blog/:title" found. Skipping
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------
+ The render plugin "disableAngular has thrown the below error,
+              while trying to render route "/blog/2020-11-15-blog"
+              Scully will exitError: A stats(-es2015).json is required for the 'disableAngular' plugin.
+Please run 'ng build' with the '--stats-json' flag
+
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------
+ The render plugin "disableAngular has thrown the below error,
+              while trying to render route "/blog/angular-tutorial"
+              Scully will exitError: A stats(-es2015).json is required for the 'disableAngular' plugin.
+Please run 'ng build' with the '--stats-json' flag
+
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------The file .\blog\asset\img.jpg has extension .jpg that has no plugin defined, scully will skip this file.
+
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------
+ The render plugin "lazyImages has thrown the below error,
+              while trying to render route "/blog/angular-tutorial"
+              Scully will exitError: ENOENT: no such file or directory, open 'D:\Belajar\Github_Afif\belajarAngular\belajarScully\afifalfiano\dist\assets\img.jpg'
+
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------
+ The render plugin "lazyImages has thrown the below error,
+              while trying to render route "/blog/angular-tutorial"
+              Scully will exitError: ENOENT: no such file or directory, open 'D:\Belajar\Github_Afif\belajarAngular\belajarScully\afifalfiano\dist\assets\img.jpg'
+
+ The render plugin "lazyImages has thrown the below error,
+              while trying to render route "/blog/angular-tutorial"
+              Scully will exitError: ENOENT: no such file or directory, open 'D:\Belajar\Github_Afif\belajarAngular\belajarScully\afifalfiano\dist\assets\img.jpg'
+
