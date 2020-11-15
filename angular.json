@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "afifalfiano"
+  "defaultProject": "afifalfiano",
+  "cli": {
+    "analytics": false
+  }
 }

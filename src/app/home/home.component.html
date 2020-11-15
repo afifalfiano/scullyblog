@@ -1,0 +1,11 @@
+<p>home works!</p>
+
+<ul>
+  <li *ngFor="let page of links$ | async">
+    <a href="{{page.route}}">{{page.route}}</a>
+
+    <!-- <span *ngFor="let arrayItem of page.arbitaryArray">
+      {{arrayItem}}
+    </span> -->
+  </li>
+</ul>
