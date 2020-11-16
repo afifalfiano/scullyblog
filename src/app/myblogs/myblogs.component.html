@@ -1,1 +1,31 @@
-<p>myblogs works!</p>
+<app-navigation (click)="scrollSmooth($event)"></app-navigation>
+<!-- <div (click)="scrollToElement(home)">Test</div> -->
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <div class="row">
+    <div class="col-md-12">
+      <h2 id="blogs" #blogs class="text-center">Blogs</h2>
+    </div>
+    </div>
+  </div>
+</div>
+
+<!-- blog -->
+<!-- Blog -->
+<div class="container mt-5 mb-5">
+  <div class="row mt-4">
+    <span *ngFor="let page of pureBlog">
+      <div class="col-lg-4">
+          <div class="card shadow p-3 mb-5 bg-white rounded" style="height: 300px; width: 350px;">
+            <img src="..." class="card-img-top" alt="...">
+            <h5 class="card-title">{{page.title}}</h5>
+            <p>Post</p>
+            <div class="card-body">
+              <p class="card-text">{{page.description}}</p>
+            </div>
+            <a href="{{page.route}}" class="btn btn-primary">{{page.title}}</a>
+          </div>
+        </div>
+      </span>
+    </div>
+</div>

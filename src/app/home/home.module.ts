@@ -1,3 +1,4 @@
+import { SharedModule } from './../shared/shared.module';
 import { NavigationComponent } from './../navigation/navigation.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -8,10 +9,11 @@ import { FooterComponent } from '../footer/footer.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, NavigationComponent, FooterComponent],
+  declarations: [HomeComponent],
   imports: [
     CommonModule,
-    HomeRoutingModule
-  ]
+    HomeRoutingModule,
+    SharedModule
+  ],
 })
 export class HomeModule { }

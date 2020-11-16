@@ -1,10 +1,10 @@
 <app-navigation (click)="scrollSmooth($event)"></app-navigation>
 <!-- <div (click)="scrollToElement(home)">Test</div> -->
-<div id="home" #home class="jumbotron jumbotron-fluid">
+<div class="jumbotron jumbotron-fluid">
   <div class="container">
     <div class="row">
     <div class="col-md-6">
-      <p>Hello!</p>
+      <p id="home" #home >Hello!</p>
       <h2>Afif Alfiano</h2>
       <h4>Frontend Developer</h4>
       <ul>
@@ -195,10 +195,15 @@
         </div>
       </span>
     </div>
+    <div class="row">
+      <div class="col text-center">
+        <a [routerLink]="['/myblogs']" routerLinkActive="router-link-active"  class="btn btn-success">View More</a>
+      </div>
+    </div>
 </div>
 
 
-
+<!-- Feedback -->
 <div class="container mt-5 mb-5">
   <div class="row">
     <div class="col">
@@ -243,15 +248,3 @@
 
 
 <app-footer></app-footer>
-
-
-<!-- <ul>
-  <li *ngFor="let page of links$ | async">
-    <a href="{{page.route}}">{{page.route}}</a> -->
-
-    <!-- <span *ngFor="let arrayItem of page.arbitaryArray">
-      {{arrayItem}}
-    </span> -->
-  <!-- </li>
-</ul> -->
-<!-- ng generate module navigation --route=navigation --module=app-routing -->

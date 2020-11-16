@@ -10,19 +10,44 @@
         <a class="nav-link">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link">About Me</a>
+        <span *ngIf="isHome === true">
+          <a class="nav-link">About Me</a>
+        </span>
+        <span *ngIf="isHome === false">
+          <a class="nav-link" href="#home">About Me</a>
+        </span>
       </li>
       <li class="nav-item">
-        <a class="nav-link">Experience</a>
+        <span *ngIf="isHome === true">
+          <a class="nav-link">Experience</a>
+        </span>
+        <span *ngIf="isHome === false">
+          <a class="nav-link" href="#home">Experience</a>
+        </span>
       </li>
       <li class="nav-item">
-        <a class="nav-link">Portfolio</a>
+        <span *ngIf="isHome === true">
+          <a class="nav-link">Portfolio</a>
+        </span>
+        <span *ngIf="isHome === false">
+          <a class="nav-link" href="#home">Portfolio</a>
+        </span>
       </li>
       <li class="nav-item">
-        <a class="nav-link">Blog</a>
+        <span *ngIf="isHome === true">
+          <a class="nav-link">Blog</a>
+        </span>
+        <span *ngIf="isHome === false">
+          <a class="nav-link" href="#home">Blog</a>
+        </span>
       </li>
       <li class="nav-item">
-        <a class="nav-link">Contact</a>
+        <span *ngIf="isHome === true">
+          <a class="nav-link">Contact</a>
+        </span>
+        <span *ngIf="isHome === false">
+          <a class="nav-link" href="#home">Contact</a>
+        </span>
       </li>
     </ul>
   </div>
