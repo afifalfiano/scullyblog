@@ -1,11 +1,257 @@
-<p>home works!</p>
+<app-navigation (click)="scrollSmooth($event)"></app-navigation>
+<!-- <div (click)="scrollToElement(home)">Test</div> -->
+<div id="home" #home class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <div class="row">
+    <div class="col-md-6">
+      <p>Hello!</p>
+      <h2>Afif Alfiano</h2>
+      <h4>Frontend Developer</h4>
+      <ul>
+        <li>Email: afifalfiano2@gmail.com</li>
+        <li>Phone: +628112636768</li>
+        <li>Location: Yogyakarta, Indonesia</li>
+      </ul>
+    </div>
+    <div class="col-md-6">Photos</div>
+    </div>
+  </div>
+</div>
 
-<ul>
+<!-- About me -->
+<div class="container mt-5 mb-5">
+<div class="row">
+  <div class="col-md-6">
+    <p>IMG</p>
+  </div>
+  <div class="col-md-6">
+    <h2 id="aboutme" #aboutme>About Me</h2>
+    <p>Hello, I'm a Afif Alfiano, web developer based on Indonesia. I have rich experiecnce in web site design like using figma, adobe xd and build from scratch.</p>
+    <div *ngFor="let stack of myStack" style="display: inline;">
+      <span class="btn btn-outline-primary m-2">{{stack.tech}}</span>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- What I Do -->
+<div class="container mt-5 mb-5">
+<div class="row">
+  <div class="col mt-4">
+    <h2 class="text-center">What I Do</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+      <h5 class="card-title">UI Design</h5>
+      <div class="card-body">
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+      <h5 class="card-title">UI Design</h5>
+      <div class="card-body">
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+      <h5 class="card-title">UI Design</h5>
+      <div class="card-body">
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Timeline -->
+<div class="container mt-5 mb-5">
+  <div class="row">
+    <div class="col">
+      <h2 class="text-center" id="experience" #experience>Experience</h2>
+    </div>
+  </div>
+	<div class="row">
+		<div class="col-md-6 offset-md-3">
+			<ul class="timeline">
+				<li>
+					<a target="_blank" href="https://www.totoprayogo.com/#">New Web Design</a>
+					<a href="#" class="float-right">21 March, 2014</a>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et elementum lorem ornare. Maecenas placerat facilisis mollis. Duis sagittis ligula in sodales vehicula....</p>
+				</li>
+				<li>
+					<a href="#">21 000 Job Seekers</a>
+					<a href="#" class="float-right">4 March, 2014</a>
+					<p>Curabitur purus sem, malesuada eu luctus eget, suscipit sed turpis. Nam pellentesque felis vitae justo accumsan, sed semper nisi sollicitudin...</p>
+				</li>
+				<li>
+					<a href="#">Awesome Employers</a>
+					<a href="#" class="float-right">1 April, 2014</a>
+					<p>Fusce ullamcorper ligula sit amet quam accumsan aliquet. Sed nulla odio, tincidunt vitae nunc vitae, mollis pharetra velit. Sed nec tempor nibh...</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<!-- Portfolio -->
+<div class="container mt-5 mb-5">
+  <div class="row">
+    <div class="col">
+      <h2 class="text-center" id="portfolio" #portfolio>Recent Portfolio</h2>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-md-12">
+      <a class="btn btn-dark text-center">Category</a>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-md-4">
+      <div class="card" style="height: 200px;">
+        <img src="..." class="card-img-top" alt="...">
+        <h5 class="card-title">UI Design</h5>
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card" style="height: 300px;">
+        <img src="..." class="card-img-top" alt="...">
+        <h5 class="card-title">UI Design</h5>
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card" style="height: 200px;">
+        <img src="..." class="card-img-top" alt="...">
+        <h5 class="card-title">UI Design</h5>
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4" style="margin-top: -4em;">
+      <div class="card" style="height: 400px;">
+        <img src="..." class="card-img-top" alt="...">
+        <h5 class="card-title">UI Design</h5>
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4" style="margin-top: 2em;">
+      <div class="card" style="height: 300px;">
+        <img src="..." class="card-img-top" alt="...">
+        <h5 class="card-title">UI Design</h5>
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4" style="margin-top: -4em;">
+      <div class="card" style="height: 400px;">
+        <img src="..." class="card-img-top" alt="...">
+        <h5 class="card-title">UI Design</h5>
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Blog -->
+<div class="container mt-5 mb-5">
+  <div class="row">
+    <div class="col">
+      <h2 class="text-center" id="blog" #blog>Featured Posts</h2>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <span *ngFor="let page of pureBlog">
+      <div class="col-lg-4">
+          <div class="card shadow p-3 mb-5 bg-white rounded" style="height: 300px; width: 350px;">
+            <img src="..." class="card-img-top" alt="...">
+            <h5 class="card-title">{{page.title}}</h5>
+            <p>Post</p>
+            <div class="card-body">
+              <p class="card-text">{{page.description}}</p>
+            </div>
+            <a href="{{page.route}}" class="btn btn-primary">{{page.title}}</a>
+          </div>
+        </div>
+      </span>
+    </div>
+</div>
+
+
+
+<div class="container mt-5 mb-5">
+  <div class="row">
+    <div class="col">
+      <h2 class="text-center" id="contact" #contact>Give Me Feedback</h2>
+    </div>
+  </div>
+  <div class="row mt-5 mb-5">
+    <div class="col-lg-6">
+      <form>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputFirstName4">FirstName</label>
+            <input type="text" class="form-control" id="inputFirstName4">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputLastName4">LastName</label>
+            <input type="text" class="form-control" id="inputLastName4">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputAddress">Email</label>
+          <input type="email" class="form-control" id="inputAddress" placeholder="username@mail.xyz">
+        </div>
+        <div class="form-group">
+          <label for="inputAddress2">Message</label>
+          <textarea name="" id="" cols="30" rows="10" class="form-control" placeholder="Your message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block ">Send</button>
+      </form>
+    </div>
+    <div class="col-lg-6">
+      <p>Map</p>
+    </div>
+  </div>
+</div>
+<!-- Floating Top -->
+<div class="container-fluid pb-4">
+  <div data-spy="affix" class="float-sm-right float-lg-right d-absolute ">
+    <button class="btn btn-outline-success" (click)="goToTop()">Top</button>
+  </div>
+</div>
+
+
+<app-footer></app-footer>
+
+
+<!-- <ul>
   <li *ngFor="let page of links$ | async">
-    <a href="{{page.route}}">{{page.route}}</a>
+    <a href="{{page.route}}">{{page.route}}</a> -->
 
     <!-- <span *ngFor="let arrayItem of page.arbitaryArray">
       {{arrayItem}}
     </span> -->
-  </li>
-</ul>
+  <!-- </li>
+</ul> -->
+<!-- ng generate module navigation --route=navigation --module=app-routing -->

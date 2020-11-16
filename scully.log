@@ -182,3 +182,18 @@ Using stored unhandled routes!.
               while trying to render route "/blog/angular-tutorial"
               Scully will exitError: ENOENT: no such file or directory, open 'D:\Belajar\Github_Afif\belajarAngular\belajarScully\afifalfiano\dist\assets\img.jpg'
 
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------
+ The render plugin "disableAngular has thrown the below error,
+              while trying to render route "/blog/test"
+              Scully will exitError: A stats(-es2015).json is required for the 'disableAngular' plugin.
+Please run 'ng build' with the '--stats-json' flag
+
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------

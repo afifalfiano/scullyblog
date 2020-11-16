@@ -9,7 +9,7 @@ import { HTTP404Component } from './http404/http404.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HTTP404Component
+    HTTP404Component,
   ],
   imports: [
     BrowserModule,
@@ -19,4 +19,6 @@ import { HTTP404Component } from './http404/http404.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+}
