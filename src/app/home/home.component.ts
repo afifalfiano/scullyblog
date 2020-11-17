@@ -19,26 +19,49 @@ export class HomeComponent implements OnInit {
 
   myStack: Array<any> = [
     {
-      tech: 'php'
+      tech: 'php',
+      style: 'btn-outline-primary'
     },
     {
-      tech: 'html'
+      tech: 'html',
+      style: 'btn-outline-success'
     },
     {
-      tech: 'css'
+      tech: 'css',
+      style: 'btn-outline-danger'
     },
     {
-      tech: 'javascript'
+      tech: 'javascript',
+      style: 'btn-outline-warning'
     },
     {
-      tech: 'typescript'
+      tech: 'typescript',
+      style: 'btn-outline-primary'
     },
     {
-      tech: 'wordpress'
+      tech: 'wordpress',
+      style: 'btn-outline-info'
     },
     {
-      tech: 'laravel'
+      tech: 'laravel',
+      style: 'btn-outline-danger'
     },
+    {
+      tech: 'Figma',
+      style: 'btn-outline-primary'
+    },
+    {
+      tech: 'Adobe Xd',
+      style: 'btn-outline-dark'
+    },
+    {
+      tech: 'Inkscape',
+      style: 'btn-outline-secondary'
+    },
+    {
+      tech: 'Gimp',
+      style: 'btn-outline-success'
+    }
   ];
   pureBlog: Array<any> = [];
   constructor(private scullySvc: ScullyRoutesService) { }
