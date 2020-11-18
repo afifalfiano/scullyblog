@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {ActivatedRoute, Router, ROUTES} from '@angular/router';
 import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
@@ -15,7 +16,11 @@ declare var ng: any;
 })
 export class BlogComponent implements OnInit {
   currentPost$: Observable<ScullyRoute> = this.scullySvc.getCurrent();
-  constructor(private router: Router, private route: ActivatedRoute, private scullySvc: ScullyRoutesService) {
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private scullySvc: ScullyRoutesService,
+    private location: Location) {
   }
 
   // tslint:disable-next-line:typedef
@@ -45,5 +50,10 @@ export class BlogComponent implements OnInit {
     } else {
       this.router.navigateByUrl('/');
     }
+  }
+
+  // tslint:disable-next-line:typedef
+  goBack() {
+    this.router.navigateByUrl('/home');
   }
 }

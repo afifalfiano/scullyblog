@@ -37,10 +37,27 @@ export class MyblogsComponent implements OnInit {
     if (history.state.data !== undefined) {
       this.pureBlog = history.state.data;
     } else {
-      this.location.back();
+      // this.location.back();
+      this.getBlogNew();
     }
     // tslint:disable-next-line:no-unused-expression
     // this.checkUrl();
+  }
+
+  // tslint:disable-next-line:typedef
+  getBlogNew() {
+    this.links$.subscribe(link => {
+      link.forEach(item => {
+        this.pureBlog.push(item);
+      });
+      this.pureBlog.splice(0, 2);
+      this.pureBlog.unshift();
+      this.pureBlog.unshift();
+      this.pureBlog.pop();
+      this.pureBlog.pop();
+    }, (error: any) => {
+      this.error.handleError(error);
+    });
   }
 
   // tslint:disable-next-line:typedef
@@ -51,7 +68,7 @@ export class MyblogsComponent implements OnInit {
     console.log(changeFormat);
     const spliceData = this.pureBlog.splice(0, 3);
     if (typeof changeFormat === 'string') {
-      this.router.navigate(['/'], {state: {data: spliceData}});
+      this.router.navigate(['/home'], {state: {data: spliceData}});
     } else {
       this.router.navigate(['/'], {state: {data: spliceData}});
     }

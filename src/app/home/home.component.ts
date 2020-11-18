@@ -113,7 +113,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
 
-    if(history.state.data !== undefined) {
+    if (history.state.data !== undefined) {
       this.pureBlog = history.state.data;
     } else {
       this.getBlog();
@@ -128,17 +128,17 @@ export class HomeComponent implements OnInit {
       // this.thumbnailArticle.push(link);
       // this.thumbnailArticle.splice(0, 5);
       link.forEach(item => {
-          console.log(item);
           this.thumbnailArticle.push(item);
+          this.pureBlog.push(item);
         });
-      this.pureBlog = link;
+      // this.pureBlog = link;
       this.pureBlog.splice(1, 1);
       this.pureBlog.pop();
       this.pureBlog.shift();
       this.pureBlog.pop();
       this.pureBlog.splice(0, 5);
-      console.log(this.thumbnailArticle);
-      console.log(this.pureBlog);
+      // console.log(this.thumbnailArticle);
+      // console.log(this.pureBlog);
     }, (error: any) => {
       this.error.handleError(error);
     });
@@ -146,8 +146,12 @@ export class HomeComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   sendSlug() {
-    localStorage.setItem('slug', this.router.url);
-    // localStorage.setItem('slug', $event);
+    // const datas = this.thumbnailArticle;
+    // datas.shift();
+    // datas.shift();
+    // datas.pop();
+    // datas.pop();
+    // history.pushState(datas, this.router.url);
   }
 
   // tslint:disable-next-line:typedef
@@ -186,7 +190,6 @@ export class HomeComponent implements OnInit {
       datas.shift();
       datas.pop();
       datas.pop();
-      console.log(datas);
       window.scrollTo({top: 0, behavior: 'auto'});
       this.router.navigate(['/myblogs'], {state: {data: datas}});
   }

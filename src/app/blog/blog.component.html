@@ -1,24 +1,27 @@
-<!-- <app-navigation (click)="scrollSmooth($event)"></app-navigation> -->
-<!-- <hr> -->
+<app-navigation (click)="scrollSmooth($event)"></app-navigation>
 
 <!-- This is where Scully will inject the static HTML -->
-<!-- <scully-content></scully-content>
+<div *ngIf="currentPost$ | async as post">
+  <div>{{post.title}}</div>
+</div>
+<scully-content></scully-content>
 <hr>
 <h4>End of content</h4>
 
+<!-- <a [routerLink]="['/myblogs']" routerLinkActive="router-link-active" >Kembali</a> -->
 <a [routerLink]="['/home']" routerLinkActive="router-link-active" >Kembali</a>
 
-<app-footer></app-footer> -->
+<app-footer></app-footer>
 
 
-<article>
+<!-- <article>
   <header *ngIf="currentPost$ | async as currentPost" class="pt-6 xl:pb-10">
     <div class="space-y-1 text-center">
       <dl class="space-y-10" *ngIf="currentPost.published">
         <div>
           <dt class="sr-only">Published on</dt>
           <dd class="text-base leading-6 font-medium text-gray-500">
-            <!-- <time [dateTime]="currentPost.publishedAt"> {{ currentPost.publishedAt | date: "dd MMMM yyyy" }} </time> -->
+            <time [dateTime]="currentPost.publishedAt"> {{ currentPost.publishedAt | date: "dd MMMM yyyy" }} </time>
           </dd>
         </div>
       </dl>
@@ -28,6 +31,5 @@
     </div>
   </header>
 
-  <!-- This is where Scully will inject the static HTML -->
   <scully-content></scully-content>
-</article>
+</article> -->
