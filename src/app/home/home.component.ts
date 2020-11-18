@@ -111,7 +111,9 @@ export class HomeComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
+
     this.getBlog();
+    this.checkUrl();
   }
 
   // tslint:disable-next-line:typedef
@@ -172,7 +174,17 @@ export class HomeComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   goToBlogs() {
-    this.router.navigateByUrl('/myblogs');
+    // this.router.navigateByUrl('/myblogs');
+      // this.router.navigateByUrl('/', {skipLocationChange: true}).then(() =>
+      this.router.navigateByUrl('/myblogs');
+
+  }
+
+  // tslint:disable-next-line:typedef
+  checkUrl() {
+    if (this.router.url === '/myblogs') {
+    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+    }
   }
 
 }
