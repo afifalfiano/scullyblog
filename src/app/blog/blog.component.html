@@ -1,15 +1,35 @@
 <app-navigation (click)="scrollSmooth($event)"></app-navigation>
 
 <!-- This is where Scully will inject the static HTML -->
-<div *ngIf="currentPost$ | async as post">
-  <div>{{post.title}}</div>
-</div>
-<scully-content></scully-content>
-<hr>
-<h4>End of content</h4>
 
-<!-- <a [routerLink]="['/myblogs']" routerLinkActive="router-link-active" >Kembali</a> -->
-<a [routerLink]="['/home']" routerLinkActive="router-link-active" >Kembali</a>
+<div class="container">
+<div *ngIf="currentPost$ | async as post">
+  <div class="row mt-3">
+    <div class="col">
+  <h2>{{post.title}}</h2>
+  <label class="btn bg-secondary p-1 text-white">{{post.categories}}</label>
+  <p>Published <span class="text-success">{{post.date | date}}</span> by <span class="text-success">{{post.author}}</span></p>
+  <div class="border border-light bg-light rounded col-lg-12">
+  <img src="{{post.image}}" class="img-fluid p-4" alt="{{post.title}}">
+  </div>
+</div>
+  </div>
+  <scully-content></scully-content>
+  <hr>
+  <h5>Keyword: <em>{{post.keywords}}</em></h5>
+  <h4>End of content</h4>
+  <div id="disqus_thread"></div>
+</div>
+
+<div class="row">
+  <div class="col">
+
+    <a [routerLink]="['/home']" routerLinkActive="router-link-active" class="btn btn-dark">
+      <i class="fa fa-step-backward" aria-hidden="true"></i>
+      Kembali</a>
+  </div>
+</div>
+</div>
 
 <app-footer></app-footer>
 
