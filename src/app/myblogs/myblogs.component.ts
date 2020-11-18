@@ -1,8 +1,9 @@
-import { Route, Router } from '@angular/router';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 import { HomeComponent } from './../home/home.component';
-import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild, ErrorHandler } from '@angular/core';
 import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
 import { Observable } from 'rxjs';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-myblogs',
@@ -18,39 +19,41 @@ export class MyblogsComponent implements OnInit {
   constructor(
     private scullySvc: ScullyRoutesService,
     private router: Router,
-    ) { }
+    private location: Location,
+    private route: ActivatedRoute,
+    private error: ErrorHandler
+    ) {
+    // const data = this.router.getCurrentNavigation()?.extras.state;
+    // console.log(data);
+    // this.pureBlog = history.state.data;
+    // this.getBlog();
+     }
 
-  ngOnInit(): void {
-    this.getBlog();
+  ngOnInit(): any {
+    // this.getBlog();
     if (this.pureBlog === [] || this.pureBlog === null) {
-      this.router.navigateByUrl('/');
+      this.location.back();
     }
-  }
-
-  // tslint:disable-next-line:typedef
-  getBlog() {
-    this.links$.subscribe((link) => {
-      this.pureBlog = link;
-      this.isLoaded = true;
-      this.pureBlog.splice(1, 1);
-      this.pureBlog.pop();
-      this.pureBlog.shift();
-      this.pureBlog.pop();
-      console.log(this.pureBlog);
-    });
+    if (history.state.data !== undefined) {
+      this.pureBlog = history.state.data;
+    } else {
+      this.location.back();
+    }
+    // tslint:disable-next-line:no-unused-expression
+    // this.checkUrl();
   }
 
   // tslint:disable-next-line:typedef
   scrollSmooth($event: any) {
     console.log($event);
     const name = $event.target.computedName;
-    let changeFormat = name.replace(' ', '').toLowerCase();
-    changeFormat = 'home';
+    const changeFormat = name.replace(' ', '').toLowerCase();
     console.log(changeFormat);
-    if (changeFormat === 'home') {
-      this.router.navigateByUrl('/#home');
+    const spliceData = this.pureBlog.splice(0, 3);
+    if (typeof changeFormat === 'string') {
+      this.router.navigate(['/'], {state: {data: spliceData}});
     } else {
-      this.router.navigateByUrl('/');
+      this.router.navigate(['/'], {state: {data: spliceData}});
     }
   }
 
@@ -58,5 +61,4 @@ export class MyblogsComponent implements OnInit {
   sendSlug() {
     // localStorage.setItem('slug', $event);
   }
-
 }

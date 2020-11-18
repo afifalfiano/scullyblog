@@ -2,6 +2,7 @@ import { Router } from '@angular/router';
 import { Component, ElementRef, ErrorHandler, OnInit, ViewChild } from '@angular/core';
 import { ScullyRoutesService, ScullyRoute } from '@scullyio/ng-lib';
 import { Observable } from 'rxjs';
+import { state } from '@angular/animations';
 
 
 @Component({
@@ -112,27 +113,32 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.getBlog();
-    this.checkUrl();
+    if(history.state.data !== undefined) {
+      this.pureBlog = history.state.data;
+    } else {
+      this.getBlog();
+    }
+
+
   }
 
   // tslint:disable-next-line:typedef
   getBlog() {
     this.links$.subscribe((link) => {
+      // this.thumbnailArticle.push(link);
+      // this.thumbnailArticle.splice(0, 5);
+      link.forEach(item => {
+          console.log(item);
+          this.thumbnailArticle.push(item);
+        });
       this.pureBlog = link;
-      this.thumbnailArticle = this.pureBlog;
-      this.thumbnailArticle.splice(0, 5);
-      // link.map(item => {
-      //   console.log(item);
-      //   this.thumbnailArticle.push(item);
-      //   this.thumbnailArticle.splice(0 , 3);
-      // });
       this.pureBlog.splice(1, 1);
       this.pureBlog.pop();
       this.pureBlog.shift();
       this.pureBlog.pop();
+      this.pureBlog.splice(0, 5);
+      console.log(this.thumbnailArticle);
       console.log(this.pureBlog);
-      return;
     }, (error: any) => {
       this.error.handleError(error);
     });
@@ -174,17 +180,16 @@ export class HomeComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   goToBlogs() {
-    // this.router.navigateByUrl('/myblogs');
-      // this.router.navigateByUrl('/', {skipLocationChange: true}).then(() =>
-      this.router.navigateByUrl('/myblogs');
 
+      const datas = this.thumbnailArticle;
+      datas.shift();
+      datas.shift();
+      datas.pop();
+      datas.pop();
+      console.log(datas);
+      window.scrollTo({top: 0, behavior: 'auto'});
+      this.router.navigate(['/myblogs'], {state: {data: datas}});
   }
 
-  // tslint:disable-next-line:typedef
-  checkUrl() {
-    if (this.router.url === '/myblogs') {
-    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
-    }
-  }
 
 }
