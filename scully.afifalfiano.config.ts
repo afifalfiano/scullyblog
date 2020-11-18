@@ -9,7 +9,7 @@ const Http404Plugin = getHttp404Plugin();
 const postRenderersBlog = [DisableAngular, Http404Plugin, 'mediumZoom'];
 
 setPluginConfig('md', { enableSyntaxHighlighting: true });
-setPluginConfig(DisableAngular, 'render', {removeState: true});
+setPluginConfig(DisableAngular, 'render', {removeState: false});
 export const config: ScullyConfig = {
   projectRoot: './src',
   projectName: 'afifalfiano',
