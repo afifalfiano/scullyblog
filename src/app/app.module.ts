@@ -8,6 +8,8 @@ import { HTTP404Component } from './http404/http404.component';
 import { FooterComponent } from './footer/footer.component';
 import { CaptionPipe } from './caption.pipe';
 import { StringFilterPipe } from './string-filter.pipe';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import { StringFilterPipe } from './string-filter.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ScullyLibModule
+    ScullyLibModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
