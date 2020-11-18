@@ -190,8 +190,8 @@ export class HomeComponent implements OnInit {
       datas.shift();
       datas.pop();
       datas.pop();
-      window.scrollTo({top: 0, behavior: 'auto'});
       this.router.navigate(['/myblogs'], {state: {data: datas}});
+      window.scrollTo({top: 0, behavior: 'auto'});
   }
 
 
