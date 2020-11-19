@@ -162,18 +162,24 @@ export class HomeComponent implements OnInit {
     console.log(changeFormat);
     if (changeFormat === 'home') {
       this.home?.nativeElement.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
+      this.router.navigateByUrl('/#home');
     } else if (changeFormat === 'aboutme') {
       this.aboutme?.nativeElement.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
+      this.router.navigateByUrl('/#aboutme');
     } else if (changeFormat === 'experience') {
       this.experience?.nativeElement.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
+      this.router.navigateByUrl('/#experience');
     } else if (changeFormat === 'portfolio') {
       this.portfolio?.nativeElement.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
+      this.router.navigateByUrl('/#portfolio');
     } else if (changeFormat === 'blog') {
       this.blog?.nativeElement.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
     } else if (changeFormat === 'contact') {
       this.contact?.nativeElement.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
+      this.router.navigateByUrl('/#contact');
     } else {
       this.home?.nativeElement.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
+      this.router.navigateByUrl('/#home');
     }
   }
 
