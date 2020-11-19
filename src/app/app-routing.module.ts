@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) },
   {path: '404', component: HTTP404Component},
   { path: 'myblogs', loadChildren: () => import('./myblogs/myblogs.module').then(m => m.MyblogsModule) },
+  { path: 'myportfolios', loadChildren: () => import('./my-portfolios/my-portfolios.module').then(m => m.MyPortfoliosModule) },
   {path: '**', component: HTTP404Component}
 ];
 

@@ -200,5 +200,10 @@ export class HomeComponent implements OnInit {
       window.scrollTo({top: 0, behavior: 'auto'});
   }
 
+  // tslint:disable-next-line:typedef
+  goToPortfolios() {
+    this.router.navigateByUrl('/myportfolios');
+  }
+
 
 }
