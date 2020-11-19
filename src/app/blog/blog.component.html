@@ -2,22 +2,22 @@
 
 <!-- This is where Scully will inject the static HTML -->
 
-<div class="container">
+<div class="container mt-4">
   <div *ngIf="currentPost$ | async as post">
-    <div class="row mt-3">
+    <div class="row" style="margin-top:100px;">
       <div class="col">
-        <h2>{{ post.title }}</h2>
-        <label class="btn bg-secondary p-1 text-white">{{
+        <h2 class="display-3">{{ post.title }}</h2>
+        <label class="p-1 text-secondary"><em>{{
           post.categories
-        }}</label>
+        }}</em></label>
         <p>
-          Published <span class="text-success">{{ post.date | date }}</span> by
-          <span class="text-success">{{ post.author }}</span>
+          Published <span class="text-primary">{{ post.date | date }}</span> by
+          <span class="text-primary">{{ post.author }}</span>
         </p>
-        <div class="border border-light bg-light rounded col-lg-12">
+        <div class="border border-light bg-light p-4 rounded col-lg-12">
           <img
             src="{{ post.image }}"
-            class="img-fluid p-4"
+            class="img-fluid"
             alt="{{ post.title }}"
           />
         </div>
