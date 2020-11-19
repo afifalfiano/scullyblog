@@ -5,6 +5,7 @@ import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
 import { Observable } from 'rxjs';
 
 declare var ng: any;
+declare var $: any;
 
 @Component({
   selector: 'app-blog',
