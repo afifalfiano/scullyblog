@@ -4,8 +4,6 @@ import {ActivatedRoute, Router, ROUTES} from '@angular/router';
 import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
 import { Observable } from 'rxjs';
 
-declare var ng: any;
-declare var $: any;
 
 @Component({
   selector: 'app-blog',
@@ -19,9 +17,7 @@ export class BlogComponent implements OnInit {
   currentPost$: Observable<ScullyRoute> = this.scullySvc.getCurrent();
   constructor(
     private router: Router,
-    private route: ActivatedRoute,
-    private scullySvc: ScullyRoutesService,
-    private location: Location) {
+    private scullySvc: ScullyRoutesService) {
   }
 
   // tslint:disable-next-line:typedef

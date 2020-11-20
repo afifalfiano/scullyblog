@@ -52,3 +52,46 @@ ul.timeline > li:before {
   padding-right: 0 !important;
   padding-top: 0 !important;
 }
+
+
+/* If the screen size is 601px or more, set the font-size of <div> to 80px */
+@media only screen and (min-width: 601px) {
+  #header-jumbo {
+    height: 400px !important;
+  }
+}
+
+/* If the screen size is 600px or less, set the font-size of <div> to 30px */
+@media only screen and (max-width: 600px) {
+  .profile {
+    display: none !important;
+  }
+  #header-jumbo {
+    height: 320px !important;
+    margin-top: 3em !important;
+  }
+  #hidden {
+    display: none !important;
+  }
+  #feedback {
+    display: none !important;
+  }
+  .timeline {
+    margin-left: -20px;
+  }
+  .name {
+    font-size: 3em !important;
+  }
+  .job {
+    font-size: 1.5em !important;
+  }
+  .port {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+  }
+  #aboutme{
+    text-align: center !important;
+    margin-top: -10px;
+    margin-bottom: 20px;
+  }
+}

@@ -5,3 +5,13 @@ h1 {
   border-radius: 5px;
   width: fit-content;
 }
+
+
+
+@media only screen and (max-width: 600px) {
+  .read {
+    margin-top: -.7em !important;
+    font-size: 2em !important;
+    font-weight: 400;
+  }
+}

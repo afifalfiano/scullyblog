@@ -158,6 +158,7 @@ export class HomeComponent implements OnInit {
   scrollSmooth($event: any) {
     console.log($event);
     const name = $event.target.computedName;
+    const toolbar = $event.target.className;
     const changeFormat = name.replace(' ', '').toLowerCase();
     console.log(changeFormat);
     if (changeFormat === 'home') {
@@ -177,9 +178,9 @@ export class HomeComponent implements OnInit {
     } else if (changeFormat === 'contact') {
       this.contact?.nativeElement.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
       this.router.navigateByUrl('/#contact');
-    } else {
-      this.home?.nativeElement.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
-      this.router.navigateByUrl('/#home');
+    } else if (toolbar === 'navbar-toggler-icon'){
+      // this.home?.nativeElement.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
+      // this.router.navigateByUrl('/#home');
     }
   }
 

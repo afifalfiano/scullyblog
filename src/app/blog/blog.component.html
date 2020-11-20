@@ -6,13 +6,13 @@
   <div *ngIf="currentPost$ | async as post">
     <div class="row" style="margin-top:100px;">
       <div class="col">
-        <h2 class="display-3">{{ post.title }}</h2>
+        <h2 class="display-3 read">{{ post.title }}</h2>
         <label class="p-1 text-secondary"><em>{{
           post.categories
         }}</em></label>
         <p>
-          Published <span class="text-primary">{{ post.date | date }}</span> by
-          <span class="text-primary">{{ post.author }}</span>
+          Published <span class="text-primary">{{ post.publishedAt | date }}</span> by
+          <span class="text-primary">{{ post.authors }}</span>
         </p>
         <div class="border border-light bg-light p-4 rounded col-lg-12">
           <img

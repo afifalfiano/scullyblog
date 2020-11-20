@@ -48,6 +48,7 @@
     "@notiz/scully-plugin-fouc": "^0.2.0",
     "@notiz/scully-plugin-lazy-images": "^0.3.0",
     "@notiz/scully-plugin-medium-zoom": "^0.2.4",
+    "@notiz/scully-plugin-rss": "^0.3.0",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
     "bootstrap": "^4.5.3",

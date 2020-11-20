@@ -1,6 +1,6 @@
 <app-navigation (click)="scrollSmooth($event)"></app-navigation>
 <!-- <div (click)="scrollToElement(home)">Test</div> -->
-<div class="jumbotron jumbotron-fluid">
+<div class="jumbotron jumbotron-fluid" id="myblogs">
   <div class="container">
     <div class="row">
     <div class="col-md-12 text-center" style="height: 300px;">
@@ -12,10 +12,10 @@
 
 <!-- blog -->
 <!-- Blog -->
-<div class="container mt-5 mb-5">
+<div class="container mt-5 mb-5 addblog">
   <div class="row mt-4">
-    <div class="col-md-8 col-lg-8">
-      <div *ngFor="let page of pureBlog | paginate: { itemsPerPage: 6, currentPage: p }" style="display: inline-block;" class="col-md-6">
+    <div class="col-md-8 col-lg-8 col-sm-12">
+      <div *ngFor="let page of pureBlog | paginate: { itemsPerPage: 6, currentPage: p }" style="display: inline-block;" class="col-md-6 col-sm-12">
         <!-- <div class="col-lg-4"> -->
             <div class="card shadow p-3 mb-5 bg-white rounded" style="height: auto; width: auto;">
               <img src="{{page.image}}" class="card-img-top" alt="{{page.title}}" height="250px">
@@ -28,16 +28,18 @@
             </div>
           <!-- </div> -->
         </div>
-        <pagination-controls class="text-center"  (pageChange)="p = $event"></pagination-controls>
+        <div class="center-small">
+          <pagination-controls class="text-center"  (pageChange)="p = $event"></pagination-controls>
+        </div>
     </div>
     <div class="col-md-4 col-lg-4">
-      <div class="row">
+      <div class="row pure">
         <div class="col">
           <h2>Profile</h2>
           <div style="height: 300px;"></div>
         </div>
       </div>
-      <div class="row">
+      <div class="row pure">
         <div class="col">
           <h2>Categories</h2>
           <div style="height: 300px;"></div>

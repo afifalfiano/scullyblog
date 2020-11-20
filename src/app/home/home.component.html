@@ -2,18 +2,18 @@
 <!-- <div (click)="scrollToElement(home)">Test</div> -->
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <div class="row mt-5" style="height: 400px;">
-    <div class="col-md-6 mt-4">
+    <div class="row mt-5" id="header-jumbo" style="height: 400px;">
+    <div class="col-md-6  col-sm-12 mt-4">
       <p id="home" #home >Hello!</p>
-      <h1 class="mt-3 display-3"><strong>Afif Alfiano</strong></h1>
-      <h2 class="">Frontend Developer</h2>
+      <h1 class="mt-3 display-3 name"><strong>Afif Alfiano</strong></h1>
+      <h2 class="job">Frontend Developer</h2>
       <ul style="list-style-type: none;padding-left: 0;">
         <li><i class="fa fa-envelope" aria-hidden="true"></i> &nbsp; afifalfiano2@gmail.com</li>
         <li><i class="fa fa-phone-square" aria-hidden="true"></i> &nbsp; +628112636768</li>
         <li><i class="fa fa-globe" aria-hidden="true"></i> &nbsp; Yogyakarta, Indonesia</li>
       </ul>
       <div class="row">
-        <div class="col">
+        <div class="col-sm-12">
           <i class="fa fa-facebook-square fa-2x m-2" aria-hidden="true"></i>
           <i class="fa fa-dribbble fa-2x m-2" aria-hidden="true"></i>
           <i class="fa fa-github-square fa-2x m-2" aria-hidden="true"></i>
@@ -21,9 +21,9 @@
         </div>
       </div>
     </div>
-    <div class="col-md-6 mt-3">
+    <div class="col-md-6 col-sm-12 mt-3">
       <div class="text-center">
-        <img src="../../assets/profile.jpg" class="img-fluid rounded-circle p-4 bg-dark" alt="Afif Alfiaon" width="350">
+        <img src="../../assets/profile.jpg" class="img-fluid rounded-circle p-4 bg-dark profile" alt="Afif Alfiaon" width="350">
       </div>
     </div>
     </div>
@@ -33,13 +33,13 @@
 <!-- About me -->
 <div class="container mt-5 mb-5">
 <div class="row">
-  <div class="col-md-6">
+  <div class="col-md-6 col-sm-12" id="hidden">
     <div class="text-center">
       <img src="../../assets/images/home/code.png" class="img-fluid" width="450" alt="code">
       <a href='https://www.freepik.com/vectors/banner' style="visibility: hidden;">Banner vector created by katemangostar - www.freepik.com</a>
     </div>
   </div>
-  <div class="col-md-6">
+  <div class="col-md-6 col-sm-12">
     <h2 id="aboutme" #aboutme>About Me</h2>
     <p>Hello, I'm a Afif Alfiano, web developer based on Indonesia. I have rich experiecnce in web site design like using figma, adobe xd and build from scratch.</p>
     <div *ngFor="let stack of myStack" style="display: inline;">
@@ -56,9 +56,9 @@
     <h2 class="text-center">What I Do</h2>
   </div>
 </div>
-<div class="row mt-4">
+<div class="row mt-4 ">
   <div class="col-md-4 col-lg-4 col-sm-12 mt-2 mb-2">
-    <div class="card">
+    <div class="card ">
       <i class="fa fa-paint-brush fa-5x pr-3 pt-3 pb-3 pl-3 text-warning text-center" aria-hidden="true"></i>
       <h5 class="card-title pl-3 pr-3 text-center">UI Design</h5>
       <div class="card-body pt-0">
@@ -138,7 +138,7 @@
   </div>
   <div class="row mt-4 mb-5">
     <div class="col-md-4 col-lg-4 col-sm-12">
-      <div class="card border" style="height: 400px;">
+      <div class="card border port" style="height: 400px;">
         <div class="card-body">
           <img src="../../assets/img.jpg" class="card-img-top" alt="..." height="auto">
           <div class="mt-3">
@@ -148,7 +148,7 @@
       </div>
     </div>
     <div class="col-md-4 col-lg-4 col-sm-12">
-      <div class="card border" style="height: 500px;">
+      <div class="card border port" style="height: 500px;">
         <div class="card-body">
         <img src="../../assets/img.jpg" class="card-img-top" alt="..." width="auto" height="410">
         <div class="mt-3">
@@ -158,7 +158,7 @@
       </div>
     </div>
     <div class="col-md-4 col-lg-4 col-sm-12">
-      <div class="card border" style="height: 400px;">
+      <div class="card border port" style="height: 400px;">
         <div class="card-body">
         <img src="../../assets/img.jpg" class="card-img-top" alt="..." height="" width="auto" >
         <div class="mt-3">
@@ -242,9 +242,9 @@
         <button type="submit" class="btn btn-primary btn-block ">Send</button>
       </form>
     </div>
-    <div class="col-lg-6">
+    <div class="col-lg-6" id="feedback">
       <div class="text-center ml-4">
-        <img src="../../assets/images/home/feedback.png" class="img-fluid ml-4" alt="Feedback">
+        <img src="../../assets/images/home/feedback.png" class="img-fluid ml-4" alt="Feedback" width="500">
         <a href='https://www.freepik.com/vectors/star' style="visibility: hidden;">Star vector created by vectorjuice - www.freepik.com</a>
       </div>
     </div>
@@ -252,8 +252,8 @@
 </div>
 <!-- Floating Top -->
 <div class="container-fluid pb-4">
-  <div data-spy="affix" class="float-sm-right float-lg-right d-absolute ">
-    <button class="btn btn-outline-success" (click)="goToTop()">Top</button>
+  <div data-spy="affix" class="float-right float-right d-absolute ">
+    <button class="btn btn-outline-success float-right" (click)="goToTop()">Top</button>
   </div>
 </div>
 
