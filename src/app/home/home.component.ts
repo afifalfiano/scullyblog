@@ -138,6 +138,8 @@ export class HomeComponent implements OnInit {
       this.pureBlog.shift();
       this.pureBlog.pop();
       this.pureBlog.pop();
+      this.pureBlog.pop();
+      this.pureBlog.pop();
       // // this.pureBlog.splice(0, 4);
       // console.log(this.thumbnailArticle);
       console.log(this.pureBlog);

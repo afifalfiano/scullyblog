@@ -55,6 +55,7 @@ export class MyblogsComponent implements OnInit {
       this.pureBlog.unshift();
       this.pureBlog.pop();
       this.pureBlog.pop();
+      this.pureBlog.pop();
     }, (error: any) => {
       this.error.handleError(error);
     });
