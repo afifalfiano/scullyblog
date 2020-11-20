@@ -48,9 +48,4 @@ export class BlogComponent implements OnInit {
       this.router.navigateByUrl('/');
     }
   }
-
-  // tslint:disable-next-line:typedef
-  goBack() {
-    this.router.navigateByUrl('/home');
-  }
 }

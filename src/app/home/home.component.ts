@@ -3,6 +3,7 @@ import { Component, ElementRef, ErrorHandler, OnInit, ViewChild } from '@angular
 import { ScullyRoutesService, ScullyRoute } from '@scullyio/ng-lib';
 import { Observable } from 'rxjs';
 import { state } from '@angular/animations';
+import { Location } from '@angular/common';
 
 
 @Component({
@@ -108,16 +109,18 @@ export class HomeComponent implements OnInit {
   constructor(
     private scullySvc: ScullyRoutesService,
     private router: Router,
-    private error: ErrorHandler
+    private error: ErrorHandler,
+    private location: Location
     ) { }
 
   ngOnInit(): void {
-
     if (history.state.data !== undefined) {
       this.pureBlog = history.state.data;
     } else {
       this.getBlog();
     }
+
+    console.log(this.pureBlog);
 
 
   }
@@ -131,14 +134,13 @@ export class HomeComponent implements OnInit {
           this.thumbnailArticle.push(item);
           this.pureBlog.push(item);
         });
-      // this.pureBlog = link;
-      this.pureBlog.splice(1, 1);
-      this.pureBlog.pop();
+      this.pureBlog.shift();
       this.pureBlog.shift();
       this.pureBlog.pop();
-      this.pureBlog.splice(0, 4);
+      this.pureBlog.pop();
+      // // this.pureBlog.splice(0, 4);
       // console.log(this.thumbnailArticle);
-      // console.log(this.pureBlog);
+      console.log(this.pureBlog);
     }, (error: any) => {
       this.error.handleError(error);
     });
@@ -181,6 +183,9 @@ export class HomeComponent implements OnInit {
     } else if (toolbar === 'navbar-toggler-icon'){
       // this.home?.nativeElement.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
       // this.router.navigateByUrl('/#home');
+    } else {
+      this.home?.nativeElement.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
+      this.location.back();
     }
   }
 

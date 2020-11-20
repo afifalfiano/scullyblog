@@ -1,5 +1,5 @@
 ---
-title: My Journey from IT Support to Development Team
+title: My Journey to Devopment
 description: My Journey from IT Support to Development Team
 published: true
 slugs:
