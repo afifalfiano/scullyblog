@@ -12,7 +12,7 @@
     "scully": "scully",
     "hmr": "ng serve --hmr",
     "scully:serve": "scully serve",
-    "deploy": "ng build --prod --stats-json && npm run scully"
+    "deploy": "ng build --prod --stats-json && npm run scully -- --scanRoutes"
   },
   "private": true,
   "dependencies": {
