@@ -36,6 +36,7 @@ export class MyblogsComponent implements OnInit {
     }
     if (history.state.data !== undefined) {
       this.pureBlog = history.state.data;
+      this.pureBlog.pop();
     } else {
       // this.location.back();
       this.getBlogNew();
@@ -53,7 +54,6 @@ export class MyblogsComponent implements OnInit {
       this.pureBlog.splice(0, 2);
       this.pureBlog.unshift();
       this.pureBlog.unshift();
-      this.pureBlog.pop();
       this.pureBlog.pop();
       this.pureBlog.pop();
       this.pureBlog.pop();
