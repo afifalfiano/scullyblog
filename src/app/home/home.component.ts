@@ -1,3 +1,4 @@
+import { fadeInAnimation } from './../animation/_animation';
 import { Router } from '@angular/router';
 import { Component, ElementRef, ErrorHandler, OnInit, ViewChild } from '@angular/core';
 import { ScullyRoutesService, ScullyRoute } from '@scullyio/ng-lib';
@@ -9,7 +10,11 @@ import { Location } from '@angular/common';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
+  animations: [fadeInAnimation],
+  // tslint:disable-next-line:no-host-metadata-property
+  host: { '[@fadeInAnimation]': '' }
+
 })
 export class HomeComponent implements OnInit {
   @ViewChild('home') home: ElementRef | undefined;
@@ -121,8 +126,6 @@ export class HomeComponent implements OnInit {
     }
 
     console.log(this.pureBlog);
-
-
   }
 
   // tslint:disable-next-line:typedef
@@ -213,5 +216,14 @@ export class HomeComponent implements OnInit {
     this.router.navigateByUrl('/myportfolios');
   }
 
-
+  // tslint:disable-next-line:typedef
+  mouseEnter(div: string) {
+    console.log(div);
+    // const mycard: any = document.getElementById('mycard');
+    // mycard.class.color = 'red';
+  }
+    // tslint:disable-next-line:typedef
+  mouseLeave(div: string) {
+    console.log(div);
+  }
 }

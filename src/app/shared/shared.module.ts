@@ -4,11 +4,13 @@ import { FooterComponent } from './../footer/footer.component';
 import { NavigationComponent } from './../navigation/navigation.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { WordCountPipe } from '../word-count.pipe';
 
 
 
 @NgModule({
-  declarations: [NavigationComponent, FooterComponent, CaptionPipe, StringFilterPipe],
+  declarations: [NavigationComponent, FooterComponent, CaptionPipe, StringFilterPipe, WordCountPipe,
+  ],
   imports: [
     CommonModule
   ],
@@ -16,7 +18,8 @@ import { CommonModule } from '@angular/common';
     NavigationComponent,
     FooterComponent,
     CaptionPipe,
-    StringFilterPipe
+    StringFilterPipe,
+    WordCountPipe
   ]
 })
 export class SharedModule { }

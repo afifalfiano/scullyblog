@@ -1,3 +1,4 @@
+import { fadeInAnimation, slideInOutAnimation } from './../animation/_animation';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { HomeComponent } from './../home/home.component';
 import { Component, OnInit, ElementRef, ViewChild, ErrorHandler } from '@angular/core';
@@ -8,7 +9,10 @@ import { Location } from '@angular/common';
 @Component({
   selector: 'app-myblogs',
   templateUrl: './myblogs.component.html',
-  styleUrls: ['./myblogs.component.css']
+  styleUrls: ['./myblogs.component.css'],
+  animations: [fadeInAnimation],
+  // tslint:disable-next-line:no-host-metadata-property
+  host: { '[@fadeInAnimation]': '' }
 })
 export class MyblogsComponent implements OnInit {
   @ViewChild(HomeComponent) home: ElementRef | undefined;

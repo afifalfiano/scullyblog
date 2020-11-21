@@ -16,6 +16,7 @@ tags:
 publishedAt: 2020-03-25T10:12:00.000Z
 updatedAt: 2020-03-25T10:12:00.000Z
 thumbnailText: Selamat malam teman-teman, Bagaimana kabarnya? Semoga selalu dalam keadaan sehat dan selalu diberi kemudahan. Tetap semangat ya walaupun dalam keadaan seperti ini. Semoga wabah corona virus ini segera berakhir dan kita bisa kembali normal seperti sediakala 
+wordCount: 566
 ---
 #
 
