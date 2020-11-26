@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { Component, ElementRef, ErrorHandler, OnInit, ViewChild } from '@angular/core';
 import { ScullyRoutesService, ScullyRoute } from '@scullyio/ng-lib';
 import { Observable } from 'rxjs';
-import { state } from '@angular/animations';
+import { state, trigger, transition, animate, style } from '@angular/animations';
 import { Location } from '@angular/common';
 
 
@@ -11,7 +11,23 @@ import { Location } from '@angular/common';
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
-  animations: [fadeInAnimation],
+  animations: [fadeInAnimation,
+  trigger('changeState', [
+    state('rest', style({
+      transform: 'scale(1)'
+    })),
+    state('hover', style({
+      transform: 'scale(1.1)'
+    })),
+    state('press', style({
+      transform: 'scale(1.5)',
+    })),
+    transition('rest => hover', animate('400ms ease-in')),
+    transition('hover => rest', animate('200ms ease-out')),
+    transition('hover => press', animate('400ms ease-in')),
+    transition('press => rest', animate('200ms ease-out')),
+
+  ])],
   // tslint:disable-next-line:no-host-metadata-property
   host: { '[@fadeInAnimation]': '' }
 
@@ -23,6 +39,8 @@ export class HomeComponent implements OnInit {
   @ViewChild('portfolio') portfolio: ElementRef | undefined;
   @ViewChild('blog') blog: ElementRef | undefined;
   @ViewChild('contact') contact: ElementRef | undefined;
+  currentState = ['rest'];
+  currentCard = false;
   links$: Observable<ScullyRoute[]> = this.scullySvc.available$;
 
   myStack: Array<any> = [
@@ -217,13 +235,7 @@ export class HomeComponent implements OnInit {
   }
 
   // tslint:disable-next-line:typedef
-  mouseEnter(div: string) {
-    console.log(div);
-    // const mycard: any = document.getElementById('mycard');
-    // mycard.class.color = 'red';
-  }
-    // tslint:disable-next-line:typedef
-  mouseLeave(div: string) {
-    console.log(div);
+  changeMouseState($event: any, i: number): void {
+    this.currentState[i] = $event;
   }
 }
