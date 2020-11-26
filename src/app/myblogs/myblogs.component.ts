@@ -5,12 +5,28 @@ import { Component, OnInit, ElementRef, ViewChild, ErrorHandler } from '@angular
 import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
 import { Observable } from 'rxjs';
 import { Location } from '@angular/common';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-myblogs',
   templateUrl: './myblogs.component.html',
   styleUrls: ['./myblogs.component.css'],
-  animations: [fadeInAnimation],
+  animations: [fadeInAnimation,
+    trigger('changeState', [
+      state('rest', style({
+        transform: 'scale(1)'
+      })),
+      state('hover', style({
+        transform: 'scale(1.1)'
+      })),
+      state('press', style({
+        transform: 'scale(1.5)',
+      })),
+      transition('rest => hover', animate('400ms ease-in')),
+      transition('hover => rest', animate('200ms ease-out')),
+      transition('hover => press', animate('400ms ease-in')),
+      transition('press => rest', animate('200ms ease-out')),
+    ])],
   // tslint:disable-next-line:no-host-metadata-property
   host: { '[@fadeInAnimation]': '' }
 })
@@ -19,6 +35,7 @@ export class MyblogsComponent implements OnInit {
   links$: Observable<ScullyRoute[]> = this.scullySvc.available$;
   pureBlog: Array<any> = [];
   p = 1;
+  currentState = ['rest'];
   isLoaded = false;
   constructor(
     private scullySvc: ScullyRoutesService,
@@ -83,5 +100,9 @@ export class MyblogsComponent implements OnInit {
   // tslint:disable-next-line:typedef
   sendSlug() {
     // localStorage.setItem('slug', $event);
+  }
+
+  changeMouseState($event: any, i: number): void {
+    this.currentState[i] = $event;
   }
 }

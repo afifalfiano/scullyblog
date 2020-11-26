@@ -1,11 +1,11 @@
 import { fadeInAnimation } from './../animation/_animation';
 import { Router } from '@angular/router';
-import { Component, ElementRef, ErrorHandler, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, ErrorHandler, OnInit, Type, ViewChild } from '@angular/core';
 import { ScullyRoutesService, ScullyRoute } from '@scullyio/ng-lib';
 import { Observable } from 'rxjs';
 import { state, trigger, transition, animate, style } from '@angular/animations';
 import { Location } from '@angular/common';
-
+import Typed from 'typed.js';
 
 @Component({
   selector: 'app-home',
@@ -19,13 +19,8 @@ import { Location } from '@angular/common';
     state('hover', style({
       transform: 'scale(1.1)'
     })),
-    state('press', style({
-      transform: 'scale(1.5)',
-    })),
     transition('rest => hover', animate('400ms ease-in')),
     transition('hover => rest', animate('200ms ease-out')),
-    transition('hover => press', animate('400ms ease-in')),
-    transition('press => rest', animate('200ms ease-out')),
 
   ])],
   // tslint:disable-next-line:no-host-metadata-property
@@ -39,8 +34,8 @@ export class HomeComponent implements OnInit {
   @ViewChild('portfolio') portfolio: ElementRef | undefined;
   @ViewChild('blog') blog: ElementRef | undefined;
   @ViewChild('contact') contact: ElementRef | undefined;
-  currentState = ['rest'];
-  currentCard = false;
+  @ViewChild('myName') myName: ElementRef | undefined;
+  currentState: Array<any> = [];
   links$: Observable<ScullyRoute[]> = this.scullySvc.available$;
 
   myStack: Array<any> = [
@@ -142,8 +137,24 @@ export class HomeComponent implements OnInit {
     } else {
       this.getBlog();
     }
-
+    this.runnerText();
     console.log(this.pureBlog);
+  }
+
+  // tslint:disable-next-line:typedef
+  runnerText(): void {
+    const options = {
+      strings: ['', '^1000 <strong>Hello friends!</strong> ^1000', '<strong>My Name is Afif Alfiano</strong> ^1000', '<strong>Nice to meet you!</strong>'],
+      typeSpeed: 60,
+      backSpeed: 60,
+      showCursor: false,
+      backDelay: 700
+    };
+
+    const typed = new Typed('.element', options);
+
+    const a = document.getElementById('myName');
+    console.log(a);
   }
 
   // tslint:disable-next-line:typedef
