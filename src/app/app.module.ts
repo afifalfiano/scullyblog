@@ -1,3 +1,4 @@
+import { SharedModule } from './shared/shared.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -12,7 +13,7 @@ import { environment } from '../environments/environment';
 @NgModule({
   declarations: [
     AppComponent,
-    HTTP404Component,
+    HTTP404Component
   ],
   imports: [
     BrowserModule,
@@ -20,6 +21,7 @@ import { environment } from '../environments/environment';
     AppRoutingModule,
     ScullyLibModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production, registrationStrategy: 'registerImmediately' }),
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

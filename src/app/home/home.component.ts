@@ -144,17 +144,18 @@ export class HomeComponent implements OnInit {
   // tslint:disable-next-line:typedef
   runnerText(): void {
     const options = {
-      strings: ['', '^1000 <strong>Hello friends!</strong> ^1000', '<strong>My Name is Afif Alfiano</strong> ^1000', '<strong>Nice to meet you!</strong>'],
+      strings: ['', '^1000 <strong>Hello friends!</strong> ^1000', '<strong>My Name is Afif Alfiano</strong> ^1000', '<strong>Nice to meet you!</strong>', '<strong>Afif Alfiano</strong>'],
       typeSpeed: 60,
-      backSpeed: 60,
+      backSpeed: 30,
       showCursor: false,
       backDelay: 700
     };
 
     const typed = new Typed('.element', options);
 
-    const a = document.getElementById('myName');
-    console.log(a);
+    // const a = document.getElementById('myName');
+    // a?.replaceWith('Afif Alfiano');
+    // console.log(a);
   }
 
   // tslint:disable-next-line:typedef
