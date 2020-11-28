@@ -19,6 +19,9 @@ jobs:
         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
           ${{ runner.os }}-node-
+    - uses: cmgriffing/scully-gh-pages-action@v9
+        with:
+          access-token: ${{ secrets.ACCESS_TOKEN }}
     - name: Build
       run: |
         npm install
