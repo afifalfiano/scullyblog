@@ -21,7 +21,7 @@ jobs:
           ${{ runner.os }}-node-
     - uses: cmgriffing/scully-gh-pages-action@v9
       with:
-        access-token: ${{ secrets.ACCESS_TOKEN }}
+        access-token: ${{ 4fa4e74d7d8896db4be9aac32ab442882fdffaba }}
     - name: Build
       run: |
         npm install
@@ -29,6 +29,5 @@ jobs:
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages
         FOLDER: dist/static
