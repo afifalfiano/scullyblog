@@ -7,14 +7,14 @@
     <div class="row" style="margin-top:100px;">
       <div class="col">
         <h2 class="display-3 read">{{ post.title }}</h2>
-        <label class="p-1 text-secondary"><em>{{
+        <label class="p-1 badge badge-primary"><em>{{
           post.categories
         }}</em></label>
         <p>
           Published <span class="text-primary">{{ post.publishedAt | date }}</span> by
           <span class="text-primary">{{ post.authors }}</span>
         </p>
-        <div class="border border-light bg-light p-4 rounded col-lg-12">
+        <div class="border border-light bg-light p-4 rounded col-lg-12 text-center">
           <img
             src="{{ post.image }}"
             class="img-fluid"
@@ -25,9 +25,10 @@
     </div>
     <scully-content></scully-content>
     <hr />
-    <h5>
-      Keyword: <em>{{ post.keywords }}</em>
-    </h5>
+    <p class="d-inline font-weight-bold">Keyword: </p>
+    <div *ngFor="let keyword of post.keywords" class="d-inline">
+      <p class="badge badge-primary "><em>{{ keyword }}</em></p>
+    </div>
     <hr/>
     <div id="disqus_thread"></div>
   </div>
@@ -38,9 +39,7 @@
         [routerLink]="['/myblogs']"
         routerLinkActive="router-link-active"
         class="btn btn-dark"
-      >
-        <i class="fa fa-step-backward" aria-hidden="true"></i>
-        Kembali</a
+      > Back</a
       >
     </div>
   </div>

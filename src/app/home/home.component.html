@@ -126,6 +126,11 @@
 					<a href="#" class="float-right">1 January, 2019</a>
 					<p>Fusce ullamcorper ligula sit amet quam accumsan aliquet. Sed nulla odio, tincidunt vitae nunc vitae, mollis pharetra velit. Sed nec tempor nibh...</p>
 				</li>
+				<li>
+					<a href="#">Technician PT.Telkom Access</a>
+					<a href="#" class="float-right">1 October 2017</a>
+					<p>Fusce ullamcorper ligula sit amet quam accumsan aliquet. Sed nulla odio, tincidunt vitae nunc vitae, mollis pharetra velit. Sed nec tempor nibh...</p>
+				</li>
 			</ul>
 		</div>
 	</div>
@@ -147,7 +152,7 @@
             <img [src]="portfolio.image" class="card-img-top" [alt]="portfolio.label" height="auto">
             <div class="mt-3">
               <div class="m-2">
-                <i class="fa fa-external-link btn btn-primary bg-primary" aria-hidden="true">&nbsp; <a [href]="portfolio.link" class="text-white text-decoration-none">View Demo</a></i>
+                <i class="fa fa-external-link btn btn-primary bg-primary" aria-hidden="true">&nbsp; <a [href]="portfolio.link" class="text-white text-decoration-none" target="blank">View Demo</a></i>
               </div>
               <div *ngFor="let fitur of portfolio.feature" class="d-inline m-1">
                   <label for="" class="btn badge badge-danger">{{fitur}}</label>
@@ -185,13 +190,12 @@
           [@changeState]="currentState[i]"
           >
             <img src="{{page.image}}" class="card-img-top" alt="{{page.title}}">
-            <h4 class="card-title mt-3">{{page.title}} <span class="btn btn-sm btn-success float-right text-white position-absolute" style="top: 15px;right: 15px;">{{page.categories}}</span></h4>
-            <p>Post on <span class="text-primary">{{page.publishedAt | date }}</span> by <span class="text-primary">{{page.authors}}</span></p>
-            <p><span class="text-secondary" style="font-weight: 500;"><em>{{page.wordCount | readTime }}</em></span></p>
-            <div class="card-body reformat">
+            <h4 class="card-title mt-3 mb-1">{{page.title}} <span class="btn btn-sm btn-success float-right text-white position-absolute" style="top: 15px;right: 15px;">{{page.categories}}</span></h4>
+            <p class="mb-3">Post on <span class="text-primary">{{page.publishedAt | date }}</span> by <span class="text-primary">{{page.authors}}</span></p>
+            <div class="card-body reformat" >
               <p class="card-text text-secondary">{{page.thumbnailText | caption}}</p>
             </div>
-            <a href="{{page.route}}" class="btn btn-primary stretched-link" (click)="sendSlug()">Read...</a>
+            <a href="{{page.route}}" class="btn btn-primary stretched-link" (click)="sendSlug()">{{page.wordCount | readTime }}</a>
           </div>
       </div>
     </div>

@@ -20,13 +20,12 @@
             <div class="card shadow p-3 mb-5 bg-white rounded" style="height: auto; width: auto;" (mouseenter) ="changeMouseState('hover', i)"  (mouseleave) ="changeMouseState('rest', i)"
             [@changeState]="currentState[i]">
               <img src="{{page.image}}" class="card-img-top" alt="{{page.title}}" height="250px">
-              <h4 class="card-title mt-3">{{page.title}} <span class="btn btn-sm btn-success float-right text-white position-absolute" style="top: 15px;right: 15px;">{{page.categories}}</span></h4>
-              <p>Post on <span class="text-primary">{{page.publishedAt | date }}</span> by <span class="text-primary">{{page.authors}}</span></p>
-              <p><span class="text-secondary" style="font-weight: 500;"><em>{{page.wordCount | readTime }}</em></span></p>
-              <div class="card-body reformat">
-                <p class="card-text text-secondary">{{page.thumbnailText | caption}}</p>
-              </div>
-              <a href="{{page.route}}" data-disqus-identifier="" class="btn btn-primary stretched-link" (click)="sendSlug()">Read...</a>
+              <h4 class="card-title mt-3 mb-1">{{page.title}} <span class="btn btn-sm btn-success float-right text-white position-absolute" style="top: 15px;right: 15px;">{{page.categories}}</span></h4>
+            <p class="mb-3">Post on <span class="text-primary">{{page.publishedAt | date }}</span> by <span class="text-primary">{{page.authors}}</span></p>
+            <div class="card-body reformat" >
+              <p class="card-text text-secondary">{{page.thumbnailText | caption}}</p>
+            </div>
+            <a href="{{page.route}}" class="btn btn-primary stretched-link" (click)="sendSlug()">{{page.wordCount | readTime }}</a>
             </div>
           <!-- </div> -->
         </div>
