@@ -20,8 +20,6 @@ thumbnailText: Sepertinya akhir-akhir bidang UI/UX sedang diminati banyak orang.
 wordCount: 1639
 ---
 
-#
-
 Sepertinya akhir-akhir bidang UI/UX sedang diminati banyak orang. Apakah teman-teman pernah mendengar istilah heuristik? atau mendengar istilah UX? saya yakin kalo istilah UX pasti sudah familiar ya, tapi bagaimana dengan heuristik? kalau belum familiar mari kita pelajari topik ini secara bersama-sama. Heuristik dikutip dari wikipedia bunyinya seperti berikut ini:
 
 <blockquote style="padding-top:10px;padding-bottom:10px;"><strong><em>Heuristic is any approach to problem solving or self-discovery that employs a practical method that is not guaranteed to be optimal, perfect or rational, but which is nevertheless sufficient for reaching an immediate, short-term goal.</em></strong></blockquote>

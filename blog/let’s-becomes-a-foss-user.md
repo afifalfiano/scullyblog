@@ -19,8 +19,6 @@ thumbnailText: Selamat pagi, gimana kabar teman-teman? semoga tetap semangat dan
 wordCount: 923
 ---
 
-#
-
 Selamat pagi, gimana kabar teman-teman? semoga tetap semangat dan selalu diberikan kesehatan ya. Pada kesempatan kali ini saya tidak akan menulis tentang hal-hal yang berbau teknis karena saya hanya ingin berbagi pengalaman tentang perangkat lunak gratisan. 😁
 
 Ada yang udah familiar dengan kalimat ini Free and Open Source Software(FOSS)? kalau sudah ya alhamdulillah, kalau belum ya mari kita bahas bareng-bareng. Dilansir dari wikipedia, seperti ini definsi dari FOSS.
