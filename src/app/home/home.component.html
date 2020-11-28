@@ -5,12 +5,14 @@
     <div class="row mt-5" id="header-jumbo" style="height: 400px;">
     <div class="col-md-6  col-sm-12 mt-4">
       <p id="home" #home >Hello!</p>
-      <h1 class="mt-3 display-4 name element" id="myName"></h1>
+      <div>
+        <h1 class="mt-3 display-4 name element" id="myName"></h1>
+      </div>
       <h2 class="job">Frontend Developer</h2>
       <ul style="list-style-type: none;padding-left: 0;">
-        <li><i class="fa fa-envelope" aria-hidden="true"></i> &nbsp; afifalfiano2@gmail.com</li>
-        <li><i class="fa fa-phone-square" aria-hidden="true"></i> &nbsp; +628112636768</li>
-        <li><i class="fa fa-globe" aria-hidden="true"></i> &nbsp; Yogyakarta, Indonesia</li>
+        <li><i class="fa fa-envelope text-danger" aria-hidden="true"></i> &nbsp; afifalfiano2@gmail.com</li>
+        <li><i class="fa fa-phone-square text-success" aria-hidden="true"></i> &nbsp; +628112636768</li>
+        <li><i class="fa fa-globe text-secondary" aria-hidden="true"></i> &nbsp; Yogyakarta, Indonesia</li>
       </ul>
       <div class="row">
         <div class="col-sm-12">
@@ -137,33 +139,22 @@
     </div>
   </div>
   <div class="row mt-4 mb-5">
-    <div class="col-md-4 col-lg-4 col-sm-12">
-      <div class="card border port" style="height: 400px;">
-        <div class="card-body">
-          <img src="../../assets/img.jpg" class="card-img-top" alt="..." height="auto">
-          <div class="mt-3">
-            <h5 class="card-title text-center" >UI Design</h5>
+    <div *ngFor="let portfolio of myPortfolio; let i = index" class="col-md-4 col-sm-12">
+      <div class="text-center">
+        <div class="card border port" style="height: auto;">
+          <h6 class="card-header card-title text-center font-weight-bold bg-danger text-white">{{portfolio.label}}</h6>
+          <div class="card-body">
+            <img [src]="portfolio.image" class="card-img-top" [alt]="portfolio.label" height="auto">
+            <div class="mt-3">
+              <div class="m-2">
+                <i class="fa fa-external-link btn btn-primary bg-primary" aria-hidden="true">&nbsp; <a [href]="portfolio.link" class="text-white text-decoration-none">View Demo</a></i>
+              </div>
+              <div *ngFor="let fitur of portfolio.feature" class="d-inline m-1">
+                  <label for="" class="btn badge badge-danger">{{fitur}}</label>
+              </div>
+              <p class="text-md-left">{{portfolio.description}}</p>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 col-lg-4 col-sm-12">
-      <div class="card border port" style="height: 500px;">
-        <div class="card-body">
-        <img src="../../assets/img.jpg" class="card-img-top" alt="..." width="auto" height="410">
-        <div class="mt-3">
-          <h5 class="card-title text-center" >UI Design</h5>
-        </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 col-lg-4 col-sm-12">
-      <div class="card border port" style="height: 400px;">
-        <div class="card-body">
-        <img src="../../assets/img.jpg" class="card-img-top" alt="..." height="" width="auto" >
-        <div class="mt-3">
-          <h5 class="card-title text-center" >UI Design</h5>
-        </div>
         </div>
       </div>
     </div>

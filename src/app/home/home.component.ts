@@ -124,6 +124,29 @@ export class HomeComponent implements OnInit {
     },
   ];
   thumbnailArticle: Array<any> = [];
+  myPortfolio: Array<any> = [
+    {
+      label: 'Pokemon Card PWA',
+      link: 'https://pokemon-card-pwa.vercel.app/',
+      image: '../assets/img.jpg',
+      description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium magnam facilis similique deleniti consequatur tempora iste voluptas impedit delectus aperiam?',
+      feature: ['PWA', 'Lazy Loading', 'Pagination']
+    },
+    {
+      label: 'Statis E Commerce',
+      link: 'https://afifalfiano.github.io/alfiano-store/',
+      image: '../assets/img.jpg',
+      description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium magnam facilis similique deleniti consequatur tempora iste voluptas impedit delectus aperiam?',
+      feature: ['Responsive', 'UI/UX', 'Design']
+    },
+    {
+      label: 'Kabar Bola',
+      link: 'https://kabar-bola-fde85.web.app/',
+      image: '../assets/img.jpg',
+      description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium magnam facilis similique deleniti consequatur tempora iste voluptas impedit delectus aperiam?',
+      feature: ['PWA', 'MaterializeCSS', 'Offline-First']
+    },
+  ];
   constructor(
     private scullySvc: ScullyRoutesService,
     private router: Router,
