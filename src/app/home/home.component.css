@@ -67,7 +67,8 @@ ul.timeline > li:before {
     display: none !important;
   }
   #header-jumbo {
-    height: 320px !important;
+    text-align: center;
+    height: 340px !important;
     margin-top: 3em !important;
   }
   #hidden {
