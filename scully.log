@@ -694,3 +694,13 @@ Route "/blog/let’s-becomes-a-foss-user" not provided by angular app
       document.querySelector('scully-content')
       ----------------
       
+
+      ----------------
+      Error, missing "<scully-content>" in route "/blog/let’s-becomes-a-foss-user"
+      without <scully-content> we can not render this route.
+      Make sure it is in there, and not inside any conditionals (*ngIf)
+      You can check this by opening "http://localhost:4200/blog/let’s-becomes-a-foss-user"
+      when you serve your app with ng serve and then in the browsers console run:
+      document.querySelector('scully-content')
+      ----------------
+      
