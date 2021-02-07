@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
 import { state, trigger, transition, animate, style } from '@angular/animations';
 import { Location } from '@angular/common';
 import Typed from 'typed.js';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -38,6 +39,8 @@ export class HomeComponent implements OnInit {
   currentState: Array<any> = [];
   links$: Observable<ScullyRoute[]> = this.scullySvc.available$;
 
+  formFeedback: any;
+  underMaintenance = false;
   myStack: Array<any> = [
     {
       tech: 'php',
@@ -68,19 +71,19 @@ export class HomeComponent implements OnInit {
       style: 'btn-outline-danger'
     },
     {
-      tech: 'Figma',
+      tech: 'figma',
       style: 'btn-outline-primary'
     },
     {
-      tech: 'Adobe Xd',
+      tech: 'adobe xd',
       style: 'btn-outline-dark'
     },
     {
-      tech: 'Inkscape',
+      tech: 'inkscape',
       style: 'btn-outline-secondary'
     },
     {
-      tech: 'Gimp',
+      tech: 'gimp',
       style: 'btn-outline-success'
     }
   ];
@@ -129,21 +132,21 @@ export class HomeComponent implements OnInit {
       label: 'Pokemon Card PWA',
       link: 'https://pokemon-card-pwa.vercel.app/',
       image: '../assets/img.jpg',
-      description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium magnam facilis similique deleniti consequatur tempora iste voluptas impedit delectus aperiam?',
+      description: 'Build an application using the angular framework with pokemon api. Also uses lazy loading images and PWAs to improve website performance',
       feature: ['PWA', 'Lazy Loading', 'Pagination']
     },
     {
       label: 'Statis E Commerce',
       link: 'https://afifalfiano.github.io/alfiano-store/',
       image: '../assets/img.jpg',
-      description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium magnam facilis similique deleniti consequatur tempora iste voluptas impedit delectus aperiam?',
+      description: 'Create a simple e commerce static website using html, css, js and bootstrap. Not too many features because it\'s just a static website',
       feature: ['Responsive', 'UI/UX', 'Design']
     },
     {
       label: 'Kabar Bola',
       link: 'https://kabar-bola-fde85.web.app/',
       image: '../assets/img.jpg',
-      description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium magnam facilis similique deleniti consequatur tempora iste voluptas impedit delectus aperiam?',
+      description: 'Create a simple football schedule website with native javascript, pwa, and webpack. Don\'t forget to use push notifications with the help of firebase to push messages.',
       feature: ['PWA', 'MaterializeCSS', 'Offline-First']
     },
   ];
@@ -151,7 +154,8 @@ export class HomeComponent implements OnInit {
     private scullySvc: ScullyRoutesService,
     private router: Router,
     private error: ErrorHandler,
-    private location: Location
+    private location: Location,
+    private formBuilder: FormBuilder
     ) { }
 
   ngOnInit(): void {
@@ -161,7 +165,8 @@ export class HomeComponent implements OnInit {
       this.getBlog();
     }
     this.runnerText();
-    console.log(this.pureBlog);
+    this.onInitForm();
+    // console.log(this.pureBlog);
   }
 
   // tslint:disable-next-line:typedef
@@ -198,7 +203,7 @@ export class HomeComponent implements OnInit {
       this.pureBlog.pop();
       // // this.pureBlog.splice(0, 4);
       // console.log(this.thumbnailArticle);
-      console.log(this.pureBlog);
+      // console.log(this.pureBlog);
     }, (error: any) => {
       this.error.handleError(error);
     });
@@ -216,11 +221,10 @@ export class HomeComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   scrollSmooth($event: any) {
-    console.log($event);
-    const name = $event.target.computedName;
+    // console.log($event);
+    const name = $event.target.innerText;
     const toolbar = $event.target.className;
     const changeFormat = name.replace(' ', '').toLowerCase();
-    console.log(changeFormat);
     if (changeFormat === 'home') {
       this.home?.nativeElement.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
       this.router.navigateByUrl('/#home');
@@ -273,4 +277,24 @@ export class HomeComponent implements OnInit {
   changeMouseState($event: any, i: number): void {
     this.currentState[i] = $event;
   }
+
+  onInitForm(): any {
+    this.formFeedback = this.formBuilder.group({
+      firstname: ['', [Validators.required]],
+      lastname: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email] ],
+      message: ['', [Validators.required]]
+    });
+  }
+
+  onSubmit(): any {
+    this.underMaintenance = true;
+    setTimeout(
+      () => {
+        this.formFeedback.reset();
+      }, 2000
+    );
+    // console.log(this.formFeedback);
+  }
 }
+

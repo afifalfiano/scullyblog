@@ -24,7 +24,7 @@ export class BlogComponent implements OnInit {
   ngOnInit() {
     const slug = this.router.url;
     localStorage.setItem('slug', slug);
-    console.log(this.currentPost$);
+    // console.log(this.currentPost$);
   }
 
   // tslint:disable-next-line:typedef
@@ -32,16 +32,16 @@ export class BlogComponent implements OnInit {
     const getSlug: any = localStorage.getItem('slug');
     const splitSlug = getSlug.split('/');
     const toString = splitSlug[2].toString();
-    console.log(toString);
+    // console.log(toString);
   }
 
   // tslint:disable-next-line:typedef
   scrollSmooth($event: any) {
-    console.log($event);
-    const name = $event.target.computedName;
+    // console.log($event);
+    const name = $event.target.innerText;
     let changeFormat = name.replace(' ', '').toLowerCase();
     changeFormat = 'home';
-    console.log(changeFormat);
+    // console.log(changeFormat);
     if (changeFormat === 'home') {
       this.router.navigateByUrl('/#home');
     } else {

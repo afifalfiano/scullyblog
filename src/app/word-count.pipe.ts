@@ -10,7 +10,6 @@ export class WordCountPipe implements PipeTransform {
     const noOfWords = value;
     const minutes = noOfWords / wordsPerMinute;
     const readTime = Math.ceil(minutes);
-    console.log(readTime);
     return `${readTime} minute read`;
   }
 

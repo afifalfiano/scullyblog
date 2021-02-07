@@ -17,10 +17,10 @@ export class MyPortfoliosComponent implements OnInit {
 
     // tslint:disable-next-line:typedef
     scrollSmooth($event: any) {
-      console.log($event);
-      const name = $event.target.computedName;
+      // console.log($event);
+      const name = $event.target.innerText;
       const changeFormat = name.replace(' ', '').toLowerCase();
-      console.log(changeFormat);
+      // console.log(changeFormat);
       if (typeof changeFormat === 'string') {
         this.router.navigate(['/home']);
       } else {

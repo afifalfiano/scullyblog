@@ -57,7 +57,7 @@
   </div>
   <div class="col-md-6 col-sm-12">
     <h2 id="aboutme" #aboutme>About Me</h2>
-    <p>Hello, I'm a Afif Alfiano, web developer based on Indonesia. I have rich experiecnce in web site design like using figma, adobe xd and build from scratch.</p>
+    <p>Hello, I'm a Afif Alfiano, web developer based on Indonesia. I have an experiecnce in web design using figma, adobe xd and build from scratch.</p>
     <div *ngFor="let stack of myStack" style="display: inline;">
       <span class="btn {{stack.style}} m-2">{{stack.tech}}</span>
     </div>
@@ -79,9 +79,7 @@
       <h5 class="card-title pl-3 pr-3 text-center">UI Design</h5>
       <div class="card-body pt-0">
         <p class="card-text">
-          Some quick example text to build on the card title and make up the bulk of the card's content.
-          Some quick example text to build on the card title and make up the bulk of the card's content.
-          Some quick example text to build on the card title and make up the bulk of the card's content.
+          Create a design that can be used as a flyer, poster and etc. Usually using gimp or inkscape.
         </p>
       </div>
     </div>
@@ -92,9 +90,7 @@
       <h5 class="card-title pl-3 pr-3 text-center">Web Design</h5>
       <div class="card-body pt-0">
         <p class="card-text">
-          Some quick example text to build on the card title and make up the bulk of the card's content.
-          Some quick example text to build on the card title and make up the bulk of the card's content.
-          Some quick example text to build on the card title and make up the bulk of the card's content.
+          Make website designs starting from a sitemap, wireframe, and high fidelity using adobe xd or figma.
         </p>
       </div>
     </div>
@@ -105,9 +101,7 @@
       <h5 class="card-title pl-3 pr-3 text-center">Web Development</h5>
       <div class="card-body pt-0">
         <p class="card-text">
-          Some quick example text to build on the card title and make up the bulk of the card's content.
-          Some quick example text to build on the card title and make up the bulk of the card's content.
-          Some quick example text to build on the card title and make up the bulk of the card's content.
+          Implementing website design into a website application using several frameworks.
         </p>
       </div>
     </div>
@@ -128,22 +122,24 @@
 				<li>
 					<a target="_blank" href="#">Frontend Developer</a>
 					<a href="#" class="float-right">20 August, 2020</a>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et elementum lorem ornare. Maecenas placerat facilisis mollis. Duis sagittis ligula in sodales vehicula....</p>
+					<p>Implementation of a design product to the web application. (On the frontend developer, we use an Angular framework.</p>
 				</li>
 				<li>
 					<a href="#">UI/UX Designer</a>
 					<a href="#" class="float-right">20 February, 2020</a>
-					<p>Curabitur purus sem, malesuada eu luctus eget, suscipit sed turpis. Nam pellentesque felis vitae justo accumsan, sed semper nisi sollicitudin...</p>
+					<p>Create a product design for a system BPM with the scrum method</p>
 				</li>
 				<li>
 					<a href="#">IT Support</a>
 					<a href="#" class="float-right">1 January, 2019</a>
-					<p>Fusce ullamcorper ligula sit amet quam accumsan aliquet. Sed nulla odio, tincidunt vitae nunc vitae, mollis pharetra velit. Sed nec tempor nibh...</p>
+					<p>Work at BSI UII on IT Support position. BSI uses a lot of technology to build systems at UII and makes clear networks and extraordinary.</p>
 				</li>
 				<li>
 					<a href="#">Technician PT.Telkom Access</a>
 					<a href="#" class="float-right">1 October 2017</a>
-					<p>Fusce ullamcorper ligula sit amet quam accumsan aliquet. Sed nulla odio, tincidunt vitae nunc vitae, mollis pharetra velit. Sed nec tempor nibh...</p>
+					<p>
+            Following the PKL (Field Work / Apprenticeship) program from SMK N 2 Yogyakarta for 3 months at PT. Telkom Access. Many things can be taken from these street vendors, such as how to splicing optical fiber, installing a new indihome internet connection, becoming a help desk, getting to know the internet network, knowing what ODP, ODC, Splicer, FO, and others. Perform network maintenance when an error occurs or natural factors. That's great an experience.
+          </p>
 				</li>
 			</ul>
 		</div>
@@ -225,32 +221,37 @@
 <div class="container mt-5 mb-5">
   <div class="row">
     <div class="col">
-      <h2 class="text-center" id="contact" #contact>Give Me Feedback</h2>
+      <h2 class="text-center" id="contact" #contact>Give a Feedback</h2>
     </div>
   </div>
   <div class="row mt-5 mb-5">
     <div class="col-lg-6">
-      <form>
+      <form [formGroup]="formFeedback" (submit)="onSubmit()" >
         <div class="form-row">
           <div class="form-group col-md-6">
-            <label for="inputFirstName4">FirstName</label>
-            <input type="text" class="form-control" id="inputFirstName4">
+            <label for="firstname">FirstName</label>
+            <input type="text" class="form-control" id="firstname" formControlName="firstname" placeholder="Your firstname">
           </div>
           <div class="form-group col-md-6">
-            <label for="inputLastName4">LastName</label>
-            <input type="text" class="form-control" id="inputLastName4">
+            <label for="lastname">LastName</label>
+            <input type="text" class="form-control" id="lastname" formControlName="lastname" placeholder="Your lastname">
           </div>
         </div>
         <div class="form-group">
-          <label for="inputAddress">Email</label>
-          <input type="email" class="form-control" id="inputAddress" placeholder="username@mail.xyz">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="username@mail.xyz" formControlName="email">
         </div>
         <div class="form-group">
-          <label for="inputAddress2">Message</label>
-          <textarea name="" id="" cols="30" rows="10" class="form-control" placeholder="Your message"></textarea>
+          <label for="message">Message</label>
+          <textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Your message" formControlName="message"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary btn-block ">Send</button>
+        <button type="submit" [disabled]="!formFeedback.valid" class="btn btn-primary btn-block ">Send</button>
       </form>
+      <br>
+      <div *ngIf="underMaintenance" class="alert alert-warning" role="alert">
+        Whooops! this feature is currently undergoing improvement
+      </div>
+
     </div>
     <div class="col-lg-6" id="feedback">
       <div class="text-center ml-4">
