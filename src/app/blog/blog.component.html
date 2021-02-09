@@ -5,7 +5,7 @@
 <div class="container mt-4">
   <div *ngIf="currentPost$ | async as post">
     <div class="row" style="margin-top:100px;">
-      <div class="col-lg-10 mx-auto mb-3">
+      <div class="col-lg-8 mx-auto mb-3">
         <h2 class="display-3 read">{{ post.title }}</h2>
         <label class="p-1 badge badge-primary"><em>{{
           post.categories
@@ -23,7 +23,7 @@
         </div>
       </div>
     </div>
-    <div class="col-lg-10 mx-auto">
+    <div class="col-lg-8 mx-auto">
       <scully-content></scully-content>
     <hr />
     <p class="d-inline font-weight-bold">Keyword: </p>
@@ -36,7 +36,7 @@
   </div>
 
   <div class="row">
-    <div class="col-lg-10 mx-auto pl-4">
+    <div class="col-lg-8 mx-auto pl-4">
       <a
         [routerLink]="['/myblogs']"
         routerLinkActive="router-link-active"
