@@ -1,13 +1,74 @@
 <app-navigation (click)="scrollSmooth($event)"></app-navigation>
 
-<div class="jumbotron jumbotron-fluid">
+<div class="jumbotron jumbotron-fluid" id="myportfolio">
   <div class="container">
     <div class="row">
       <div class="col-md-12 text-center" style="height: 300px;">
-        <h2 id="blogs" #blogs class="text-center display-3 position-absolute" style="top:40%;left: 40%;">Portfolios</h2>
+        <h2 id="portfolio" #portfolio class="text-center display-3 position-absolute" style="top:40%;left: 40%;">Portfolios</h2>
       </div>
     </div>
   </div>
+</div>
+
+<!-- blog -->
+<!-- Blog -->
+<div class="container mt-5 mb-5 addPortfolio">
+  <div class="row mt-4">
+    <div class="col-md-8 col-lg-8 col-sm-12">
+      <!-- <div *ngFor="let page of pureBlog | paginate: { itemsPerPage: 6, currentPage: p }; let i = index;" style="display: inline-block;" class="col-md-6 col-sm-12"> -->
+        <!-- <div class="col-lg-4"> -->
+            <!-- <div class="card shadow p-3 mb-5 bg-white rounded" style="height: auto; width: auto;" (mouseenter) ="changeMouseState('hover', i)"  (mouseleave) ="changeMouseState('rest', i)"
+            [@changeState]="currentState[i]">
+              <img src="{{page.image}}" class="card-img-top" alt="{{page.title}}" height="250px">
+              <h4 class="card-title mt-3 mb-1">{{page.title}} <span class="btn btn-sm btn-success float-right text-white position-absolute" style="top: 15px;right: 15px;">{{page.categories}}</span></h4>
+            <p class="mb-3">Post on <span class="text-primary">{{page.publishedAt | date }}</span> by <span class="text-primary">{{page.authors}}</span></p>
+            <div class="card-body reformat" >
+              <p class="card-text text-secondary">{{page.thumbnailText | caption}}</p>
+            </div>
+            <a href="{{page.route}}" class="btn btn-primary stretched-link" (click)="sendSlug()">{{page.wordCount | readTime }}</a>
+            </div> -->
+          <!-- </div> -->
+        <!-- </div> -->
+        <!-- <div class="center-small">
+          <pagination-controls class="text-center"  (pageChange)="p = $event"></pagination-controls>
+        </div> -->
+    </div>
+    <div class="col-md-4 col-lg-4">
+      <div class="row pure">
+        <div class="col">
+          <div class="text-center mt-5">
+            <div class="container">
+              <img src="../../assets/profile.jpg" class="img-fluid rounded-circle p-4 profile" alt="Afif Alfiaon" width="170">
+              <h3>Afif Alfiano</h3>
+              <p class="text-secondary">Frontend Developer</p>
+              <p>Hello, Hopefully my article can give you some insight and insipired. Let's enjoy to read.</p>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <a href="https://www.facebook.com/alfiano.hermasyah/" target="blank"><i class="fa fa-facebook-square fa-2x m-2 text-primary" aria-hidden="true"></i></a>
+                <a href="https://dribbble.com/afifalfiano" target="blank"><i class="fa fa-dribbble fa-2x m-2 text-danger" aria-hidden="true"></i></a>
+                <a href="https://github.com/afifalfiano" target="blank"><i class="fa fa-github-square fa-2x m-2 text-dark" aria-hidden="true"></i></a>
+                <a href="https://twitter.com/afifalfiano8" target="blank"><i class="fa fa-twitter-square fa-2x m-2 text-info" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="row pure">
+        <div class="col mt-5">
+          <h4>Category</h4>
+          <ul class="list-group mt-3">
+            <a href="#" class="pt-1 pb-1">Technology (5)</a>
+            <a href="#" class="pt-1 pb-1">Design (5)</a>
+            <a href="#" class="pt-1 pb-1">Dream (5)</a>
+            <a href="#" class="pt-1 pb-1">Improvement (5)</a>
+            <a href="#" class="pt-1 pb-1">Methodology (5)</a>
+            <a href="#" class="pt-1 pb-1">Story (5)</a>
+          </ul>
+        </div> -->
+      <!-- </div> -->
+    </div>
+    </div>
 </div>
 
 <app-footer></app-footer>

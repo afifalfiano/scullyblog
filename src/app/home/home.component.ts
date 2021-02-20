@@ -131,21 +131,21 @@ export class HomeComponent implements OnInit {
     {
       label: 'Pokemon Card PWA',
       link: 'https://pokemon-card-pwa.vercel.app/',
-      image: '../assets/img.jpg',
+      image: '../assets/portfolio/pwa-pokemon.jpg',
       description: 'Build an application using the angular framework with pokemon api. Also uses lazy loading images and PWAs to improve website performance',
       feature: ['PWA', 'Lazy Loading', 'Pagination']
     },
     {
       label: 'Statis E Commerce',
       link: 'https://afifalfiano.github.io/alfiano-store/',
-      image: '../assets/img.jpg',
+      image: '../assets/portfolio/static-ecommerce.jpg',
       description: 'Create a simple e commerce static website using html, css, js and bootstrap. Not too many features because it\'s just a static website',
       feature: ['Responsive', 'UI/UX', 'Design']
     },
     {
       label: 'Kabar Bola',
       link: 'https://kabar-bola-fde85.web.app/',
-      image: '../assets/img.jpg',
+      image: '../assets/portfolio/kabar-bola.jpg',
       description: 'Create a simple football schedule website with native javascript, pwa, and webpack. Don\'t forget to use push notifications with the help of firebase to push messages.',
       feature: ['PWA', 'MaterializeCSS', 'Offline-First']
     },

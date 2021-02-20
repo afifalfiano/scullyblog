@@ -1,7 +1,7 @@
 import { fadeInAnimation, slideInOutAnimation } from './../animation/_animation';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { HomeComponent } from './../home/home.component';
-import { Component, OnInit, ElementRef, ViewChild, ErrorHandler } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild, ErrorHandler, OnDestroy } from '@angular/core';
 import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
 import { Observable } from 'rxjs';
 import { Location } from '@angular/common';
@@ -30,13 +30,14 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
   // tslint:disable-next-line:no-host-metadata-property
   host: { '[@fadeInAnimation]': '' }
 })
-export class MyblogsComponent implements OnInit {
+export class MyblogsComponent implements OnInit, OnDestroy {
   @ViewChild(HomeComponent) home: ElementRef | undefined;
   links$: Observable<ScullyRoute[]> = this.scullySvc.available$;
   pureBlog: Array<any> = [];
   p = 1;
   currentState = ['rest'];
   isLoaded = false;
+  cekArticle: any;
   constructor(
     private scullySvc: ScullyRoutesService,
     private router: Router,
@@ -49,6 +50,9 @@ export class MyblogsComponent implements OnInit {
     // this.pureBlog = history.state.data;
     // this.getBlog();
      }
+  ngOnDestroy(): void {
+    // clearInterval(this.cekArticle);
+  }
 
   ngOnInit(): any {
     // this.getBlog();
@@ -61,6 +65,11 @@ export class MyblogsComponent implements OnInit {
     } else {
       // this.location.back();
       this.getBlogNew();
+      // this.cekArticle = setTimeout(
+      //   () => {
+      //     this.getBlogNew();
+      //   }, 1000
+      // );
     }
     // tslint:disable-next-line:no-unused-expression
     // this.checkUrl();
