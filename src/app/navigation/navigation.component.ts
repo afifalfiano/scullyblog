@@ -32,11 +32,11 @@ export class NavigationComponent implements OnInit, OnDestroy {
   checkRouter() {
     const url = this.router.url;
     console.log(url);
-    if (url === '/home' || url === '/') {
+    if (url === 'home') {
       this.isHome = true;
       this.onlyHome = true;
       this.router.navigateByUrl('/home');
-    } else {
+    } else if (url === 'myblogs' || url === 'myportfolios'){
       this.isHome = false;
       this.onlyHome = false;
     }
