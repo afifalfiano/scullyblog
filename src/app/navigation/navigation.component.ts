@@ -35,7 +35,7 @@ export class NavigationComponent implements OnInit, OnDestroy {
     if (url === '/home' || url === '/') {
       this.isHome = true;
       this.onlyHome = true;
-      // this.router.navigateByUrl('/home');
+      this.router.navigateByUrl('/home');
     } else {
       this.isHome = false;
       this.onlyHome = false;
