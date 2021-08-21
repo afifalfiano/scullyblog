@@ -80,10 +80,10 @@
     "typescript": "~4.0.2"
   },
   "lint-staged": {
-    "*.{ts,js}": [
+    "*.ts": [
       "tslint --fix"
     ],
-    "*.{css}": [
+    "*.css": [
       "npx stylelint src/**/*.css --fix"
     ]
   }
