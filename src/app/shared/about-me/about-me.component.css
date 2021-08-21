@@ -1,0 +1,54 @@
+.about-me {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+  height: 1024px;
+  background: url("../../../assets/bg/about.png");
+}
+
+.img-about img {
+  position: absolute;
+  width: 533.3px;
+  height: 632px;
+  left: 83px;
+  top: 179px;
+  z-index: 110;
+}
+
+.about-info {
+  position: absolute;
+  width: 585px;
+  height: 95px;
+  left: 730px;
+  top: 211px;
+}
+
+.about-title {
+  background: -webkit-linear-gradient(130deg, #d80bbc, #3b42e7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 328px;
+  height: 95px;
+  font-family: Ruda;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 72px;
+  line-height: 95px;
+}
+
+.about-text {
+  width: 588px;
+  height: 178px;
+  font-family: Ruda;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 39px;
+  color: #1d2070;
+  margin-bottom: 30px;
+}
+
+.stack {
+  display: inline;
+  margin-top: 30px;
+}

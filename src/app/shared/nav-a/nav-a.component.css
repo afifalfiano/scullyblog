@@ -11,4 +11,42 @@
 
 .nav-menu {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  font-family: Ruda;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 50px;
+  line-height: 66px;
+  margin-left: 30px;
+  color: #fff;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-right: 30px;
+}
+
+.menu a {
+  font-family: Ruda;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 41px;
+
+  /* identical to box height */
+
+  color: #fff;
+}
+
+.menu a:hover {
+  text-decoration-color: #ff3186;
+  text-decoration-line: underline;
+  text-underline-offset: 2px;
 }
