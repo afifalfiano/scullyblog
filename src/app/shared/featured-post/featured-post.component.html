@@ -4,56 +4,24 @@
         <p>This is my blog or tutorial that make other people can read and implements some tutorial</p>
     </div>
     <div class="container row mt-5 mx-auto">
-        <div class="col-lg-4">
-                <div class="card">
-                    <div class="card-img-top img-empty" alt="..."></div>
-                    <div class="category-post">UIUX</div>
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-published">Pulbihsed on 22 January 2021</p>
-                      <p class="card-likes text-success">999 Likes </p>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <div class="action">
-                          <a href="#" class="btn btn-primary">9 minutes read</a>
-                          <a href="#" class="btn btn-success"><i class="fa fa-thumbs-up fa-lg" aria-hidden="true"></i></a>
-                      </div>
-                    </div>
-                  </div>
+      <div class="col-lg-4" *ngFor="let item of data">
+          <div class="card">
+              <img src="{{item.image}}" class="card-img-top" alt="{{item.title}}"/>
+              <div class="category-post">{{item.categories}}</div>
+              <div class="card-body">
+                <h5 class="card-title">{{item.title}}</h5>
+                <p class="card-published">Post on <span class="text-primary">{{item.publishedAt | date }}</span> by <span class="text-primary">{{item.authors}}</span></p>
+                <p class="card-likes text-success">999 Likes </p>
+                <p class="card-text">{{item.thumbnailText | caption}}</p>
+                <div class="action">
+                  <a href="{{item.route}}" class="btn btn-primary stretched-link">{{item.wordCount | readTime }}</a>
+                  <a href="#" class="btn btn-success"><i class="fa fa-thumbs-up fa-lg" aria-hidden="true"></i></a>
+                </div>
+              </div>
             </div>
-            <div class="col-lg-4">
-                <div class="card">
-                    <div class="card-img-top img-empty" alt="..."></div>
-                    <div class="category-post">UIUX</div>
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-published">Pulbihsed on 22 January 2021</p>
-                      <p class="card-likes text-success">999 Likes </p>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <div class="action">
-                          <a href="#" class="btn btn-primary">9 minutes read</a>
-                          <a href="#" class="btn btn-success"><i class="fa fa-thumbs-up fa-lg" aria-hidden="true"></i></a>
-                      </div>
-                    </div>
-                  </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card">
-                    <div class="card-img-top img-empty" alt="..."></div>
-                    <div class="category-post">UIUX</div>
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-published">Pulbihsed on 22 January 2021</p>
-                      <p class="card-likes text-success">999 Likes </p>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <div class="action">
-                          <a href="#" class="btn btn-primary">9 minutes read</a>
-                          <a href="#" class="btn btn-success"><i class="fa fa-thumbs-up fa-lg" aria-hidden="true"></i></a>
-                      </div>
-                    </div>
-                  </div>
-        </div>
+      </div>
         <div class="mx-auto">
-          <button class="btn btn-orange">Want to read more articles? Just in here</button>
+          <button class="btn btn-orange" routerLink="'/myblogs'" >Want to read more articles? Just in here</button>
         </div>
     </div>
 </div>

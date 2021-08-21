@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class CaptionPipe implements PipeTransform {
 
   transform(value: string): any {
-      return value.slice(0, 100) + ' ...';
+      return value.slice(0, 130) + ' ...';
   }
 
 }

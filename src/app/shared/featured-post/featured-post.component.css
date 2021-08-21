@@ -78,6 +78,7 @@
 .card {
   width: 347px;
   height: 554px;
+  border: none;
   border-radius: 20px;
 }
 

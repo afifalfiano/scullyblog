@@ -15,7 +15,24 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 })
 export class HomeComponent implements OnInit {
- constructor() {}
- ngOnInit(): void {}
+  links$: Observable<ScullyRoute[]> = this.scullySvc.available$;
+  blogs: any = [];
+ constructor(
+  private scullySvc: ScullyRoutesService,
+  private router: Router,
+  private error: ErrorHandler,
+  private location: Location
+ ) {}
+ ngOnInit(): void {
+   this.getBlog();
+ }
+
+ getBlog(): any {
+  this.links$.subscribe((link) => {
+    this.blogs.push(link);
+  }, (error: any) => {
+    this.error.handleError(error);
+  });
+}
 }
 

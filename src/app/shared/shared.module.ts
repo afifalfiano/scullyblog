@@ -10,12 +10,13 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { FeaturedPostComponent } from './featured-post/featured-post.component';
 import { HeroComponent } from './hero/hero.component';
 import { NavAComponent } from './nav-a/nav-a.component';
+import { SubsribeBlogComponent } from './subsribe-blog/subsribe-blog.component';
 
 
 
 @NgModule({
   // tslint:disable-next-line:max-line-length
-  declarations: [FooterComponent, CaptionPipe, StringFilterPipe, WordCountPipe, AboutMeComponent, ExperienceComponent, PortfolioComponent, FeaturedPostComponent, HeroComponent, NavAComponent,
+  declarations: [FooterComponent, CaptionPipe, StringFilterPipe, WordCountPipe, AboutMeComponent, ExperienceComponent, PortfolioComponent, FeaturedPostComponent, HeroComponent, NavAComponent, SubsribeBlogComponent,
   ],
   imports: [
     CommonModule
@@ -30,7 +31,8 @@ import { NavAComponent } from './nav-a/nav-a.component';
     ExperienceComponent,
     FeaturedPostComponent,
     PortfolioComponent,
-    NavAComponent
+    NavAComponent,
+    SubsribeBlogComponent
   ]
 })
 export class SharedModule { }

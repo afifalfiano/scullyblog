@@ -1,0 +1,29 @@
+.container-fluid {
+  background:
+    linear-gradient(
+      90deg,
+      #ff3186 0.12%,
+      #ff7d5a 100%
+    );
+  color: #fff;
+  min-height: 350px;
+}
+
+.subscribe {
+  padding-top: 100px;
+  text-align: center;
+}
+
+.btn-primary {
+  border-radius: 15px;
+  width: 100%;
+}
+
+.subscribe input {
+  display: inline;
+  border-radius: 15px;
+}
+
+.form-sub {
+  padding: 0 250px;
+}
