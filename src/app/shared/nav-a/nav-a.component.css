@@ -1,4 +1,4 @@
-.nav-a {
+/* .nav-a {
   position: absolute;
   width: 1196px;
   height: 107px;
@@ -16,15 +16,7 @@
   height: 100%;
 }
 
-.logo {
-  font-family: Ruda;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 50px;
-  line-height: 66px;
-  margin-left: 30px;
-  color: #fff;
-}
+
 
 .menu {
   display: flex;
@@ -40,13 +32,38 @@
   font-size: 32px;
   line-height: 41px;
 
-  /* identical to box height */
-
   color: #fff;
 }
 
 .menu a:hover {
-  text-decoration-color: #ff3186;
-  text-decoration-line: underline;
-  text-underline-offset: 2px;
+  text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: 4px solid #ff3186;
+} */
+
+.nav-a {
+  position: absolute;
+  left: 122px;
+  top: 50px;
+  z-index: 110;
+  min-height: 60px;
+  border-radius: 20px;
+  background-color: #272952;
+}
+
+.bg-dark {
+  background-color: #272952 !important;
+}
+
+.nav-item {
+  margin-right: 20px;
+}
+
+.nav-item a:hover {
+  border-bottom: 3px solid #ff3186;
+}
+
+.navbar-brand {
+  font-style: normal;
+  font-weight: 900;
 }
