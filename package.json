@@ -12,7 +12,9 @@
     "scully": "scully",
     "hmr": "ng serve --hmr",
     "scully:serve": "scully serve",
-    "deploy": "ng build --prod --stats-json && npm run scully -- --scanRoutes"
+    "deploy": "ng build --prod --stats-json && npm run scully -- --scanRoutes",
+    "pre-commit": "lint-staged",
+    "stylelint": "npx stylelint --fix"
   },
   "private": true,
   "dependencies": {
@@ -45,6 +47,8 @@
     "@angular-devkit/build-angular": "~0.1100.1",
     "@angular/cli": "~11.0.1",
     "@angular/compiler-cli": "~11.0.0",
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-angular": "^13.1.0",
     "@gammastream/scully-plugin-http404": "^1.0.4",
     "@notiz/scully-plugin-fouc": "^0.2.0",
     "@notiz/scully-plugin-lazy-images": "^0.3.0",
@@ -54,6 +58,7 @@
     "@types/node": "^12.11.1",
     "bootstrap": "^4.5.3",
     "codelyzer": "^6.0.0",
+    "husky": "^7.0.1",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
     "jquery": "^3.5.1",
@@ -62,12 +67,24 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "lint-staged": "^11.1.2",
     "propper": "^1.0.3",
     "protractor": "~7.0.0",
     "scully-plugin-disable-angular": "^6.2.0",
     "scully-plugin-minify-html": "^5.0.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-scss": "^3.20.1",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~4.0.2"
+  },
+  "lint-staged": {
+    "*.{ts,js}": [
+      "tslint --fix"
+    ],
+    "*.{css}": [
+      "npx stylelint src/**/*.css --fix"
+    ]
   }
 }
