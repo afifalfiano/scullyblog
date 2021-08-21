@@ -34,5 +34,9 @@ export class HomeComponent implements OnInit {
     this.error.handleError(error);
   });
 }
+
+goToTop(): any {
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
 }
 

@@ -5,4 +5,10 @@
 <app-portfolio></app-portfolio>
 <app-featured-post [recentBlogs]="blogs"></app-featured-post>
 <app-subsribe-blog></app-subsribe-blog>
+<!-- Floating Top -->
+<div class="container-fluid pb-3">
+    <div data-spy="affix" class="float-right float-right d-absolute ">
+        <button class="btn btn-outline-success float-right" (click)="goToTop()">Top</button>
+    </div>
+</div>
 <app-footer></app-footer>

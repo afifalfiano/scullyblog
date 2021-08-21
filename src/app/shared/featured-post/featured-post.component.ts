@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-featured-post',
@@ -8,7 +9,9 @@ import { Component, Input, OnInit } from '@angular/core';
 export class FeaturedPostComponent implements OnInit {
   @Input() recentBlogs: any;
   data: any = [];
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     console.log(this.recentBlogs);
@@ -18,6 +21,10 @@ export class FeaturedPostComponent implements OnInit {
         console.log(this.data, 'dat');
       }, 3000
     );
+  }
+
+  goToBlogs(): any {
+    this.router.navigateByUrl('/myblogs');
   }
 
   onlyGetBlog(): any {

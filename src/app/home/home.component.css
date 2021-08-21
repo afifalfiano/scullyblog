@@ -1,0 +1,8 @@
+.container-fluid {
+  background:
+    linear-gradient(
+      90deg,
+      #ff3186 0.12%,
+      #ff7d5a 100%
+    );
+}
