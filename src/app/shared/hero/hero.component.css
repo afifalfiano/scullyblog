@@ -18,10 +18,9 @@
 
 .btn-primary {
   position: relative;
-  width: 270px;
-  font-size: 24px;
-  height: 63px;
-  top: 247px;
+  width: 190px;
+  min-height: 44px;
+  top: 250px;
   background:
     linear-gradient(
       90deg,
@@ -62,8 +61,9 @@
 }
 
 .img-pattern-1 {
-  position: relative;
-  top: 300px;
+  position: absolute;
+  top: 710px;
+  left: 0;
 }
 
 .img-pattern-2 {

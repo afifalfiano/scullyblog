@@ -7,26 +7,10 @@
     <div class="mx-auto">
 		<div class="col-lg-8 offset-md-2 col-lg-8 col-sm-8 mr-3">
 			<ul class="timeline">
-				<li>
-					<a target="_blank" href="#">Frontend Developer</a>
-					<a href="#" class="float-right">20 August, 2020</a>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati fuga natus odit beatae, repellat ducimus ea fugit molestiae tenetur accusamus!</p>
-				</li>
-				<li>
-					<a href="#">UI/UX Designer</a>
-					<a href="#" class="float-right">20 February, 2020</a>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati fuga natus odit beatae, repellat ducimus ea fugit molestiae tenetur accusamus!</p>
-				</li>
-				<li>
-					<a href="#">IT Support</a>
-					<a href="#" class="float-right">1 January, 2019</a>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati fuga natus odit beatae, repellat ducimus ea fugit molestiae tenetur accusamus!</p>
-				</li>
-				<li>
-					<a href="#">Technician PT.Telkom Access</a>
-					<a href="#" class="float-right">1 October 2017</a>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati fuga natus odit beatae, repellat ducimus ea fugit molestiae tenetur accusamus!</p>
-
+				<li *ngFor="let item of myExperience">
+					<a target="_blank" href="#">{{item.position}}</a>
+					<a href="#" class="float-right">{{item.time}}</a>
+					<p>{{item.description}}</p>
 				</li>
 			</ul>
 		</div>

@@ -5,3 +5,11 @@
   overflow-x: hidden;
   font-family: 'Ruda';
 }
+
+.btn {
+  min-height: 44px !important;
+  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

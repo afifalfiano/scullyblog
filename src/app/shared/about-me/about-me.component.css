@@ -12,6 +12,10 @@
   transform: translateY(200px);
 }
 
+.btn {
+  border-radius: 15px;
+}
+
 .about-title {
   background:
     -webkit-linear-gradient(
