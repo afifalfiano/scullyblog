@@ -9,12 +9,15 @@
   #myblogs {
     display: none !important;
   }
+
   .addblog {
     margin-top: 5.4em !important;
   }
+
   .pure {
     display: none !important;
   }
+
   .center-small {
     margin-bottom: -2em !important;
     margin-left: -3em !important;

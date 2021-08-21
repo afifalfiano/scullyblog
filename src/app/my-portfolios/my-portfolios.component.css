@@ -1,15 +1,18 @@
 @media only screen and (max-width: 600px) {
-    #myportfolio {
-      display: none !important;
-    }
-    .addPortfolio {
-      margin-top: 5.4em !important;
-    }
-    .pure {
-      display: none !important;
-    }
-    .center-small {
-      margin-bottom: -2em !important;
-      margin-left: -3em !important;
-    }
+  #myportfolio {
+    display: none !important;
   }
+
+  .addPortfolio {
+    margin-top: 5.4em !important;
+  }
+
+  .pure {
+    display: none !important;
+  }
+
+  .center-small {
+    margin-bottom: -2em !important;
+    margin-left: -3em !important;
+  }
+}

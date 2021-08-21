@@ -14,11 +14,11 @@ export class AppComponent {
   constructor(
     private router: Router
   ) {
-    this.router.events.subscribe(event => {
-      if (event instanceof NavigationEnd) {
-        (window as any).ga('set', 'page', event.urlAfterRedirects);
-        (window as any).ga('send', 'pageview');
-      }
-    });
+    // this.router.events.subscribe(event => {
+    //   if (event instanceof NavigationEnd) {
+    //     (window as any).ga('set', 'page', event.urlAfterRedirects);
+    //     (window as any).ga('send', 'pageview');
+    //   }
+    // });
   }
 }

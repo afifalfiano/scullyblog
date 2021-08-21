@@ -1,0 +1,103 @@
+.hero {
+  /* Desktop - 1 */
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow-x: hidden;
+  height: 1024px;
+  background: linear-gradient(124.65deg, #3b42e7 11.8%, #ff3186 69.04%, #ff7d5a 87.07%);
+}
+
+.job-title {
+  position: absolute;
+  width: 451px;
+  height: 61px;
+  left: 122px;
+  top: 302px;
+  font-family: 'Ruda';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 61px;
+  color: #fff;
+}
+
+.my-name {
+  position: absolute;
+  width: 534px;
+  height: 133px;
+  left: 122px;
+  top: 383px;
+  font-family: 'Ruda';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 100px;
+  line-height: 132px;
+
+  /* identical to box height */
+
+  color: #fff;
+}
+
+.my-info {
+  position: absolute;
+  width: 534px;
+  height: 156px;
+  left: 122px;
+  top: 536px;
+  font-family: 'Ruda';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 39px;
+  color: #fff;
+}
+
+.contact-me {
+  position: absolute;
+  width: 345px;
+  height: 80px;
+  margin-top: 20px;
+  left: 122px;
+  top: 735px;
+  background: linear-gradient(90deg, #ff3186 0.12%, #ff7d5a 100%);
+  border-radius: 20px;
+}
+
+.contact-me span {
+  font-family: 'Ruda';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 46px;
+
+  /* identical to box height */
+
+  color: #fff;
+}
+
+.img-me {
+  position: absolute;
+  width: 568px;
+  height: 655px;
+  left: 724px;
+  top: 237px;
+  z-index: 99;
+}
+
+.img-pattern-1 {
+  position: absolute;
+  width: 302.67px;
+  height: 50.75px;
+  left: 123px;
+  top: 867px;
+}
+
+.img-pattern-2 {
+  position: relative;
+  width: 395.99px;
+  height: 416.59px;
+  left: 1044px;
+  top: 607px;
+}

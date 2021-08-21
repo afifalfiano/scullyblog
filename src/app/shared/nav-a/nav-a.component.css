@@ -1,0 +1,14 @@
+.nav-a {
+  position: absolute;
+  width: 1196px;
+  height: 107px;
+  left: 122px;
+  top: 50px;
+  z-index: 1000;
+  background-color: #272952;
+  border-radius: 20px;
+}
+
+.nav-menu {
+  display: flex;
+}

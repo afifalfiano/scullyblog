@@ -1,6 +1,6 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { fadeInAnimation } from '../animation/_animation';
+import { fadeInAnimation } from '../../animation/_animation';
 
 @Component({
   selector: 'app-http404',
