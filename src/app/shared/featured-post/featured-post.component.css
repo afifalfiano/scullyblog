@@ -10,6 +10,23 @@
   border-radius: 10px;
 }
 
+.btn-primary {
+  background:
+    linear-gradient(
+      290.91deg,
+      #d80bbc,
+      #3b42e7
+    );
+  border: none;
+  min-width: 220px;
+}
+
+.btn-success {
+  background: linear-gradient(131.91deg, #aae2d8 0.01%, #389a9a 37.19%, #3b42e7 98.56%);
+  min-width: 60px;
+  border: none;
+}
+
 .post-title {
   padding-top: 200px;
 }
@@ -29,20 +46,17 @@
   padding-bottom: 10px;
 }
 
-.btn-primary {
-  min-width: 220px;
-}
-
-.btn-success {
-  min-width: 60px;
-}
-
 .category-post {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #ffaf00;
-  border-radius: 20px 0 0 0;
+  background:
+    linear-gradient(
+      180deg,
+      #ff3186 0.12%,
+      #ff7d5a 100%
+    );
+  border-radius: 20px 0 20px 0;
   color: #fff;
   min-width: 100px;
   padding: 10px;
@@ -74,4 +88,9 @@
   font-size: 72px;
   line-height: 95px;
   color: #fff;
+}
+
+.post-title p {
+  color: #fff;
+  font-size: 24px;
 }
