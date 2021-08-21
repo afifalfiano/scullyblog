@@ -7,6 +7,10 @@
   padding-bottom: 200px;
 }
 
+.btn {
+  border-radius: 10px;
+}
+
 .portfolio-title h1 {
   background:
     -webkit-linear-gradient(
