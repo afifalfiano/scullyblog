@@ -1,4 +1,4 @@
-<div class="about-me">
+<!-- <div class="about-me">
     <div class="img-about">
         <img src="./assets/images/about/about-me.png" alt="">
     </div>
@@ -7,6 +7,27 @@
         <p class="about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium minus maxime reprehenderit eveniet modi, consequuntur ab provident est laboriosam fuga.</p>
         <div *ngFor="let data of myStack" class="stack">
             <span class="btn {{data.style}} m-2">{{data.tech}}</span>
+        </div>
+    </div>
+</div> -->
+
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                    <img src="./assets/images/about/about-me.png" alt="" class="img img-responsive about">
+            </div>
+            <div class="col-lg-6">
+                <div class="about-info">
+                    <h1 class="about-title">About Me</h1>
+                    <p class="about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium minus maxime reprehenderit eveniet modi, consequuntur ab provident est laboriosam fuga.</p>
+                    <div class="list-stack">
+                        <div *ngFor="let data of myStack" class="stack">
+                            <span class="btn {{data.style}} mr-3 mt-3">{{data.tech}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
