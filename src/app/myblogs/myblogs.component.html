@@ -23,8 +23,8 @@
 <div class="container mt-5 mb-5">
   <div class="row mt-4">
     <div class="col-md-8 col-lg-8 col-sm-12">
-      <div *ngFor="let page of myblogs | paginate: { itemsPerPage: 6, currentPage: p }; let i = index;" style="display: inline-block;" class="col-md-6 col-sm-12">
-            <div class="card shadow p-3 mb-5 bg-white rounded" style="height: auto; width: auto;">
+      <div *ngFor="let item of myblogs | paginate: { itemsPerPage: 6, currentPage: p }; let i = index;" style="display: inline-block;" class="col-md-6 col-sm-12">
+            <!-- <div class="card shadow p-3 mb-5 bg-white rounded" style="height: auto; width: auto;">
               <img src="{{page.image}}" class="card-img-top" alt="{{page.title}}" height="250px">
               <h4 class="card-title mt-3 mb-1">{{page.title}} <span class="btn btn-sm btn-success float-right text-white position-absolute" style="top: 15px;right: 15px;">{{page.categories}}</span></h4>
             <p class="mb-3">Post on <span class="text-primary">{{page.publishedAt | date }}</span> by <span class="text-primary">{{page.authors}}</span></p>
@@ -32,6 +32,20 @@
               <p class="card-text text-secondary">{{page.thumbnailText | caption}}</p>
             </div>
             <a href="{{page.route}}" class="btn btn-primary stretched-link">{{page.wordCount | readTime }}</a>
+            </div> -->
+            <div class="card shadow mb-5">
+              <img src="{{item.image}}" class="card-img-top" alt="{{item.title}}"/>
+              <div class="category-post">{{item.categories}}</div>
+              <div class="card-body">
+                <h5 class="card-title">{{item.title}}</h5>
+                <p class="card-published">Post on <span class="text-primary">{{item.publishedAt | date }}</span> by <span class="text-primary">{{item.authors}}</span></p>
+                <p class="card-likes text-success">999 Likes </p>
+                <p class="card-text">{{item.thumbnailText | caption}}</p>
+                <div class="action">
+                  <a href="{{item.route}}" class="btn btn-primary stretched-link">{{item.wordCount | readTime }}</a>
+                  <a href="#" class="btn btn-success"><i class="fa fa-thumbs-up fa-lg" aria-hidden="true"></i></a>
+                </div>
+              </div>
             </div>
         </div>
         <div class="center-small">

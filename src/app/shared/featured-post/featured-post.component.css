@@ -40,6 +40,10 @@
   min-width: 300px;
 }
 
+.card-img-top {
+  min-height: 250px;
+}
+
 .card-published,
 .card-likes {
   margin: 0;

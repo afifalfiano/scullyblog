@@ -50,16 +50,6 @@
   text-align: left;
 }
 
-.btn-primary {
-  border-radius: 15px;
-  background:
-    linear-gradient(
-      150.91deg,
-      #d80bbc,
-      #3b42e7
-    );
-}
-
 .more {
   margin-top: 90px;
   font-size: 24px;
@@ -89,4 +79,88 @@
     margin-bottom: -2em !important;
     margin-left: -3em !important;
   }
+}
+
+
+
+
+
+/* Post All */
+
+.btn {
+  border-radius: 10px;
+}
+
+.btn-primary {
+  background:
+    linear-gradient(
+      290.91deg,
+      #d80bbc,
+      #3b42e7
+    );
+  border: none;
+  min-width: 220px;
+}
+
+.btn-success {
+  background: linear-gradient(131.91deg, #aae2d8 0.01%, #389a9a 37.19%, #3b42e7 98.56%);
+  min-width: 60px;
+  border: none;
+}
+
+.post-title {
+  padding-top: 200px;
+}
+
+.btn-orange {
+  background: linear-gradient(90deg, #ff3186 0.12%, #ff7d5a 100%);
+  border-radius: 15px;
+  color: #fff;
+  padding: 10px;
+  margin-top: 50px;
+  min-width: 300px;
+}
+
+.card-published,
+.card-likes {
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.category-post {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background:
+    linear-gradient(
+      180deg,
+      #ff3186 0.12%,
+      #ff7d5a 100%
+    );
+  border-radius: 20px 0 20px 0;
+  color: #fff;
+  min-width: 100px;
+  padding: 10px;
+  text-align: center;
+}
+
+.action {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  width: 347px;
+  height: 554px;
+  border: 1px solid #1d2070;
+  border-radius: 20px;
+}
+
+.post-title p {
+  color: #fff;
+  font-size: 24px;
+}
+
+.card-img-top {
+  min-height: 250px;
 }
