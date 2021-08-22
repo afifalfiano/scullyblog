@@ -1,11 +1,4 @@
-import { fadeInAnimation, slideInOutAnimation } from './../animation/_animation';
-import { ActivatedRoute, Route, Router } from '@angular/router';
-import { HomeComponent } from './../home/home.component';
 import { Component, OnInit, ElementRef, ViewChild, ErrorHandler, OnDestroy } from '@angular/core';
-import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
-import { Observable } from 'rxjs';
-import { Location } from '@angular/common';
-import { animate, state, style, transition, trigger } from '@angular/animations';
 import { ArticleService } from '../shared/article.service';
 
 @Component({

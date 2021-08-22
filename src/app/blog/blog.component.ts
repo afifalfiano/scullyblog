@@ -20,32 +20,7 @@ export class BlogComponent implements OnInit {
     private scullySvc: ScullyRoutesService) {
   }
 
-  // tslint:disable-next-line:typedef
-  ngOnInit() {
-    const slug = this.router.url;
-    localStorage.setItem('slug', slug);
-    // console.log(this.currentPost$);
-  }
-
-  // tslint:disable-next-line:typedef
-  getBlog() {
-    const getSlug: any = localStorage.getItem('slug');
-    const splitSlug = getSlug.split('/');
-    const toString = splitSlug[2].toString();
-    // console.log(toString);
-  }
-
-  // tslint:disable-next-line:typedef
-  scrollSmooth($event: any) {
-    // console.log($event);
-    const name = $event.target.innerText;
-    let changeFormat = name.replace(' ', '').toLowerCase();
-    changeFormat = 'home';
-    // console.log(changeFormat);
-    if (changeFormat === 'home') {
-      this.router.navigateByUrl('/#home');
-    } else {
-      this.router.navigateByUrl('/');
-    }
+  ngOnInit(): void {
+    console.log(this.currentPost$);
   }
 }
