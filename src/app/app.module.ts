@@ -10,6 +10,8 @@ import { HTTP404Component } from './shared/http404/http404.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ArticleService } from './shared/article.service';
+import { MyblogsModule } from './myblogs/myblogs.module';
 
 @NgModule({
   declarations: [
@@ -18,15 +20,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
+    SharedModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     ScullyLibModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production, registrationStrategy: 'registerImmediately' }),
-    SharedModule,
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {

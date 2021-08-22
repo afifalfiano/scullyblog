@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ArticleService } from '../article.service';
 
 @Component({
   selector: 'app-featured-post',
@@ -7,20 +8,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./featured-post.component.css']
 })
 export class FeaturedPostComponent implements OnInit {
-  @Input() recentBlogs: any;
-  data: any = [];
+  recentBlog: any = [];
   constructor(
-    private router: Router
+    private router: Router,
+    private articleSvc: ArticleService
   ) { }
 
   ngOnInit(): void {
-    console.log(this.recentBlogs);
-    setTimeout(
-      () => {
-        this.onlyGetBlog();
-        console.log(this.data, 'dat');
-      }, 3000
-    );
+    this.onlyGetBlog();
   }
 
   goToBlogs(): any {
@@ -28,12 +23,15 @@ export class FeaturedPostComponent implements OnInit {
   }
 
   onlyGetBlog(): any {
-    this.recentBlogs[0].forEach((item: { route: string; }, index: number) => {
-      if (item.route.match(/blog/g) && item.route !== '/myblogs') {
-        if (index <= 4) {
-          this.data.push(item);
-        }
-      }
+    this.articleSvc.getData().subscribe((response: any) => {
+      const data = response;
+      const dataBlog = data.map((item: any, index: number) => {
+          if (index < 3) {
+            return item;
+          }
+      });
+      const dataFix = dataBlog.filter((item: any) => item !== undefined);
+      this.recentBlog = dataFix;
     });
   }
 

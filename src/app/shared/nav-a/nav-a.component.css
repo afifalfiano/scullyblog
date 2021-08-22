@@ -1,11 +1,18 @@
 .nav-a {
   position: absolute;
-  left: 122px;
+  width: 100%;
   top: 50px;
   z-index: 110;
   min-height: 75px;
   border-radius: 20px;
   background-color: #272952;
+}
+
+.wrap-nav {
+  display: flex;
+  width: 100%;
+  align-content: center;
+  justify-content: center;
 }
 
 .bg-dark {
