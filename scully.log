@@ -1886,3 +1886,49 @@ Check the routes in your app, rebuild and retry.
 When there are extraRoutes in your config, we will still try to render those.
 
 
+Using deprecated plugin type:"render"  use "postProcessByHtml" insteadUsing deprecated plugin type:"render"  use "postProcessByHtml" insteadUsing deprecated plugin type:"render"  use "postProcessByHtml" insteadUsing deprecated plugin type:"render"  use "postProcessByHtml" insteadUsing deprecated plugin type:"render"  use "postProcessByHtml" instead
+
+
+
+
+Using deprecated plugin type:"render"  use "postProcessByHtml" insteadUsing deprecated plugin type:"render"  use "postProcessByHtml" insteadUsing deprecated plugin type:"render"  use "postProcessByHtml" insteadUsing deprecated plugin type:"render"  use "postProcessByHtml" insteadUsing deprecated plugin type:"render"  use "postProcessByHtml" instead
+
+
+
+
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------
+Route "/blog/let’s-becomes-a-foss-user" not provided by angular app
+      ----------------
+      Error, missing "<scully-content>" in route "/blog/let’s-becomes-a-foss-user"
+      without <scully-content> we can not render this route.
+      Make sure it is in there, and not inside any conditionals (*ngIf)
+      You can check this by opening "http://localhost:4200/blog/let’s-becomes-a-foss-user"
+      when you serve your app with ng serve and then in the browsers console run:
+      document.querySelector('scully-content')
+      ----------------
+      
+
+
+      ----------------
+      Error, missing "<scully-content>" in route "/blog/___UNPUBLISHED___ksn244h3_4wJhALJwXmUnKDKH1Gw87Eqft1VnBbqa"
+      without <scully-content> we can not render this route.
+      Make sure it is in there, and not inside any conditionals (*ngIf)
+      You can check this by opening "http://localhost:4200/blog/___UNPUBLISHED___ksn244h3_4wJhALJwXmUnKDKH1Gw87Eqft1VnBbqa"
+      when you serve your app with ng serve and then in the browsers console run:
+      document.querySelector('scully-content')
+      ----------------
+      
+
+      ----------------
+      Error, missing "<scully-content>" in route "/blog/___UNPUBLISHED___ksnux6ku_WPP0jhbIKQwbLmHjLzqQ2KQjSgiZ9XiT"
+      without <scully-content> we can not render this route.
+      Make sure it is in there, and not inside any conditionals (*ngIf)
+      You can check this by opening "http://localhost:4200/blog/___UNPUBLISHED___ksnux6ku_WPP0jhbIKQwbLmHjLzqQ2KQjSgiZ9XiT"
+      when you serve your app with ng serve and then in the browsers console run:
+      document.querySelector('scully-content')
+      ----------------
+      

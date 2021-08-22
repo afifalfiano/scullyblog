@@ -10,9 +10,10 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "scully": "npx scully",
+    "scully:stats": "npx scully --stats",
     "hmr": "ng serve --hmr",
     "scully:serve": "npx scully serve",
-    "deploy": "ng build --prod --stats-json && npm run scully -- --scanRoutes",
+    "deploy": "ng build --prod --stats-json && npm run scully:stats",
     "pre-commit": "lint-staged",
     "stylelint": "npx stylelint --fix"
   },
