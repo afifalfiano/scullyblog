@@ -23,11 +23,5 @@ export const config: ScullyConfig = {
       },
       postRenderers: postRenderersBlog
     },
-    // '/blog/:slug': {
-    //   type: 'contentFolder',
-    //   slug: {
-    //     folder: './blog'
-    //   }
-    // },
-  }
+    },
 };
