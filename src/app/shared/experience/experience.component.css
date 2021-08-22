@@ -3,6 +3,8 @@
   width: 100%;
   min-height: 1224px;
   background: linear-gradient(132.93deg, #d80bbc 0%, #ff3186 45.89%, #ff7d5a 98.55%);
+  animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
   color: #fff;
 }
 

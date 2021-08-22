@@ -23,16 +23,26 @@ export class FeaturedPostComponent implements OnInit {
   }
 
   onlyGetBlog(): any {
-    this.articleSvc.getData().subscribe((response: any) => {
-      const data = response;
-      const dataBlog = data.map((item: any, index: number) => {
-          if (index < 3) {
-            return item;
-          }
+    let dataTemp = [];
+    if (localStorage.getItem('articles')) {
+      const dataLocal = localStorage.getItem('articles');
+      if (dataLocal) {
+        const data = JSON.parse(dataLocal);
+        dataTemp = data;
+      }
+    } else {
+      this.articleSvc.getData().subscribe((response: any) => {
+        const data = response;
+        dataTemp = data;
       });
-      const dataFix = dataBlog.filter((item: any) => item !== undefined);
-      this.recentBlog = dataFix;
-    });
+    }
+    const dataBlog = dataTemp.map((item: any, index: number) => {
+      if (index < 3) {
+        return item;
+      }
+  });
+    const dataFix = dataBlog.filter((item: any) => item !== undefined);
+    this.recentBlog = dataFix;
   }
 
 }

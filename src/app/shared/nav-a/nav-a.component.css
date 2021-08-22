@@ -15,6 +15,11 @@
   justify-content: center;
 }
 
+.active {
+  border-bottom: 3px solid #ff3186;
+  color: #fff;
+}
+
 .bg-dark {
   background-color: #272952 !important;
 }

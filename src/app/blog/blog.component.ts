@@ -23,15 +23,26 @@ export class BlogComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.currentPost$);
     this.getAllPost();
+    this.addClassActive();
+  }
+
+  addClassActive(): void {
+    const url = this.router.url.match('/blog/');
+    if (url) {
+      const menu = document.querySelectorAll('.nav-item');
+      menu.forEach(item => {
+        if (item.textContent === 'Blog') {
+          item.classList.add('active');
+        }
+      });
+    }
   }
 
   getAllPost(): any {
     const dataLocal = localStorage.getItem('articles');
     if (dataLocal) {
       this.allPost = JSON.parse(dataLocal);
-      console.log(this.allPost);
     }
   }
 

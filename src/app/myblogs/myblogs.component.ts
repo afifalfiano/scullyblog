@@ -48,7 +48,6 @@ export class MyblogsComponent implements OnInit {
     if (dataLocal) {
       this.myblogs = JSON.parse(dataLocal);
       this.previewBlog.push(this.myblogs[0]);
-      console.log(this.previewBlog);
     }
   }
 

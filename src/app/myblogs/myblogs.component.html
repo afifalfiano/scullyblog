@@ -24,7 +24,7 @@
   <div class="row mt-4">
     <div class="col-md-8 col-lg-8 col-sm-12">
       <div *ngFor="let item of myblogs | paginate: { itemsPerPage: 6, currentPage: p }; let i = index;" style="display: inline-block;" class="col-md-6 col-sm-12">
-            <div class="card shadow mb-5">
+            <div class="card mb-5">
               <img src="{{item.image}}" class="card-img-top" alt="{{item.title}}"/>
               <div class="category-post">{{item.categories}}</div>
               <div class="card-body">

@@ -14,19 +14,4 @@ export class HTTP404Component implements OnInit {
 
   ngOnInit(): void {
   }
-
-  // tslint:disable-next-line:typedef
-  scrollSmooth($event: any) {
-    // console.log($event);
-    const name = $event.target.innerText;
-    const changeFormat = name.replace(' ', '').toLowerCase();
-    // console.log(changeFormat);
-    if (typeof changeFormat === 'string') {
-      this.router.navigate(['/home']);
-    } else {
-      this.router.navigate(['/']);
-    }
-  }
-
-
 }
