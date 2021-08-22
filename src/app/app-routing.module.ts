@@ -5,12 +5,12 @@ import { ArticleResolver } from './shared/resolver.service';
 
 // tslint:disable-next-line:max-line-length
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) },
   { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) },
   { path: 'blog', loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule) },
-  // tslint:disable-next-line:max-line-length
-  { path: 'myblogs', loadChildren: () => import('./myblogs/myblogs.module').then(m => m.MyblogsModule), resolve: {article: ArticleResolver} },
+  { path: 'myblogs', loadChildren: () => import('./myblogs/myblogs.module').then(m => m.MyblogsModule)},
   { path: 'myportfolios', loadChildren: () => import('./my-portfolios/my-portfolios.module').then(m => m.MyPortfoliosModule) },
+  { path: 'blog', loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule) },
   {path: '**', component: HTTP404Component}
 ];
 

@@ -9,9 +9,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "scully": "scully",
+    "scully": "npx scully -- --scanRoutes",
     "hmr": "ng serve --hmr",
-    "scully:serve": "scully serve",
+    "scully:serve": "npx scully serve --",
     "deploy": "ng build --prod --stats-json && npm run scully -- --scanRoutes",
     "pre-commit": "lint-staged",
     "stylelint": "npx stylelint --fix"
