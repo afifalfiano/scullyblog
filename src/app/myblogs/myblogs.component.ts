@@ -18,6 +18,28 @@ export class MyblogsComponent implements OnInit {
   previewBlog: any = [];
   p = 1;
   isLoaded = false;
+  categoryData = [
+    {
+      category: 'Technology',
+      class: 'bg-primary text-white'
+    },
+    {
+      category: 'Design',
+      class: 'bg-danger text-white'
+    },
+    {
+      category: 'Dream',
+      class: 'bg-secondary text-white'
+    },
+    {
+      category: 'Improvement',
+      class: 'bg-warning text-white'
+    },
+    {
+      category: 'Methodology',
+      class: 'bg-primary text-white'
+    },
+  ];
   constructor(
     private error: ErrorHandler,
     public articleSvc: ArticleService,

@@ -24,15 +24,6 @@
   <div class="row mt-4">
     <div class="col-md-8 col-lg-8 col-sm-12">
       <div *ngFor="let item of myblogs | paginate: { itemsPerPage: 6, currentPage: p }; let i = index;" style="display: inline-block;" class="col-md-6 col-sm-12">
-            <!-- <div class="card shadow p-3 mb-5 bg-white rounded" style="height: auto; width: auto;">
-              <img src="{{page.image}}" class="card-img-top" alt="{{page.title}}" height="250px">
-              <h4 class="card-title mt-3 mb-1">{{page.title}} <span class="btn btn-sm btn-success float-right text-white position-absolute" style="top: 15px;right: 15px;">{{page.categories}}</span></h4>
-            <p class="mb-3">Post on <span class="text-primary">{{page.publishedAt | date }}</span> by <span class="text-primary">{{page.authors}}</span></p>
-            <div class="card-body reformat" >
-              <p class="card-text text-secondary">{{page.thumbnailText | caption}}</p>
-            </div>
-            <a href="{{page.route}}" class="btn btn-primary stretched-link">{{page.wordCount | readTime }}</a>
-            </div> -->
             <div class="card shadow mb-5">
               <img src="{{item.image}}" class="card-img-top" alt="{{item.title}}"/>
               <div class="category-post">{{item.categories}}</div>
@@ -42,7 +33,7 @@
                 <p class="card-likes text-success">999 Likes </p>
                 <p class="card-text">{{item.thumbnailText | caption}}</p>
                 <div class="action">
-                  <a href="{{item.route}}" class="btn btn-primary stretched-link">{{item.wordCount | readTime }}</a>
+                  <a href="{{item.route}}" class="btn btn-primary">{{item.wordCount | readTime }}</a>
                   <a href="#" class="btn btn-success"><i class="fa fa-thumbs-up fa-lg" aria-hidden="true"></i></a>
                 </div>
               </div>
@@ -58,7 +49,7 @@
           <div class="text-center mt-5">
             <div class="container">
               <img src="../../assets/profile.jpg" class="img-fluid rounded-circle p-4 profile" alt="Afif Alfiaon" width="170">
-              <h3>Afif Alfiano</h3>
+              <h3 style="font-weight: bold;">Afif Alfiano</h3>
               <p class="text-secondary">Frontend Developer</p>
               <p>Hello, Hopefully my article can give you some insight and insipired. Let's enjoy to read.</p>
             </div>
@@ -75,14 +66,9 @@
       </div>
       <div class="row pure">
         <div class="col mt-5">
-          <h4>Category</h4>
+          <h4 style="font-weight: bold;">Category</h4>
           <ul class="list-group mt-3">
-            <a href="#" class="pt-1 pb-1">Technology (5)</a>
-            <a href="#" class="pt-1 pb-1">Design (5)</a>
-            <a href="#" class="pt-1 pb-1">Dream (5)</a>
-            <a href="#" class="pt-1 pb-1">Improvement (5)</a>
-            <a href="#" class="pt-1 pb-1">Methodology (5)</a>
-            <a href="#" class="pt-1 pb-1">Story (5)</a>
+            <span *ngFor="let item of categoryData" class="badge rounded-pill {{item.class}} p-2 m-1">{{item.category}}</span>
           </ul>
         </div>
       </div>

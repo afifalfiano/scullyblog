@@ -152,7 +152,7 @@
 .card {
   width: 347px;
   height: 554px;
-  border: 1px solid #1d2070;
+  border: 1px solid rgba(29, 32, 112, 0.1);
   border-radius: 20px;
 }
 
@@ -163,4 +163,15 @@
 
 .card-img-top {
   min-height: 250px;
+}
+
+.list-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 18px;
+}
+
+.badge {
+  min-width: 90px;
 }
