@@ -5,6 +5,73 @@
   padding-top: 0 !important;
 }
 
+.jumbotron-fluid {
+  min-height: 550px;
+  text-align: center;
+  padding-bottom: 100px;
+  background: linear-gradient(254.65deg, #ff3186 10%, #ff7d5a 100%);
+}
+
+.content {
+  display: flex;
+  margin-top: 100px;
+  min-height: 550px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.wrap-info {
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+}
+
+.prev-info {
+  display: flex;
+  margin-top: 40px;
+  align-items: flex-start;
+  font-size: 24px;
+  flex-wrap: nowrap;
+  color: #fff;
+  gap: 20px;
+  flex-direction: row;
+}
+
+.preview {
+  border-radius: 20px;
+  width: 100%;
+}
+
+.card-text {
+  text-align: left;
+}
+
+.btn-primary {
+  border-radius: 15px;
+  background:
+    linear-gradient(
+      150.91deg,
+      #d80bbc,
+      #3b42e7
+    );
+}
+
+.more {
+  margin-top: 90px;
+  font-size: 24px;
+}
+
+.display-3 {
+  font-size: 4.5rem;
+  font-weight: 300;
+  min-height: 100px;
+  line-height: 1.2;
+}
+
 @media only screen and (max-width: 600px) {
   #myblogs {
     display: none !important;

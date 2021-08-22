@@ -11,7 +11,6 @@ export class ArticleService {
   constructor() { }
 
   public setData($data: any): any {
-    console.log($data);
     this.blogs.next($data);
   }
 

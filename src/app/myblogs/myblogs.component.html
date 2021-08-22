@@ -1,9 +1,20 @@
 <app-nav-a></app-nav-a>
-<div class="jumbotron jumbotron-fluid" id="myblogs">
+<div class="jumbotron jumbotron-fluid">
   <div class="container">
     <div class="row">
-    <div class="col-md-12 text-center" style="height: 550px;">
-      <h2 id="blogs" #blogs class="text-center display-3 position-absolute" style="top:40%;left: 45%;">Blogs</h2>
+    <div class="col-md-12 content text-center">
+      <h3 class="text-center display-4">{{
+        previewBlog[0]?.title
+      }}</h3>
+      <div class="prev-info">
+        <div class="wrap-img">
+          <img src="{{previewBlog[0]?.image}}" alt="{{previewBlog[0]?.title}}" class="img img-responsive preview">
+        </div>
+        <div class="wrap-info">
+          <p class="card-text">{{previewBlog[0]?.thumbnailText}}</p>
+          <button class="btn btn-primary more">Read More</button>
+        </div>
+      </div>
     </div>
     </div>
   </div>
@@ -18,7 +29,7 @@
               <h4 class="card-title mt-3 mb-1">{{page.title}} <span class="btn btn-sm btn-success float-right text-white position-absolute" style="top: 15px;right: 15px;">{{page.categories}}</span></h4>
             <p class="mb-3">Post on <span class="text-primary">{{page.publishedAt | date }}</span> by <span class="text-primary">{{page.authors}}</span></p>
             <div class="card-body reformat" >
-              <p class="card-text text-secondary">{{page.thumbnailText}}</p>
+              <p class="card-text text-secondary">{{page.thumbnailText | caption}}</p>
             </div>
             <a href="{{page.route}}" class="btn btn-primary stretched-link">{{page.wordCount | readTime }}</a>
             </div>

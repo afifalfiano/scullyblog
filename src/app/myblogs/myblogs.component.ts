@@ -14,17 +14,14 @@ import { ArticleService } from '../shared/article.service';
   styleUrls: ['./myblogs.component.css'],
 })
 export class MyblogsComponent implements OnInit {
-  // links$: Observable<ScullyRoute[]> = this.scullySvc.available$;
   myblogs: any = [];
+  previewBlog: any = [];
   p = 1;
   isLoaded = false;
   constructor(
-    private scullySvc: ScullyRoutesService,
     private error: ErrorHandler,
     public articleSvc: ArticleService,
-    private routes: ActivatedRoute
     ) {
-      // this.routes.data.subscribe(res => console.log(res));
      }
 
   ngOnInit(): any {
@@ -35,6 +32,8 @@ export class MyblogsComponent implements OnInit {
     const dataLocal = localStorage.getItem('articles');
     if (dataLocal) {
       this.myblogs = JSON.parse(dataLocal);
+      this.previewBlog.push(this.myblogs[0]);
+      console.log(this.previewBlog);
     }
   }
 
