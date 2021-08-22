@@ -16,6 +16,7 @@ import { Observable } from 'rxjs';
 export class BlogComponent implements OnInit {
   currentPost$: Observable<ScullyRoute> = this.scullySvc.getCurrent();
   allPost: any = [];
+  p = 1;
   constructor(
     private router: Router,
     private scullySvc: ScullyRoutesService) {

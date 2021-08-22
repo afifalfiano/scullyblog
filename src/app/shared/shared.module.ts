@@ -12,6 +12,7 @@ import { HeroComponent } from './hero/hero.component';
 import { NavAComponent } from './nav-a/nav-a.component';
 import { SubsribeBlogComponent } from './subsribe-blog/subsribe-blog.component';
 import { ArticleService } from './article.service';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -20,7 +21,8 @@ import { ArticleService } from './article.service';
   declarations: [FooterComponent, CaptionPipe, StringFilterPipe, WordCountPipe, AboutMeComponent, ExperienceComponent, PortfolioComponent, FeaturedPostComponent, HeroComponent, NavAComponent, SubsribeBlogComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     FooterComponent,

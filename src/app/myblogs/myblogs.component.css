@@ -52,7 +52,8 @@
 
 .more {
   margin-top: 90px;
-  font-size: 24px;
+  font-size: 20px;
+  border-radius: 20px !important;
 }
 
 .display-3 {

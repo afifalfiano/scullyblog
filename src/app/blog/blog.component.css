@@ -1,6 +1,6 @@
 
 .badge-secondary {
-  background-color: #a1a1a4;
+  background-color: rgba(50, 52, 87, 0.7);
   border-radius: 10px;
 }
 
@@ -11,6 +11,7 @@
 .clue-post {
   display: flex;
   align-items: center;
+  margin-top: 40px;
 }
 
 .img-fluid {
@@ -23,13 +24,23 @@
   justify-content: center;
 }
 
+.new {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.img-new {
+  max-width: 160px;
+}
+
 .comming-post p:nth-child(1) {
-  font-size: 23px;
+  font-size: 20px;
   margin-bottom: 0;
 }
 
 .comming-post p:nth-child(2) {
-  font-size: 20px;
+  font-size: 16px;
   margin-top: 0;
 }
 
@@ -39,12 +50,22 @@
 
 .comming-post img {
   border-radius: 10px;
-  width: 30%;
+  width: 100%;
 }
 
 a.info {
   color: #1d2070;
   font-weight: bold;
+}
+
+.pagination {
+  display: flex;
+  margin-top: 40px;
+  padding-left: 0;
+  list-style: none;
+  border-radius: 0.25rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .prev,

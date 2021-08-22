@@ -9,10 +9,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <div class="nav-link" [routerLink]="['/']" routerLinkActive="router-link-active">Home</div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Blog</a>
+          <a class="nav-link" [routerLink]="['/myblogs']" routerLinkActive="router-link-active">Blog</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Experience</a>
