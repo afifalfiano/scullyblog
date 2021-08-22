@@ -12,7 +12,7 @@
     "scully": "npx scully -- --scanRoutes",
     "hmr": "ng serve --hmr",
     "scully:serve": "npx scully serve --",
-    "deploy": "ng build --prod --stats-json && npm run scully -- --scanRoutes",
+    "deploy": "ng build --prod --stats-json && npm run scully",
     "pre-commit": "lint-staged",
     "stylelint": "npx stylelint --fix"
   },

@@ -1491,3 +1491,4 @@ Route "/blog/let’s-becomes-a-foss-user" not provided by angular app
       
 
 Received Kill command
+Using deprecated plugin type:"render"  use "postProcessByHtml" insteadUsing deprecated plugin type:"render"  use "postProcessByHtml" insteadUsing deprecated plugin type:"render"  use "postProcessByHtml" insteadUsing deprecated plugin type:"render"  use "postProcessByHtml" insteadUsing deprecated plugin type:"render"  use "postProcessByHtml" instead
