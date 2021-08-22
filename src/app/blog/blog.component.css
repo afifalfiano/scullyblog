@@ -1,9 +1,57 @@
-h1 {
-  color: rgb(51, 6, 37);
-  background-color: rgb(248, 211, 236);
-  padding: 5px;
-  border-radius: 5px;
-  width: fit-content;
+
+.badge-secondary {
+  background-color: #a1a1a4;
+  border-radius: 10px;
+}
+
+.title-post {
+  margin-top: 150px;
+}
+
+.clue-post {
+  display: flex;
+  align-items: center;
+}
+
+.img-fluid {
+  border-radius: 15px;
+}
+
+.comming-post {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.comming-post p:nth-child(1) {
+  font-size: 23px;
+  margin-bottom: 0;
+}
+
+.comming-post p:nth-child(2) {
+  font-size: 20px;
+  margin-top: 0;
+}
+
+.distance {
+  margin-bottom: 50px;
+}
+
+.comming-post img {
+  border-radius: 10px;
+  width: 30%;
+}
+
+a.info {
+  color: #1d2070;
+  font-weight: bold;
+}
+
+.prev,
+.next {
+  font-weight: normal;
+  color: #1d2070;
+  font-size: 20px;
 }
 
 @media only screen and (max-width: 600px) {

@@ -1,47 +1,54 @@
-
+<app-nav-a></app-nav-a>
 <!-- This is where Scully will inject the static HTML -->
-
 <div class="container mt-4">
     <div *ngIf="currentPost$ | async as post">
-      <div class="row" style="margin-top:100px;">
-        <div class="col-lg-8 mx-auto mb-3">
-          <h2 class="display-3 read">{{ post.title }}</h2>
-          <label class="p-1 badge badge-primary"><em>{{
-            post.categories
-          }}</em></label>
-          <p>
+      <div class="row title-post">
+        <div class="col-lg-8 mx-auto mb-3 text-center">
+          <p class="">
             Published <span class="text-primary">{{ post.publishedAt | date }}</span> by
             <span class="text-primary">{{ post.authors }}</span>
           </p>
-          <!-- <div class="border border-light bg-light p-4 rounded col-lg-12 text-center"> -->
+          <h2 class="display-4  read">{{ post.title }}</h2>
+          <label class="p-2 mb-4 badge badge-secondary ">{{
+            post.categories
+          }}</label>
             <img
               src="{{ post.image }}"
               class="img-fluid"
               alt="{{ post.title }}"
             />
-          <!-- </div> -->
         </div>
       </div>
-      <div class="col-lg-8 mx-auto">
-        <scully-content></scully-content>
-      <hr />
-      <p class="d-inline font-weight-bold">Keyword: </p>
-      <div *ngFor="let keyword of post.keywords" class="d-inline">
-        <p class="badge badge-primary ml-1 mr-1 "><em> {{ keyword }}</em></p>
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-justify">
+          <scully-content></scully-content>
+          <!-- <div class="text-center">
+            <p>Next Feature?</p>
+          </div> -->
+          <!-- <div id="disqus_thread"></div> -->
+        </div>
       </div>
-      <hr/>
-      <div id="disqus_thread"></div>
     </div>
-    </div>
-  
-    <div class="row">
-      <div class="col-lg-8 mx-auto pl-4">
-        <a
-          [routerLink]="['/myblogs']"
-          routerLinkActive="router-link-active"
-          class="btn btn-dark"
-        > Back</a
-        >
+    
+    <div class="row distance">
+      <div class="col-lg-8 mx-auto mt-3 pl-4">
+        <hr />
+        <div class="clue-post">
+          <div class="col-lg-2">
+            <a (click)="onPrev()" class="prev">Prev</a>
+          </div>
+          <div class="col-lg-8 comming-post">
+            <img src="{{allPost[0]['image']}}" alt="" width="100">
+            <a class="info" href="{{allPost[0]['route']}}">
+              <p>{{allPost[0]['title']}}</p>
+              <p>{{allPost[0]['publishedAt'] | date }}</p>
+            </a>
+          </div>
+          <div class="col-lg-2">
+            <a (click)="onNext()" class="next">Next</a>
+          </div>
+        </div>
+        <hr/>
       </div>
     </div>
   </div>

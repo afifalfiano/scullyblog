@@ -15,6 +15,7 @@ import { Observable } from 'rxjs';
 })
 export class BlogComponent implements OnInit {
   currentPost$: Observable<ScullyRoute> = this.scullySvc.getCurrent();
+  allPost: any = [];
   constructor(
     private router: Router,
     private scullySvc: ScullyRoutesService) {
@@ -22,5 +23,22 @@ export class BlogComponent implements OnInit {
 
   ngOnInit(): void {
     console.log(this.currentPost$);
+    this.getAllPost();
+  }
+
+  getAllPost(): any {
+    const dataLocal = localStorage.getItem('articles');
+    if (dataLocal) {
+      this.allPost = JSON.parse(dataLocal);
+      console.log(this.allPost);
+    }
+  }
+
+  onPrev(): void{
+
+  }
+
+  onNext(): void {
+
   }
 }
