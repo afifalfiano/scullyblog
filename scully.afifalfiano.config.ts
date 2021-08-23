@@ -17,7 +17,7 @@ const { MinifyHtml } = require('scully-plugin-minify-html');
 
 const Http404Plugin = getHttp404Plugin();
 // tslint:disable-next-line:max-line-length
-const postRenderersBlog = [DisableAngular, Http404Plugin, 'mediumZoom', MinifyHtml, criticalCSS, 'combineStylesAmpPlugin'];
+const postRenderersBlog = [DisableAngular, Http404Plugin, 'mediumZoom', 'lazyImages', MinifyHtml, criticalCSS, 'changeTitlePlugin', 'setCanonicalLinkPlugin', 'seoHrefOptimise', 'combineStylesAmpPlugin'];
 
 setPluginConfig('md', { enableSyntaxHighlighting: true });
 setPluginConfig(DisableAngular, 'render', {removeState: false});
