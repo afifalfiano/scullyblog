@@ -1,6 +1,6 @@
 [build]
   publish = "dist/static"
-  command = "npm run deploy"
+  command = "npm run build --prod && npm run scully -- --scanRoutes"
 [[redirects]]
   from="/*"
   to="/index.html"
