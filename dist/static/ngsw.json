@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1629691884415,
+  "timestamp": 1629694271430,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -67,6 +67,7 @@
         "/assets/portfolio/pwa-pokemon.jpg",
         "/assets/portfolio/static-ecommerce.jpg",
         "/assets/profile.jpg",
+        "/assets/scully-routes.json",
         "/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
         "/fontawesome-webfont.20fd1704ea223900efa9.woff2",
         "/fontawesome-webfont.8b43027f47b20503057d.eot",
@@ -114,6 +115,7 @@
     "/assets/portfolio/pwa-pokemon.jpg": "c45334a38debc5fc972b04743b5ba964b5760a74",
     "/assets/portfolio/static-ecommerce.jpg": "de34f1d97d4e7f13ed29b1756d007fd731587bde",
     "/assets/profile.jpg": "657b208c7c570eed5926f746368d523e973431a0",
+    "/assets/scully-routes.json": "6e3a681c9e7e0c6a79729de36e4310006bd43fd3",
     "/common.3f448ac8cef0be98dd50.js": "a46f9c3c24449a37fcd7970b76c812a5ccced92a",
     "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
     "/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf": "13b1eab65a983c7a73bc7997c479d66943f7c6cb",

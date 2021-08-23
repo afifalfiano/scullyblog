@@ -1,3 +1,7 @@
+* {
+  overflow-y: hidden;
+}
+
 .experience {
   position: relative;
   width: 100%;

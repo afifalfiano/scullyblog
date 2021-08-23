@@ -1,3 +1,7 @@
+* {
+  overflow-y: hidden;
+}
+
 .hero {
   position: relative;
   top: 0;
@@ -28,7 +32,7 @@
       #ff7d5a 100%
     );
   border: none;
-  border-radius: 20px;
+  border-radius: 15px;
 }
 
 .my-name {

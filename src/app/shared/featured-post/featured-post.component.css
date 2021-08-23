@@ -9,7 +9,7 @@
 }
 
 .btn {
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .btn-primary {
@@ -62,7 +62,7 @@
       #ff3186 0.12%,
       #ff7d5a 100%
     );
-  border-radius: 20px 0 20px 0;
+  border-radius: 15px 0 15px 0;
   color: #fff;
   min-width: 100px;
   padding: 10px;
@@ -78,14 +78,14 @@
   width: 347px;
   height: 270px;
   background: #c4c4c4;
-  border-radius: 20px 20px 0 0;
+  border-radius: 15px 15px 0 0;
 }
 
 .card {
   width: 347px;
   height: 554px;
   border: none;
-  border-radius: 20px;
+  border-radius: 15px;
 }
 
 .post-title h1 {
