@@ -117,3 +117,20 @@
     flex-wrap: nowrap; */
   padding: 30px;
 }
+
+@media screen and (max-width: 425px) {
+  .portfolio-title {
+    padding-top: 100px;
+    margin: 0 0 0 20px;
+  }
+
+  .wrapper-project {
+    flex-direction: column;
+    gap: 30px;
+    border-radius: 0;
+  }
+
+  .real-project > h2 {
+    margin: 0 0 0 40px;
+  }
+}

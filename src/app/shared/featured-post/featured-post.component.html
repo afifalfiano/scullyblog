@@ -4,7 +4,7 @@
         <p>This is my blog or tutorial that make other people can read and implements some tutorial</p>
     </div>
     <div class="container row mt-5 mx-auto">
-      <div class="col-lg-4" *ngFor="let item of recentBlog">
+      <div class="col-lg-4 col-sm-12" *ngFor="let item of recentBlog">
           <div class="card">
               <img src="{{item.image}}" class="card-img-top" alt="{{item.title}}"/>
               <div class="category-post">{{item.categories}}</div>

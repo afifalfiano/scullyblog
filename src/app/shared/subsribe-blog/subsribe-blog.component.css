@@ -25,6 +25,7 @@
       #d80bbc,
       #3b42e7
     );
+  border: none;
 }
 
 .subscribe input {
@@ -34,4 +35,16 @@
 
 .form-sub {
   padding: 0 250px;
+}
+
+@media only screen and (max-width: 425px) {
+  .form-sub {
+    padding: 0;
+  }
+
+  .btn-primary {
+    margin-top: 20px;
+    display: inline-block;
+    width: 200px;
+  }
 }
