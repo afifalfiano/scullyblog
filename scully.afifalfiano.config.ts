@@ -25,6 +25,7 @@ export const config: ScullyConfig = {
   projectRoot: './src',
   projectName: 'afifalfiano',
   outDir: './dist/static',
+  staticPort: 1000,
   routes: {
     '/blog/:title': {
       type: 'contentFolder',
