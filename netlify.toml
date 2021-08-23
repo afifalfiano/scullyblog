@@ -1,6 +1,6 @@
 [build]
   publish = "dist/static"
-  command = "npm run jam-prod"
+  command = "npm run deploy"
 [[redirects]]
   from="/*"
   to="/index.html"
