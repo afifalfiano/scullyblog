@@ -24,4 +24,8 @@ export const config: ScullyConfig = {
       postRenderers: postRenderersBlog
     },
     },
+    puppeteerLaunchOptions: {
+      executablePath: '/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome',
+      timeout: 10000
+    }
 };

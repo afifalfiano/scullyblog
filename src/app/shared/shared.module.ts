@@ -13,6 +13,7 @@ import { NavAComponent } from './nav-a/nav-a.component';
 import { SubsribeBlogComponent } from './subsribe-blog/subsribe-blog.component';
 import { ArticleService } from './article.service';
 import { RouterModule } from '@angular/router';
+import { ScullyLibModule } from '@scullyio/ng-lib';
 
 
 
@@ -22,7 +23,8 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    ScullyLibModule
   ],
   exports: [
     FooterComponent,
@@ -35,7 +37,8 @@ import { RouterModule } from '@angular/router';
     FeaturedPostComponent,
     PortfolioComponent,
     NavAComponent,
-    SubsribeBlogComponent
+    SubsribeBlogComponent,
+    ScullyLibModule
   ],
   providers: [ArticleService]
 })
