@@ -4,14 +4,12 @@ import { DisableAngular } from 'scully-plugin-disable-angular';
 import { getHttp404Plugin } from '@gammastream/scully-plugin-http404';
 import { criticalCSS } from '@scullyio/scully-plugin-critical-css';
 import '@notiz/scully-plugin-rss';
-import { getSitemapPlugin } from '@gammastream/scully-plugin-sitemap';
 
 
 require ('@notiz/scully-plugin-lazy-images');
 require('@notiz/scully-plugin-medium-zoom');
 require('scully-plugin-amp-css');
 require('scully-plugin-canonical');
-const SitemapPlugin = getSitemapPlugin();
 
 const { MinifyHtml } = require('scully-plugin-minify-html');
 
@@ -25,7 +23,6 @@ export const config: ScullyConfig = {
   projectRoot: './src',
   projectName: 'afifalfiano',
   outDir: './dist/static',
-  staticPort: 1000,
   routes: {
     '/blog/:title': {
       type: 'contentFolder',

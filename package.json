@@ -53,7 +53,6 @@
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-angular": "^13.1.0",
     "@gammastream/scully-plugin-http404": "^1.0.4",
-    "@gammastream/scully-plugin-sitemap": "^1.0.7",
     "@notiz/scully-plugin-fouc": "^0.2.0",
     "@notiz/scully-plugin-lazy-images": "^0.3.0",
     "@notiz/scully-plugin-medium-zoom": "^0.2.4",
