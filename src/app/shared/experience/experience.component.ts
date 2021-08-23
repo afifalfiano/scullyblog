@@ -23,7 +23,7 @@ export class ExperienceComponent implements OnInit {
       description: 'Work at BSI UII on IT Support position. BSI uses a lot of technology to build systems at UII and makes clear networks and extraordinary.'
     },
     {
-      position: 'Technician PT.Telkom Access',
+      position: 'Technician PT.TA',
       time: '1 October, 2017',
       description: 'Following the PKL (Field Work / Apprenticeship) program from SMK N 2 Yogyakarta for 3 months at PT. Telkom Access. Many things can be taken from these street vendors, such as how to splicing optical fiber, installing a new indihome internet connection, becoming a help desk, getting to know the internet network, knowing what ODP, ODC, Splicer, FO, and others. Perform network maintenance when an error occurs or natural factors. That\'s great an experience.'
     },

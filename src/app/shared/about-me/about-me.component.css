@@ -55,3 +55,35 @@
 .about {
   transform: translateY(200px);
 }
+
+@media only screen and (min-width: 425px) {
+  .a {
+    display: none;
+  }
+
+  .container-fluid {
+    background-position: top middle;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .container-fluid,
+  .container,
+  .about-me {
+    min-height: 700px;
+    height: 700px;
+    overflow-y: hidden;
+  }
+
+  .about-info,
+  .about-title,
+  .about-text {
+    position: relative;
+    width: 100%;
+    text-align: center;
+  }
+
+  .about-info {
+    transform: translateY(100px);
+  }
+}
