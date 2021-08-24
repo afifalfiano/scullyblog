@@ -1,0 +1,27 @@
+<div class="container-fluid featured-post">
+    <div class="text-center post-title">
+        <h1>Featured Post</h1>
+        <p>This is my blog or tutorial that make other people can read and implements some tutorial</p>
+    </div>
+    <div class="container row mt-5 mx-auto">
+      <div class="col-lg-4 col-sm-12" *ngFor="let item of recentBlog">
+          <div class="card">
+              <img src="{{item.image}}" class="card-img-top" alt="{{item.title}}"/>
+              <div class="category-post">{{item.categories}}</div>
+              <div class="card-body">
+                <h5 class="card-title">{{item.title}}</h5>
+                <p class="card-published">Post on <span class="text-primary">{{item.publishedAt | date }}</span> by <span class="text-primary">{{item.authors}}</span></p>
+                <p class="card-likes text-success">999 Likes </p>
+                <p class="card-text">{{item.thumbnailText | caption}}</p>
+                <div class="action">
+                  <a href="{{item.route}}" class="btn btn-primary">{{item.wordCount | readTime }}</a>
+                  <a href="#" class="btn btn-success"><i class="fa fa-thumbs-up fa-lg" aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </div>
+      </div>
+        <div class="mx-auto">
+          <button class="btn btn-orange" (click)="goToBlogs()">Want to read more articles? Just in here</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+/* include CSS for prism toolbar */
+@import '~prismjs/plugins/toolbar/prism-toolbar.css';
+
+/* check node_modules/prismjs/themes/ for the available themes */
+@import '~prismjs/themes/prism-tomorrow';
+
+* {
+  overflow-x: hidden;
+  font-family: 'Ruda';
+}
+
+.btn {
+  min-height: 44px !important;
+  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}

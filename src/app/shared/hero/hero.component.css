@@ -1,0 +1,116 @@
+* {
+  overflow-y: hidden;
+}
+
+.hero {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow-x: hidden;
+  height: 888px;
+}
+
+.job-title {
+  position: relative;
+  width: 100%;
+  top: 190px;
+  font-weight: bold;
+  font-size: 48px;
+  color: #fff;
+}
+
+.btn-primary {
+  position: relative;
+  width: 190px;
+  min-height: 44px;
+  top: 250px;
+  background:
+    linear-gradient(
+      90deg,
+      #ff3186 0.12%,
+      #ff7d5a 100%
+    );
+  border: none;
+  border-radius: 15px;
+}
+
+.my-name {
+  position: relative;
+  top: 210px;
+  font-weight: 900;
+  font-size: 100px;
+  color: #fff;
+}
+
+.my-info {
+  position: relative;
+  top: 221px;
+  font-size: 24px;
+  line-height: 39px;
+  color: #fff;
+}
+
+.col-lg-6 {
+  padding: 0;
+  margin: 0;
+}
+
+.img-me {
+  position: absolute;
+  top: 200px;
+  right: 0;
+  z-index: 200;
+  width: 500px;
+}
+
+.img-pattern-1 {
+  position: absolute;
+  top: 710px;
+  left: 0;
+}
+
+.img-pattern-2 {
+  position: absolute;
+  top: 500px;
+  right: 0;
+}
+
+.container-fluid {
+  background: linear-gradient(124.65deg, #3b42e7 11.8%, #ff3186 69.04%, #ff7d5a 87.07%);
+  animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
+}
+
+@media only screen and (max-width: 425px) {
+  .container-fluid {
+    text-align: center;
+  }
+
+  .job-title {
+    top: 170px;
+    font-size: 30px;
+  }
+
+  .my-name {
+    top: 200px;
+    font-size: 80px;
+  }
+
+  .img-pattern-2 {
+    display: none;
+  }
+
+  .hero {
+    height: 730px;
+  }
+
+  .img-pattern-1 {
+    top: 650px;
+    width: 100%;
+  }
+
+  .img-me {
+    display: none;
+  }
+}

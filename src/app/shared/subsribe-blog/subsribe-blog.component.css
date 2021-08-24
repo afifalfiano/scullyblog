@@ -1,0 +1,50 @@
+.container-fluid {
+  background:
+    linear-gradient(
+      -45deg,
+      #ff3186,
+      #ff7d5a
+    );
+  color: #fff;
+  animation: gradient 15s ease infinite;
+  min-height: 350px;
+  background-size: 400% 400%;
+}
+
+.subscribe {
+  padding-top: 100px;
+  text-align: center;
+}
+
+.btn-primary {
+  border-radius: 15px;
+  width: 100%;
+  background:
+    linear-gradient(
+      100.91deg,
+      #d80bbc,
+      #3b42e7
+    );
+  border: none;
+}
+
+.subscribe input {
+  display: inline;
+  border-radius: 15px;
+}
+
+.form-sub {
+  padding: 0 250px;
+}
+
+@media only screen and (max-width: 425px) {
+  .form-sub {
+    padding: 0;
+  }
+
+  .btn-primary {
+    margin-top: 20px;
+    display: inline-block;
+    width: 200px;
+  }
+}

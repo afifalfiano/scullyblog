@@ -1,7 +1,60 @@
-<h3>ScullyIo content</h3>
-<hr>
-
+<app-nav-a></app-nav-a>
 <!-- This is where Scully will inject the static HTML -->
-<scully-content></scully-content>
-<hr>
-<h4>End of content</h4>
+<div class="container mt-4">
+    <div *ngIf="currentPost$ | async as post">
+      <div class="row title-post">
+        <div class="col-lg-8 mx-auto mb-3 text-center">
+          <p class="">
+            Published <span class="text-primary">{{ post.publishedAt | date }}</span> by
+            <span class="text-primary">{{ post.authors }}</span>
+          </p>
+          <h2 class="display-4  read">{{ post.title }}</h2>
+          <label class="p-2 mb-4 badge badge-secondary ">{{
+            post.categories
+          }}</label>
+            <img
+              src="{{ post.image }}"
+              class="img-fluid"
+              alt="{{ post.title }}"
+            />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-justify">
+          <scully-content></scully-content>
+          <!-- <div class="text-center">
+            <p>Next Feature?</p>
+          </div> -->
+          <!-- <div id="disqus_thread"></div> -->
+        </div>
+      </div>
+    </div>
+    
+    <div class="row distance">
+      <div class="col-lg-8 mx-auto mt-3 pl-4">
+        <hr />
+        <div class="clue-post">
+          <div class="col-lg-12">
+          <div class="comming-post">
+          <div  class="new" *ngFor="let item of allPost | paginate: { itemsPerPage: 2, currentPage: p }; let i = index;">
+            <div class="img-new">
+              <img src="{{item.image}}"  alt="{{item.title}}" width="100%"/>
+            </div>
+            <a href="{{item.route}}" class="info">
+              <p>{{item.title}}</p>
+              <p class="small">{{item.publishedAt | date }}</p>
+            </a>
+            </div>
+          </div>
+          <div class="pagination">
+            <pagination-controls class="text-center" [responsive]="true" [autoHide]="true" (pageChange)="p = $event"></pagination-controls>
+          </div>
+          </div>
+        </div>
+        <hr/>
+      </div>
+    </div>
+  </div>
+  
+  <app-footer></app-footer>
+  

@@ -1,0 +1,18 @@
+<div class="experience">
+    <div class="mb-5">
+        <div class="col">
+          <h2 class="text-center exp-title">Experience</h2>
+        </div>
+      </div>
+    <div class="mx-auto">
+		<div class="col-lg-8 offset-md-2 col-lg-8 col-sm-8 mr-3">
+			<ul class="timeline">
+				<li *ngFor="let item of myExperience">
+					<a target="_blank" href="#">{{item.position}}</a>
+					<a href="#" class="float-right">{{item.time}}</a>
+					<p>{{item.description}}</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

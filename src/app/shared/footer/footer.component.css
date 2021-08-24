@@ -1,0 +1,10 @@
+a {
+  background:
+    -webkit-linear-gradient(
+      130deg,
+      #ff3186 0.12%,
+      #ff7d5a 100%
+    );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

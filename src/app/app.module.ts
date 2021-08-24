@@ -1,20 +1,31 @@
+import { SharedModule } from './shared/shared.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ScullyLibModule } from '@scullyio/ng-lib';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HTTP404Component } from './shared/http404/http404.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HTTP404Component
   ],
   imports: [
     BrowserModule,
+    SharedModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
-    ScullyLibModule
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production, registrationStrategy: 'registerImmediately' }),
+    FormsModule,
+    ReactiveFormsModule,
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+}
