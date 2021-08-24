@@ -4,13 +4,13 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "scully": "scully",
     "scully:serve": "scully serve",
-    "deploy": "npm run build --prod && npm run scully",
+    "deploy": "npm run build && npm run scully",
     "pre-commit": "lint-staged",
     "stylelint": "npx stylelint --fix"
   },
