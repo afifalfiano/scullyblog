@@ -18,6 +18,7 @@ publishedAt: 2020-03-25T10:12:00.000Z
 updatedAt: 2020-03-25T10:12:00.000Z
 thumbnailText: Sepertinya akhir-akhir bidang UI/UX sedang diminati banyak orang. Apakah teman-teman pernah mendengar istilah heuristik? atau mendengar istilah UX? saya yakin kalo istilah UX pasti sudah familiar ya, tapi bagaimana dengan heuristik? kalau belum familiar mari kita pelajari
 wordCount: 1639
+like: 0
 ---
 
 Sepertinya akhir-akhir bidang UI/UX sedang diminati banyak orang. Apakah teman-teman pernah mendengar istilah heuristik? atau mendengar istilah UX? saya yakin kalo istilah UX pasti sudah familiar ya, tapi bagaimana dengan heuristik? kalau belum familiar mari kita pelajari topik ini secara bersama-sama. Heuristik dikutip dari wikipedia bunyinya seperti berikut ini:

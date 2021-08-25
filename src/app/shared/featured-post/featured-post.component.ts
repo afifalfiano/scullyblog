@@ -19,7 +19,9 @@ export class FeaturedPostComponent implements OnInit {
     this.onlyGetBlog();
   }
 
-  onClapButton(): any {
+  onClapButton($event: any): any {
+    console.log($event);
+    $event.like = $event.like + 1;
     console.log(this.countLike++);
   }
 

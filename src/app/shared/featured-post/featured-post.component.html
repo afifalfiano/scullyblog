@@ -11,12 +11,12 @@
               <div class="card-body">
                 <h5 class="card-title">{{item.title}}</h5>
                 <p class="card-published">Post on <span class="text-primary">{{item.publishedAt | date }}</span> by <span class="text-primary">{{item.authors}}</span></p>
-                <p class="card-likes text-success">{{countLike}} Like </p>
+                <p class="card-likes text-success">{{item.like}} Like </p>
                 <p class="card-text">{{item.thumbnailText | caption}}</p>
                 <div class="action">
                   <a href="{{item.route}}" class="btn btn-primary">{{item.wordCount | readTime }}</a>
                   <div class="btn claps">
-                    <applause-button style="width: '40px'; height: '40px';" multiclap="true" color="green" (click)="onClapButton()"></applause-button>
+                    <applause-button style="width: '40px'; height: '40px';" multiclap="true" color="green" (click)="onClapButton(item)"></applause-button>
                   </div>
                 </div>
               </div>

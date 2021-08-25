@@ -17,6 +17,7 @@ publishedAt: 2020-03-25T10:12:00.000Z
 updatedAt: 2020-03-25T10:12:00.000Z
 thumbnailText: Selamat pagi, gimana kabar teman-teman? semoga tetap semangat dan selalu diberikan kesehatan ya. Pada kesempatan kali ini saya tidak akan menulis tentang hal-hal yang berbau teknis karena saya hanya ingin berbagi pengalaman tentang perangkat lunak gratisan. 😁
 wordCount: 923
+like: 0
 ---
 
 Selamat pagi, gimana kabar teman-teman? semoga tetap semangat dan selalu diberikan kesehatan ya. Pada kesempatan kali ini saya tidak akan menulis tentang hal-hal yang berbau teknis karena saya hanya ingin berbagi pengalaman tentang perangkat lunak gratisan. 😁
