@@ -5,7 +5,7 @@ import { ArticleResolver } from './shared/resolver.service';
 
 // tslint:disable-next-line:max-line-length
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full'},
+  { path: '', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) },
   { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) },
   { path: 'blog', loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule) },
   { path: 'myblogs', loadChildren: () => import('./myblogs/myblogs.module').then(m => m.MyblogsModule)},

@@ -1,11 +1,12 @@
 {
   "name": "afifalfiano",
   "short_name": "afifalfiano",
+  "description": "My blogs",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": ".",
-  "start_url": "http://afifalfiano.netlify.app/",
+  "start_url": "https://afifalfiano.netlify.app/index.html",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
