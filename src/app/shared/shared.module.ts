@@ -14,6 +14,9 @@ import { SubsribeBlogComponent } from './subsribe-blog/subsribe-blog.component';
 import { ArticleService } from './article.service';
 import { RouterModule } from '@angular/router';
 import { ScullyLibModule } from '@scullyio/ng-lib';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from 'src/environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 
 
@@ -25,7 +28,9 @@ import { ScullyLibModule } from '@scullyio/ng-lib';
   imports: [
     CommonModule,
     RouterModule,
-    ScullyLibModule
+    ScullyLibModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule
   ],
   exports: [
     FooterComponent,
@@ -39,7 +44,9 @@ import { ScullyLibModule } from '@scullyio/ng-lib';
     PortfolioComponent,
     NavAComponent,
     SubsribeBlogComponent,
-    ScullyLibModule
+    ScullyLibModule,
+    AngularFireModule,
+    AngularFirestoreModule
   ],
   providers: [ArticleService]
 })

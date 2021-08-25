@@ -9,6 +9,7 @@ import { HTTP404Component } from './shared/http404/http404.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AngularFireModule } from '@angular/fire';
 
 @NgModule({
   declarations: [

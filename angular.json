@@ -130,6 +130,10 @@
               "devServerTarget": "scully-blog-test:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }

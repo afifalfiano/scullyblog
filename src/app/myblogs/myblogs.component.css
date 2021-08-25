@@ -14,6 +14,11 @@
   background-size: 400% 400%;
 }
 
+.claps {
+  border: 1px solid gray;
+  min-width: 60px;
+}
+
 .content {
   display: flex;
   margin-top: 100px;
@@ -166,7 +171,7 @@
 }
 
 .card-img-top {
-  min-height: 250px;
+  min-height: 0;
 }
 
 .list-group {

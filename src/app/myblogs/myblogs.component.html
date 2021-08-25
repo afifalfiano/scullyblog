@@ -25,16 +25,18 @@
     <div class="col-md-8 col-lg-8 col-sm-12">
       <div *ngFor="let item of myblogs | paginate: { itemsPerPage: 6, currentPage: p }; let i = index;" style="display: inline-block;" class="col-md-6 col-sm-12">
             <div class="card mb-5">
-              <img src="{{item.image}}" class="card-img-top" alt="{{item.title}}"/>
+              <img src="{{item.image}}" class="img img-responsive card-img-top" alt="{{item.title}}"/>
               <div class="category-post">{{item.categories}}</div>
               <div class="card-body">
                 <h5 class="card-title">{{item.title}}</h5>
                 <p class="card-published">Post on <span class="text-primary">{{item.publishedAt | date }}</span> by <span class="text-primary">{{item.authors}}</span></p>
-                <p class="card-likes text-success">999 Likes </p>
+                <p class="card-likes text-success">{{item.like}} Like </p>
                 <p class="card-text">{{item.thumbnailText | caption}}</p>
                 <div class="action">
                   <a href="{{item.route}}" class="btn btn-primary">{{item.wordCount | readTime }}</a>
-                  <a href="#" class="btn btn-success"><i class="fa fa-thumbs-up fa-lg" aria-hidden="true"></i></a>
+                  <div class="btn claps">
+                    <applause-button style="width: '40px'; height: '40px';" multiclap="true" color="green" (click)="onClapButton(item.idPost, item)"></applause-button>
+                  </div>
                 </div>
               </div>
             </div>

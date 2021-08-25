@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "personalblog-ccdbb": {
+      "hosting": {
+        "scully-blog-test": [
+          "personalblog-ccdbb"
+        ]
+      }
+    }
+  }
+}
