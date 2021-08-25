@@ -82,6 +82,21 @@
   background-size: 400% 400%;
 }
 
+.rows {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.btn-secondary {
+  border-radius: 15px;
+  background: #1d2070;
+}
+
 @media only screen and (max-width: 425px) {
   .container-fluid {
     text-align: center;
