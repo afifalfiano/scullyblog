@@ -6,9 +6,7 @@
       #ff7d5a
     );
   color: #fff;
-  animation: gradient 15s ease infinite;
   min-height: 350px;
-  background-size: 400% 400%;
 }
 
 .subscribe {
@@ -40,6 +38,10 @@
 @media only screen and (max-width: 425px) {
   .form-sub {
     padding: 0;
+  }
+
+  .container-fluid {
+    padding-bottom: 50px;
   }
 
   .btn-primary {

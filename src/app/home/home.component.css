@@ -5,8 +5,7 @@
       #ff3186,
       #ff7d5a
     );
-  animation: gradient 15s ease infinite;
-  background-size: 400% 400%;
+  color: #fff;
 }
 
 .btn-success {
@@ -18,4 +17,16 @@
     );
   border-radius: 15px;
   border: none;
+  font-size: 24px;
+  padding: 0 25px;
+  width: 44px;
+}
+
+@media only screen and (max-width: 425px) {
+  .container-fluid {
+    padding-top: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
 }

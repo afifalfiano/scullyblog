@@ -1,5 +1,4 @@
 .featured-post {
-  position: relative;
   width: 100%;
   height: 1155px;
   overflow-x: hidden;
@@ -116,5 +115,24 @@
 @media screen and (max-width: 425px) {
   .post-title {
     padding-top: 100px;
+  }
+
+  .container {
+    gap: 30px;
+  }
+
+  .featured-post {
+    height: 2300px;
+    overflow-y: hidden;
+  }
+
+  .col-sm-12 {
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .btn-orange {
+    margin-top: 0;
+    margin-bottom: 50px;
   }
 }
