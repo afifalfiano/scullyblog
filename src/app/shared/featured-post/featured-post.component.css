@@ -20,7 +20,7 @@
       #3b42e7
     );
   border: none;
-  min-width: 220px;
+  min-width: 200px;
 }
 
 .btn-success {
@@ -41,10 +41,16 @@
   padding: 10px;
   margin-top: 50px;
   min-width: 300px;
+  border: none;
+}
+
+.claps {
+  border: 1px solid gray;
+  min-width: 60px;
 }
 
 .card-img-top {
-  min-height: 250px;
+  min-height: 0;
 }
 
 .card-published,
@@ -85,6 +91,7 @@
 .card {
   width: 347px;
   height: 554px;
+  overflow-y: hidden;
   border: none;
   border-radius: 15px;
 }

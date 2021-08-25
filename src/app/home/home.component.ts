@@ -46,5 +46,10 @@ export class HomeComponent implements OnInit {
 goToTop(): any {
   window.scrollTo({top: 0, behavior: 'smooth'});
 }
+
+onClapButton(): any {
+  let i = 0;
+  console.log(i++);
+}
 }
 

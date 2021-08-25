@@ -9,6 +9,7 @@ import { ArticleService } from '../article.service';
 })
 export class FeaturedPostComponent implements OnInit {
   recentBlog: any = [];
+  countLike = 0;
   constructor(
     private router: Router,
     private articleSvc: ArticleService
@@ -16,6 +17,10 @@ export class FeaturedPostComponent implements OnInit {
 
   ngOnInit(): void {
     this.onlyGetBlog();
+  }
+
+  onClapButton(): any {
+    console.log(this.countLike++);
   }
 
   goToBlogs(): any {
