@@ -40,17 +40,18 @@
   color: #fff;
   padding: 10px;
   margin-top: 50px;
-  min-width: 300px;
+  min-width: 400px;
   border: none;
 }
 
 .claps {
-  border: 1px solid gray;
+  border: none;
+  overflow-y: hidden;
   min-width: 60px;
 }
 
 .card-img-top {
-  min-height: 0;
+  min-height: 250px;
 }
 
 .card-published,
@@ -79,6 +80,8 @@
 .action {
   display: flex;
   justify-content: space-between;
+  min-height: 44px;
+  height: 44px;
 }
 
 .img-empty {

@@ -15,7 +15,8 @@
 }
 
 .claps {
-  border: 1px solid gray;
+  border: none;
+  overflow-y: hidden;
   min-width: 60px;
 }
 
@@ -156,6 +157,8 @@
 .action {
   display: flex;
   justify-content: space-between;
+  min-height: 44px;
+  height: 44px;
 }
 
 .card {
@@ -171,7 +174,7 @@
 }
 
 .card-img-top {
-  min-height: 0;
+  min-height: 250px;
 }
 
 .list-group {
