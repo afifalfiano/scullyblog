@@ -49,6 +49,7 @@
 
 .cover {
   min-height: 207px;
+  width: fit-content;
 }
 
 .thumbnail {
@@ -69,7 +70,10 @@
 
 .card-body {
   min-height: 270px;
+  display: flex;
   height: 270px;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .portfolio-title p {
