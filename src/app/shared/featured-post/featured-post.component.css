@@ -39,8 +39,9 @@
   color: #fff;
   padding: 10px;
   margin-top: 50px;
-  min-width: 400px;
+  min-width: 44px;
   border: none;
+  width: 130px;
 }
 
 .claps {
