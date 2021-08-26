@@ -81,4 +81,8 @@ a.info {
     font-size: 2em !important;
     font-weight: 400;
   }
+
+  .comming-post {
+    flex-direction: column;
+  }
 }

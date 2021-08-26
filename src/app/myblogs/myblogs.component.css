@@ -5,7 +5,7 @@
   padding-top: 0 !important;
 }
 
-.jumbotron-fluid {
+.jumbotron {
   min-height: 550px;
   text-align: center;
   padding-bottom: 100px;
@@ -64,6 +64,10 @@
   border-radius: 15px !important;
 }
 
+.display-4 {
+  overflow-y: hidden;
+}
+
 .display-3 {
   font-size: 4.5rem;
   font-weight: 300;
@@ -72,17 +76,17 @@
 }
 
 @media only screen and (max-width: 600px) {
-  #myblogs {
+  /* #myblogs {
     display: none !important;
-  }
+  } */
 
   .addblog {
     margin-top: 5.4em !important;
   }
 
-  .pure {
+  /* .pure {
     display: none !important;
-  }
+  } */
 
   .center-small {
     margin-bottom: -2em !important;
@@ -186,4 +190,56 @@
 
 .badge {
   min-width: 90px;
+}
+
+@media only screen and (max-width: 425px) {
+  .prev-info {
+    flex-direction: column;
+  }
+
+  .wrap-info {
+    width: auto;
+  }
+
+  .card-text {
+    font-size: 21px;
+    margin-top: 30px;
+  }
+
+  .more {
+    margin-top: 30px;
+  }
+
+  .card {
+    height: 650px;
+    overflow-y: hidden;
+  }
+
+  .list-group {
+    justify-content: center;
+  }
+
+  .pure h4 {
+    text-align: center;
+  }
+
+  .line {
+    border-top: 2px solid #e8e8f1;
+    padding: 20px;
+  }
+
+  .container:nth-child(2) {
+    overflow-y: hidden;
+  }
+
+  .row,
+  .col-sm-12 {
+    overflow-y: hidden;
+  }
+
+  .each-card {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
 }

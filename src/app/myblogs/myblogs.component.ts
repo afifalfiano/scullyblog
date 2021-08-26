@@ -2,7 +2,7 @@ import { Component, OnInit, ElementRef, ViewChild, ErrorHandler, OnDestroy } fro
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { ArticleService } from '../shared/article.service';
+import { ArticleService } from '../shared/services/article.service';
 import { Like } from '../shared/featured-post/featured-post.component';
 
 @Component({

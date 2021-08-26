@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, of, Subject } from 'rxjs';
-import { MyblogsModule } from '../myblogs/myblogs.module';
-import { SharedModule } from './shared.module';
+import { Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'

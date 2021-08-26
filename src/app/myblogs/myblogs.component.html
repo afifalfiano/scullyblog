@@ -1,8 +1,8 @@
 <app-nav-a></app-nav-a>
-<div class="jumbotron jumbotron-fluid">
+<div class="jumbotron">
   <div class="container">
     <div class="row">
-    <div class="col-md-12 content text-center">
+    <div class="col-md-12 col-sm-12 content text-center">
       <h3 class="text-center display-4">{{
         previewBlog[0]?.title
       }}</h3>
@@ -23,7 +23,7 @@
 <div class="container mt-5 mb-5">
   <div class="row mt-4">
     <div class="col-md-8 col-lg-8 col-sm-12">
-      <div *ngFor="let item of myblogs | paginate: { itemsPerPage: 6, currentPage: p }; let i = index;" style="display: inline-block;" class="col-md-6 col-sm-12">
+      <div *ngFor="let item of myblogs | paginate: { itemsPerPage: 6, currentPage: p }; let i = index;" style="display: inline-block;" class="col-md-6 col-sm-12 each-card">
             <div class="card mb-5">
               <img src="{{item.image}}" class="img img-responsive card-img-top" alt="{{item.title}}"/>
               <div class="category-post">{{item.categories}}</div>
@@ -42,14 +42,14 @@
             </div>
         </div>
         <div class="center-small">
-          <pagination-controls class="text-center"  (pageChange)="p = $event"></pagination-controls>
+          <pagination-controls class="text-center"  [responsive]="true" (pageChange)="p = $event"></pagination-controls>
         </div>
     </div>
-    <div class="col-md-4 col-lg-4">
+    <div class="col-md-4 col-lg-4 col-sm-12">
       <div class="row pure">
         <div class="col">
           <div class="text-center mt-5">
-            <div class="container">
+            <div class="container line">
               <img src="../../assets/profile.jpg" class="img-fluid rounded-circle p-4 profile" alt="Afif Alfiaon" width="170">
               <h3 style="font-weight: bold;">Afif Alfiano</h3>
               <p class="text-secondary">Frontend Developer</p>

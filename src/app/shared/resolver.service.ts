@@ -3,7 +3,7 @@ import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot } from '@angular/r
 
 import { Observable, of } from 'rxjs';
 import { delay } from 'rxjs/operators';
-import { ArticleService } from './article.service';
+import { ArticleService } from './services/article.service';
 
 @Injectable({
   providedIn: 'root'

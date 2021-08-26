@@ -3,7 +3,7 @@ import { Component, ElementRef, ErrorHandler, OnInit, Type, ViewChild } from '@a
 import { ScullyRoutesService, ScullyRoute } from '@scullyio/ng-lib';
 import { Observable } from 'rxjs';
 import { Location } from '@angular/common';
-import { ArticleService } from '../shared/article.service';
+import { ArticleService } from '../shared/services/article.service';
 
 @Component({
   selector: 'app-home',
