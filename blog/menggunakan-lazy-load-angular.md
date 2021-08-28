@@ -216,8 +216,7 @@ Berikut ini kode lengkapnya saya letakan di akun github saya.
 
 Semoga teman-teman dapat mempraktikan fitur lazy loading dari angular dan semoga bermanfaat. Tetap Semangat! .
 
-“Pikirkanlah kebaikan apa yang dapat kita tinggalkan di dunia ini.”
-
+<blockquote style="padding-top:10px;padding-bottom:10px;"><strong><em>“Pikirkanlah kebaikan apa yang dapat kita tinggalkan di dunia ini.”</em></strong></blockquote>
 
 ### References
 
