@@ -50,6 +50,10 @@ export class AboutMeComponent implements OnInit {
     {
       tech: 'gimp',
       style: 'btn-outline-success'
+    },
+    {
+      tech: 'angular',
+      style: 'btn-outline-danger'
     }
   ];
   constructor() { }

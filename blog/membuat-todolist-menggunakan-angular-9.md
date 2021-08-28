@@ -7,7 +7,7 @@ slugs:
 keywords: 
     - todolist
     - angular
-image: assets/images/blog/13.todolist/1.header.jpeg
+image: assets/images/blog/13.todolist/1.header.png
 categories: Tutorial
 authors: afif alfiano
 tags:
