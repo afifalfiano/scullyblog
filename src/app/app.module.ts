@@ -10,6 +10,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
+import { HighlightService } from './shared/services/highlight.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { AngularFireModule } from '@angular/fire';
     FormsModule,
     ReactiveFormsModule,
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [HighlightService]
 })
 export class AppModule {
 

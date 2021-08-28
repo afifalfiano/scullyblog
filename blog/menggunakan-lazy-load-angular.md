@@ -35,7 +35,7 @@ Selanjutnya kita edit default tampilan dari angular dan tambahkan sedikit stylin
 
 File html seperti berikut ini.
 
-```
+```html
 <div class="container-fluid">
 <nav class="navbar navbar-white">
 <ul class="nav nav-pills mt-2" id="pills-tab" role="tablist">
@@ -61,13 +61,13 @@ File html seperti berikut ini.
 
 Kita coba dengan cara langsung generate config menggunkaan lazy loading untuk menu profile. Jalankan perintah dibawah ini.
 
-```
+```typescript
 ng generate module profile --route profile --module app.module
 ```
 
 Maka akan secara otomatis generate komponen lengkap dengan konfigurasi lazy loading.
 
-```
+```typescript
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [{ path: 'profile', loadChildren: () => import('./profile/profile.module').then(m => m.ProfileModule) }];
@@ -80,7 +80,7 @@ export class AppRoutingModule { }
 
 Nah, kita cek dikomponen profile ternyata ada file routing juga. File inilah yang akan diload ketika user merequest atau membuaka libary atau komponen ini. Seperti berikut ini.
 
-```
+```typescript
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ProfileComponent } from './profile.component';
@@ -94,13 +94,13 @@ export class ProfileRoutingModule { }
 
 Tinggal kita edit file html supaya bisa merouting komponen yang barusan kita tambahkan. Tambahkan juga untuk komponen home dengan cara generate seperti biasa. Untuk generate komponen tanpa lazy loading bisa jalankan perintah berikut ini.
 
-```
+```typescript
 ng g c home
 ```
 
 Nah, berikut ini file app.component.html yang telah saya edit.
 
-```
+```html
 <div class="container-fluid">
 <nav class="navbar navbar-white">
 <ul class="nav nav-pills mt-2" id="pills-tab" role="tablist">
@@ -138,13 +138,13 @@ Oke, selanjutnya kita coba secara manual membuat fitur lazy load ini dari kompon
 
 Setelah itu, langsung saja saya coba fork repository master dan membuat branch. Awalnya saya bingung mau kontribusi apa ya, karena kalo mau angular sudah ada, mau react juga sudah ada, mau vuejs pun juga sudah ada, akhirnya dapat ide nih untuk membuat hello world dari meteor js. Langsung saja saya kunjungi websitenya meteor js dan baca dokumentasinya.
 
-```
+```typescript
 ng generate component contact
 ```
 
 Kemudian kita buat file contact.module.ts seperti berikut ini.
 
-```
+```typescript
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ContactRoutingModule } from './contact-routing.module';
@@ -158,7 +158,7 @@ export class ContactModule { }
 
 Kemudian tambahkan juga file contact-routing.module.ts juga.
 
-```
+```typescript
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ContactComponent } from './contact.component';
@@ -172,7 +172,7 @@ export class ContactRoutingModule { }
 
 Jika sudah, tinggal kita edit file app.component.html untuk menu contact dan app-routing.module.ts supaya bisa routing contact menggunkan lazy loading.
 
-```
+```html
 <li class="nav-item" role="presentation">
 <a class="nav-link" id="pills-contact-tab" data-toggle="pill" routerLink="contact" routerLinkActive="active" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</a>
 </li>
@@ -180,7 +180,7 @@ Jika sudah, tinggal kita edit file app.component.html untuk menu contact dan app
 
 Kemudian untuk file app-routing.module.ts kita edit menjadi seperti berikut ini.
 
-```
+```typescript
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';

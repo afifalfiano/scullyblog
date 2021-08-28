@@ -2,7 +2,6 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import '~applause-button/dist/applause-button.css';
 
-
 /* include CSS for prism toolbar */
 @import '~prismjs/plugins/toolbar/prism-toolbar.css';
 

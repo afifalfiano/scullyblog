@@ -1,8 +1,9 @@
 import { Location } from '@angular/common';
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {AfterViewChecked, Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {ActivatedRoute, Router, ROUTES} from '@angular/router';
 import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
 import { Observable } from 'rxjs';
+import { HighlightService } from '../shared/services/highlight.service';
 
 
 @Component({
@@ -13,13 +14,15 @@ import { Observable } from 'rxjs';
   encapsulation: ViewEncapsulation.Emulated
 
 })
-export class BlogComponent implements OnInit {
+export class BlogComponent implements OnInit, AfterViewChecked {
   currentPost$: Observable<ScullyRoute> = this.scullySvc.getCurrent();
   allPost: any = [];
   p = 1;
   constructor(
     private router: Router,
-    private scullySvc: ScullyRoutesService) {
+    private scullySvc: ScullyRoutesService,
+    private highlightService: HighlightService
+    ) {
   }
 
   ngOnInit(): void {
@@ -37,6 +40,10 @@ export class BlogComponent implements OnInit {
         }
       });
     }
+  }
+
+  ngAfterViewChecked(): any {
+    this.highlightService.highlightAll();
   }
 
   getAllPost(): any {

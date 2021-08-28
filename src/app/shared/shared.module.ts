@@ -18,6 +18,7 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { SafePipe } from './pipe/safe.pipe';
+import { HighlightService } from './services/highlight.service';
 
 
 
@@ -49,6 +50,6 @@ import { SafePipe } from './pipe/safe.pipe';
     AngularFireModule,
     AngularFirestoreModule
   ],
-  providers: [ArticleService]
+  providers: [ArticleService, HighlightService]
 })
 export class SharedModule {}

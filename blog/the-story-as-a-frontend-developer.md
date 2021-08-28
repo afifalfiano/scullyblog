@@ -7,7 +7,7 @@ slugs:
 keywords: 
     - story
     - frontend-developer
-image: assets/images/blog/6.story-as-a-fe/header.jpeg
+image: assets/images/blog/6.story-fe/1.header.jpeg
 categories: Story
 authors: afif alfiano
 tags:
