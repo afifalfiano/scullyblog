@@ -93,10 +93,19 @@
 
 .card {
   width: 347px;
-  height: 554px;
-  overflow-y: hidden;
+  min-height: 580px;
   border: none;
   border-radius: 15px;
+  height: 580px;
+}
+
+.card-body {
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .post-title h1 {

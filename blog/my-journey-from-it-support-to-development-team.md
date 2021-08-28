@@ -47,7 +47,7 @@ Kemudian tepat pada bulan November saya kepikiran, jika saya ada di posisi yang 
 
 Saya jadi teringat sebuah quote:
 
-<blockquote style="padding-top:10px; padding-bottom:10px;"><strong><em>
+<blockquote style="padding-top: 10px; padding-bottom: 10px;"><strong><em>
 “If Opportunity doesn’t Knock, Build a Door.” ~ Milton Berle</em></strong></blockquote>
 
 <img src="assets/images/blog/3.journey/5.image.jpg" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" alt="team">

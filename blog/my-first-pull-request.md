@@ -16,7 +16,7 @@ tags:
 publishedAt: 2020-06-18T10:12:00.000Z
 updatedAt: 2020-06-18T10:12:00.000Z
 thumbnailText: Gimana rasanya ketika pertama kali pull requestmu di setuju oleh pemilik project? pasti senang bukan. Pull request adalah sebuah metode dimana kita meminta pemilik kode master untuk mereview tambahan kode kita dan jika disetujui bisa dimerge atau digabung ke master kode tersebut.
-wordCount: 566
+wordCount: 792
 like: 0
 ---
 
