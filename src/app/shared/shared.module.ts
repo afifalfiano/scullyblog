@@ -17,12 +17,13 @@ import { ScullyLibModule } from '@scullyio/ng-lib';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { SafePipe } from './pipe/safe.pipe';
 
 
 
 @NgModule({
   // tslint:disable-next-line:max-line-length
-  declarations: [FooterComponent, CaptionPipe, StringFilterPipe, WordCountPipe, AboutMeComponent, ExperienceComponent, PortfolioComponent, FeaturedPostComponent, HeroComponent, NavAComponent, SubsribeBlogComponent
+  declarations: [FooterComponent, CaptionPipe, StringFilterPipe, WordCountPipe, AboutMeComponent, ExperienceComponent, PortfolioComponent, FeaturedPostComponent, HeroComponent, NavAComponent, SubsribeBlogComponent, SafePipe
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [

@@ -9,12 +9,15 @@ require ('@notiz/scully-plugin-lazy-images');
 require('@notiz/scully-plugin-medium-zoom');
 require('scully-plugin-amp-css');
 require('scully-plugin-canonical');
+const linkPreview = require('markdown-it-link-preview');
+const md = require('markdown-it')();
+md.use(linkPreview);
 
 const { MinifyHtml } = require('scully-plugin-minify-html');
 
 const Http404Plugin = getHttp404Plugin();
 // tslint:disable-next-line:max-line-length
-const postRenderersBlog = [DisableAngular, Http404Plugin, 'mediumZoom', 'lazyImages', MinifyHtml, criticalCSS, 'changeTitlePlugin', 'setCanonicalLinkPlugin', 'seoHrefOptimise', 'combineStylesAmpPlugin'];
+const postRenderersBlog = [Http404Plugin, 'mediumZoom', MinifyHtml, 'setCanonicalLinkPlugin', 'seoHrefOptimise', 'combineStylesAmpPlugin'];
 
 setPluginConfig('md', { enableSyntaxHighlighting: true });
 setPluginConfig(DisableAngular, 'render', {removeState: false});
@@ -22,12 +25,14 @@ export const config: ScullyConfig = {
   projectRoot: './src',
   projectName: 'scully-blog-test',
   outDir: './dist/static',
+  defaultPostRenderers: postRenderersBlog,
   routes: {
     '/blog/:slug': {
       type: 'contentFolder',
       slug: {
         folder: './blog'
-      }
+      },
+      postRenderers: postRenderersBlog
     },
   }
 };

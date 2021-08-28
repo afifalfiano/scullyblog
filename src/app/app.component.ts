@@ -32,4 +32,12 @@ export class AppComponent {
   public setTitle(newTitle: string = 'Afif Alfiano'): any {
     this.titleSvc.setTitle(newTitle);
   }
+
+  getMeta(): any {
+    const title = document.querySelector('meta[property=\'og:title\'')?.getAttribute('content');
+    const desc = document.querySelector('meta[property=\'og:description\'')?.getAttribute('content');
+    const image = document.querySelector('meta[property=\'og:image\'')?.getAttribute('content');
+    const url = document.querySelector('meta[property=\'og:url\'')?.getAttribute('content');
+    return {title, desc, image, url};
+}
 }
