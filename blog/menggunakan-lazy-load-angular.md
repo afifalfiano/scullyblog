@@ -16,7 +16,7 @@ tags:
 publishedAt: 2020-07-4T10:12:00.000Z
 updatedAt: 2020-07-4T10:12:00.000Z
 thumbnailText: Haloo teman-teman. Bagaiamana akhir pekannya? Pergi refreshing apa tetap di depan laptop atau komputer 😅. Apapun itu selagi kegiatannya positif maka tidak perlu diperdebatkan, oke.Pada kesempatan kali ini saya ingin share tentang salah satu fitur angular yang bisa mempercepat waktu load website.
-wordCount: 1008
+wordCount: 1171
 like: 0
 ---
 Haloo teman-teman. Bagaiamana akhir pekannya? Pergi refreshing apa tetap di depan laptop atau komputer 😅. Apapun itu selagi kegiatannya positif maka tidak perlu diperdebatkan, oke.

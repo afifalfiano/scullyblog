@@ -16,7 +16,7 @@ tags:
 publishedAt: 2020-08-22T10:12:00.000Z
 updatedAt: 2020-08-22T10:12:00.000Z
 thumbnailText: Haloooo! Gimana kabar teman-teman? Maaf ya sudah 3 minggu lebih tidak ada artikel sama sekali. Oke, jadi pada kesempatan kali ini saya ingin berbagi ilmu tentang web component. Apakah kamu sudah tau apa itu web komponen? dilansir dari MDN berikut ini penjelasannya.
-wordCount: 1008
+wordCount: 738
 like: 0
 ---
 Haloooo! Gimana kabar teman-teman? Maaf ya sudah 3 minggu lebih tidak ada artikel sama sekali. Oke, jadi pada kesempatan kali ini saya ingin berbagi ilmu tentang web component.

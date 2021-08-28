@@ -9,6 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "scully": "scully",
+    "local": "npm run build && npm run scully && npm run scully:serve",
     "scully:serve": "scully serve",
     "deploy": "npm run build && npm run scully",
     "pre-commit": "lint-staged",

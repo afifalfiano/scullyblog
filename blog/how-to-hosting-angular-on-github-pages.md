@@ -17,7 +17,7 @@ tags:
 publishedAt: 2020-07-25T10:12:00.000Z
 updatedAt: 2020-07-25T10:12:00.000Z
 thumbnailText: Selamat Pagi, Gimana kabar teman-teman? semoga selalu dalam keadaan baik-baik saja. Pada kesempatan kali ini saya ingin membahas bagaimana cara hosting di github pages secara otomatisasi. Jadi kita tidak perlu susah-susah mengupload file hasil build project kita ke github pages.
-wordCount: 1008
+wordCount: 836
 like: 0
 ---
 Selamat Pagi, Gimana kabar teman-teman? semoga selalu dalam keadaan baik-baik saja. Pada kesempatan kali ini saya ingin membahas bagaimana cara hosting di github pages secara otomatisasi. Jadi kita tidak perlu susah-susah mengupload file hasil build project kita ke github pages.

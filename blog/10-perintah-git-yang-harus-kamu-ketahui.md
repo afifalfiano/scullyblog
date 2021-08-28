@@ -5,18 +5,18 @@ published: true
 slugs:
     - 10-perintah-git-yang-harus-kamu-ketahui
 keywords: 
-    - Git
-    - Versioning
-image: assets/images/blog/10.git/header.jpg
-categories: UX
+    - git
+    - versioning
+image: assets/images/blog/10.git/1.header.jpeg
+categories: Git
 authors: afif alfiano
 tags:
-  - UX
+  - git
   - rss
 publishedAt: 2020-07-11T10:12:00.000Z
 updatedAt: 2020-07-11T10:12:00.000Z
 thumbnailText: Selamat Sore. Bagaimana kabarmu hari ini? Semoga selalu diberikan kesehatan dan semangat yang tak pernah padam. Pernahkah kamu berkolaborasi dengan orang lain? Bagaimana cara memanajemen project yang dikerjakan? Apakah setiap ada perubahan file harus melakukan save as? atau lebih parahnya harus saling kirim file setiap ada perubahan? Tentu hal ini sangat tidak efisien.
-wordCount: 1639
+wordCount: 1449
 like: 0
 ---
 
@@ -26,11 +26,15 @@ Maka, pada kesempatan kali ini saya ingin berbagi pengetahuan tentang git. Apa i
 
 Pastika teman-teman sudah menginstall command line git ya, kalau di windows bisa pakai gitbash kalau di linux atau mac bisa tinggal install gitnya lewat terminal.
 
-lnik
+
+<p><div class="link-preview-widget"><a href="https://git-scm.com/" rel="noopener" target="_blank"><div class="link-preview-widget-title">GIT </div><div class="link-preview-widget-description">Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.</div><div class="link-preview-widget-url">https://git-scm.com/</div></a><a class="link-preview-widget-image" href="https://git-scm.com/" rel="noopener" style="background-image: url('https://git-scm.com/images/branching-illustration@2x.png');" target="_blank"></a></div></p>
+
 
 Sebelumnya saya telah membuat repository di github ya, jadi biar keliatan perubahannya seperti apa. Tapi repositorynya masih kosong dan tidak ada file readme dari github.
 
-link
+
+<p><div class="link-preview-widget"><a href="https://github.com/afifalfiano/learn-git" rel="noopener" target="_blank"><div class="link-preview-widget-title">afifalfiano/learn-git: Learning How to implements git on github.</div><div class="link-preview-widget-description">Learning How to implements git on github. Contribute to afifalfiano/learn-git development by creating an account on GitHub.</div><div class="link-preview-widget-url">https://github.com/</div></a><a class="link-preview-widget-image" href="https://github.com/afifalfiano/learn-git" rel="noopener" style="background-image: url('https://opengraph.githubassets.com/d3ba7ae1354c210e30850b0d89f39012ec58b01b1f09b5a9f4ff79be45d45950/afifalfiano/learn-git');" target="_blank"></a></div></p>
+
 
 Berikut ini 10 perintah git yang wajib teman-teman ketahui untuk memudahkan proses development suatu project.
 
@@ -88,7 +92,7 @@ Saya membuat perubahan file Todolist.md seperti ini di branch revisi1
 
 Jangan lupa untuk melakukan git add, git commit dan git push ke branch terbaru ya.
 
-<img src="assets/images/blog/10.git/10.mk-check.png" alt="Branch" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/10.git/11.mk-check.png" alt="Branch" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
 
 ### 7. Git Checkout
 
