@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ExperienceComponent implements OnInit {
   myExperience: Array<any> = [
     {
-      position: 'Frontend Developer',
+      position: 'Frontend Dev',
       time: '20 August, 2020',
       description: 'Implementation of a design product to the web application. (On the frontend developer, we use an Angular framework.'
     },
