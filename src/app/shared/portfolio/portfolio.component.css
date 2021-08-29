@@ -53,9 +53,10 @@
 }
 
 .thumbnail {
-  height: auto;
   width: 100%;
-  transform: scale(1.3);
+  min-height: 230px !important;
+  height: 230px !important;
+  overflow: hidden;
 }
 
 .card {

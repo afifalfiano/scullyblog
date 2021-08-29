@@ -8,12 +8,12 @@
         <div *ngFor="let item of dataPortfolio" class="col-lg-4">
                 <div class="card">
                     <div class="cover">
-                      <img src="{{item.asset}}" alt="{{item.title}}" class="img img-responsive thumbnail">
+                      <img src="{{item.asset}}" alt="{{item.title}}"  class="img img-responsive thumbnail">
                     </div>
                     <div class="card-body">
                       <h5 class="card-title">{{item.title}}</h5>
                       <p class="card-text">{{item.description}}</p>
-                      <a href="#" class="btn btn-primary">Detail</a>
+                      <a href="{{item.url}}" target="_blank" class="btn btn-primary">Visit</a>
                     </div>
                   </div>
             </div>
