@@ -14,7 +14,7 @@
     "deploy": "npm run build && npm run scully",
     "pre-commit": "lint-staged",
     "stylelint": "npx stylelint --fix",
-    "netilfy:deploy": "npm run build && npm run scully --prod && netlify build && netlify deploy && netlify deploy --prod "
+    "netlify:deploy": "npm run build && npm run scully --prod && netlify build && netlify deploy && netlify deploy --prod "
   },
   "private": true,
   "dependencies": {
