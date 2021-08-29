@@ -37,7 +37,6 @@ export class FeaturedPostComponent implements OnInit {
   }
 
   onClapButton(idPost: string, $event: any): any {
-    console.log($event, 'e');
     let id = idPost;
     let like: Like = {id, count: $event.like + 1, route: $event.route};
     if (id) {
@@ -52,11 +51,8 @@ export class FeaturedPostComponent implements OnInit {
   }
 
   onUpdateLike(dataBlog: any): any {
-    console.log(dataBlog);
     this.items.subscribe(response => {
-      console.log(response, 'a');
       response.forEach(like => {
-        console.log(like);
         dataBlog.forEach((item: any) => {
           if (item.route === like.route) {
             item.like = like.count;

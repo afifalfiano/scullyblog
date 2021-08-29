@@ -48,8 +48,7 @@ goToTop(): any {
 }
 
 onClapButton(): any {
-  let i = 0;
-  console.log(i++);
+  const i = 0;
 }
 }
 
