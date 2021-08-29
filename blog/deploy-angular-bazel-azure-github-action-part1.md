@@ -3,7 +3,7 @@ title: Deploy Angular 9 and Bazel on Azure Static Web Apps(Preview) using Github
 description: Berikut ini langlah-langkah mendeploy aplikasi angular 9 dilengkapi dengan tools builder bazel ke azure meggunakan github worflow action.
 published: true
 slugs:
-    - deploy-angular9-and-bazel-on-azure-static-web-apps(preview)-using-github-action-part-1
+    - deploy-angular-bazel-azure-github-action-part1
 keywords: 
     - github-action
     - angular
@@ -667,7 +667,7 @@ Nah, terdapat keterangan bahwa terjadi perubahan file pada app.component.html ja
 Oke tahap installasi angular dengan bazel sudah selesai. Selanjutnya kita masuk ke tahap deployment ke github dan azure.
 
 
-<p><div class="link-preview-widget"><a href="https://afifalfiano.netlify.app/blog/deploy-angular9-and-bazel-on-azure-static-web-apps(preview)-using-github-action-part-2" rel="noopener" target="_blank"><div class="link-preview-widget-title">Deploy Angular 9 and Bazel on Azure Static Web Apps(Preview) using Github Actions Part II</div><div class="link-preview-widget-description">Setelah proses panjang menginstall bazel di angular, maka kita lanjut ke proses mengunggah source code ke github dan menghubungkan ke azure untuk dilakukan proses deployment.</div><div class="link-preview-widget-url">https://afifalfiano.netlify.app/</div></a><a class="link-preview-widget-image" href="https://afifalfiano.netlify.app/blog/deploy-angular9-and-bazel-on-azure-static-web-apps(preview)-using-github-action-part-2" rel="noopener" style="background-image: url('https://afifalfiano.netlify.app/assets/images/blog/14.bazel/1.header.jpeg');" target="_blank"></a></div></p>
+<p><div class="link-preview-widget"><a href="https://afifalfiano.netlify.app/blog/deploy-angular-bazel-azure-github-action-part2" rel="noopener" target="_blank"><div class="link-preview-widget-title">Deploy Angular 9 and Bazel on Azure Static Web Apps(Preview) using Github Actions Part II</div><div class="link-preview-widget-description">Setelah proses panjang menginstall bazel di angular, maka kita lanjut ke proses mengunggah source code ke github dan menghubungkan ke azure untuk dilakukan proses deployment.</div><div class="link-preview-widget-url">https://afifalfiano.netlify.app/</div></a><a class="link-preview-widget-image" href="https://afifalfiano.netlify.app/blog/deploy-angular-bazel-azure-github-action-part2" rel="noopener" style="background-image: url('https://afifalfiano.netlify.app/assets/images/blog/14.bazel/1.header.jpeg');" target="_blank"></a></div></p>
 
 
 #github #anguar #bazel #azure

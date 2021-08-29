@@ -3,7 +3,7 @@ title: Deploy Angular 9 and Bazel on Azure Static Web Apps(Preview) using Github
 description: Pada proses ini kita melakukan unggah aplikasi ke github dan mendeploy ke azure.
 published: true
 slugs:
-    - deploy-angular9-and-bazel-on-azure-static-web-apps(preview)-using-github-action-part-2
+    - deploy-angular-bazel-azure-github-action-part2
 keywords: 
     - github-action
     - angular

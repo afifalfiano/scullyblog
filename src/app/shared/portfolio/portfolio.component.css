@@ -138,3 +138,30 @@
     margin: 0 0 0 40px;
   }
 }
+
+@media only screen and (max-width: 375px) {
+  .portfolio-title {
+    padding-top: 50px;
+  }
+
+  .portfolio-title h1 {
+    font-size: 50px;
+  }
+
+  .cover {
+    min-height: 140px;
+  }
+
+  .portfolio-title p {
+    font-size: 18px;
+  }
+
+  .real-project > h2 {
+    font-size: 30px;
+  }
+
+  .card-body {
+    min-height: 370px;
+    height: 370px;
+  }
+}

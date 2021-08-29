@@ -50,3 +50,13 @@
     width: 200px;
   }
 }
+
+@media only screen and (max-width: 375px) {
+  .subscribe {
+    padding-top: 50px;
+  }
+
+  .subscribe .h1 {
+    font-size: 30px;
+  }
+}

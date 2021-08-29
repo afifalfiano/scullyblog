@@ -87,3 +87,30 @@
     transform: translateY(100px);
   }
 }
+
+@media only screen and (max-width: 375px) {
+  .about-title {
+    font-size: 50px;
+  }
+
+  .about-text {
+    font-size: 18px;
+  }
+
+  .list-stack {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container-fluid,
+  .container,
+  .about-me {
+    min-height: 835px;
+    height: 853px;
+  }
+}

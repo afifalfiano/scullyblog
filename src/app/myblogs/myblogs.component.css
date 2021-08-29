@@ -263,3 +263,44 @@
     justify-content: center;
   }
 }
+
+@media only screen and (max-width: 375px) {
+  .center-small {
+    margin-left: -1em !important;
+  }
+
+  .display-4 {
+    font-size: 40px;
+  }
+
+  .post-title {
+    padding-top: 50px;
+  }
+
+  .post-title h1 {
+    font-size: 40px;
+  }
+
+  .card-img-top {
+    min-height: 130px;
+  }
+
+  .card-title,
+  .card-published,
+  .card-likes,
+  .card-text {
+    overflow: hidden;
+  }
+
+  .card {
+    height: 660px;
+  }
+
+  .post-title > p {
+    font-size: 18px;
+  }
+
+  .btn-primary {
+    min-width: 130px;
+  }
+}

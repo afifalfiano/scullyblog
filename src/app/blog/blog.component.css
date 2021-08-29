@@ -98,4 +98,14 @@ a.info {
   .comming-post {
     flex-direction: column;
   }
+
+  ::ng-deep .ngx-pagination {
+    transform: translateX(-30px) !important;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .new {
+    flex-wrap: wrap;
+  }
 }

@@ -3,7 +3,9 @@
     "extends": "stylelint-config-standard",
     "rules": {
       "no-empty-source": null,
-      "font-family-no-missing-generic-family-keyword": null
+      "font-family-no-missing-generic-family-keyword": null,
+      "selector-type-no-unknown": null,
+      "selector-pseudo-element-no-unknown": null
     },
     "ignoreFiles": [
       "dist/**/*"

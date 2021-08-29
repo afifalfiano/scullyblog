@@ -88,4 +88,27 @@ ul.timeline > li::before {
   ul.timeline li p {
     font-size: 16px;
   }
+
+  ul.timeline > li {
+    padding-left: 0;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .exp-title {
+    padding-top: 50px;
+    font-size: 50px;
+  }
+
+  ul.timeline li a:nth-child(1) {
+    font-size: 16px;
+  }
+
+  ul.timeline li a:nth-child(2) {
+    font-size: 12px;
+  }
+
+  ul.timeline li p {
+    font-size: 14px;
+  }
 }
