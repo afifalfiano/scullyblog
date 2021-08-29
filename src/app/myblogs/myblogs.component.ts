@@ -36,6 +36,14 @@ export class MyblogsComponent implements OnInit {
       category: 'Methodology',
       class: 'bg-primary text-white'
     },
+    {
+      category: 'Story',
+      class: 'bg-success text-white'
+    },
+    {
+      category: 'Tutorial',
+      class: 'bg-secondary text-white'
+    },
   ];
   updateFireStore: any = [];
   countLike = 0;

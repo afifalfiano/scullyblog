@@ -167,7 +167,7 @@
 
 .card {
   width: 347px;
-  min-height: 580px;
+  min-height: 600px;
   border: 1px solid rgba(29, 32, 112, 0.1);
   border-radius: 15px;
   height: 580px;
@@ -212,8 +212,13 @@
   }
 
   .card-text {
-    font-size: 21px;
-    margin-top: 30px;
+    font-size: 16px;
+    margin-top: 0;
+  }
+
+  .center-small {
+    margin-bottom: 0 !important;
+    margin-left: -3em !important;
   }
 
   .more {
@@ -222,7 +227,12 @@
 
   .card {
     height: 650px;
+    min-height: 650px;
     overflow-y: hidden;
+  }
+
+  .card-title {
+    font-size: 20px;
   }
 
   .list-group {

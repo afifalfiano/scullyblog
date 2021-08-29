@@ -93,7 +93,7 @@
 
 .card {
   width: 347px;
-  min-height: 580px;
+  min-height: 600px;
   border: none;
   border-radius: 15px;
   height: 580px;
@@ -132,7 +132,7 @@
   }
 
   .featured-post {
-    height: 2300px;
+    height: 2500px;
     overflow-y: hidden;
   }
 
