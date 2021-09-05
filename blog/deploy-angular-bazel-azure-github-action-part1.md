@@ -49,17 +49,17 @@ Pastikan teman-teman sudah menginstall node js, angular 9, bazel dan kebutuhan l
 
 Ketika seluruh peralatan tempur sudah dipersiapkan kita bisa langsung jalankan perintah ng new ngBazel — collection=@angular/bazel. Project ini langsung menggunakan atribut bazel, jadi misalkan teman-teman ingin menambahkan bazel di existing project bisa jalankan perintah ng add @angular/bazel.
 
-<img src="assets/images/blog/14.bazel/2.process.png" alt="Process" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/14.bazel/2.process.png" alt="Process" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Tunggu proses sampai selesai dan pastikan tidak ada eror yang muncul.
 
 Secara sekilas sekilas tidak ada perbedaan dari angular yang menggunakan bazel atau yang tidak menggunakan. Nah, disini ketika kita jalankan perintah ng serve maka secara otomatis akan running menggunakan bazel dan disini kita menggunakan nol cofiguration bazel.
 
-<img src="assets/images/blog/14.bazel/3.preview.png" alt="Preview" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/14.bazel/3.preview.png" alt="Preview" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Supaya dapat mengetahui perbedaannya, jalankan perintah ng build — leaveBazelFilesOnDisk. Maka secara otomatis file-file dari bazel pun akan muncul dan pastikan tidak terjadi eror.
 
-<img src="assets/images/blog/14.bazel/4.install.png" alt="Install" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/14.bazel/4.install.png" alt="Install" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Maka akan terdapat beberapa file, mari kita bahas satu persatu.
 
@@ -632,37 +632,37 @@ Oke langsung saja kita coba jalankan anglar 9 mengguakan bazel ini. Jika biasany
 
 Jangan bingung ya ketika proses pertama kali build memakan waktu yang lama, untuk gambar dibawah ini hanya membutuhkan waktu 2 detik saja, karena sebelumnya saya sudah melakukan bazel run //src:test dan perlu saya sampaikan proses itu memakan waktu kurang lebih 800 detik, hehe. Lama ya? ya memang sepeti itu jadi diawal bazel akan ngebuild seluruh input output dari angular dan setelah itu akan direbuild jika ada perubahan, jika tidak ada perubahan? ya pakai cache yang lama dan inilah yang disebut dengan konsep incremental dan trust cache.
 
-<img src="assets/images/blog/14.bazel/5.load.png" alt="Process" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/14.bazel/5.load.png" alt="Process" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Oke maka tampilannya seperti berikut ini dan tidak ada yang spesial ya, ini hanya prosesnya saja, nanti teman-teman bisa kembangkan sendiri.
 
-<img src="assets/images/blog/14.bazel/6.index.png" alt="Process" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/14.bazel/6.index.png" alt="Process" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Secara sekilas tidak ada perbedaan, maka dari itu mari kita cari perbedaannya. Yap coba klik kanan dan view page source maka akan terlihat jelas perbedaannya. Pada halaman tersebut terlihat dengan jelas bahwa file bundling yang digunakan oleh angular adalah file cache yang ada dimesin kita.
 
-<img src="assets/images/blog/14.bazel/7.code.png" alt="Process" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/14.bazel/7.code.png" alt="Process" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Kita juga bisa menjalankan perintah supaya bisa memonitoring setiap perubahan file yang ada menggunakan ibazel, sebelumnya jalankan perintah npm i — save-dev @bazel/bazelisk. Karena untuk menjalankan ibazel memerlukan library bazelisk yang mana bazelisk sudah deprecated dari @bazel itu sendiri. Setelah terintstall coba jalankan perintah ibazel run //src:devserver.
 
-<img src="assets/images/blog/14.bazel/8.bazel.png" alt="Process" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/14.bazel/8.bazel.png" alt="Process" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Oh, ternyta terdapat error bahwa tidak mengenali perintah — incompatible_bzl_disallow_load_after_statement=false. Nah solusinya nonaktifkan perintah tersebut yang berada di file .bazelsrc. Kemudian coba jalankan lagi dan seperti berikut ini tampilannya
 
-<img src="assets/images/blog/14.bazel/9.bazel-load.png" alt="Process" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/14.bazel/9.bazel-load.png" alt="Process" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Nah, jadi setiap ada perubahan file maka ibazel akan memberitahukan dan akan melakukan rebuild. Perlu teman-teman ketahui bahwa bazel itu selalu AOT, jadi misalkan teman-teman buat component, directive, service dan sejenisnya, tolong dilakukan build terlebih dahulu karena bazel membutuhkan file ngFactory dan ngSummary supaya bisa menjalankan component yang baru dibuat.
 
 Nah, ini coba kita tambahkan component baru. Bisa dengan menjalankan perintah ng g c header dan selanjutnya build kembali. Kemudian jalankan ibazel kembali maka hasilnya seperti berikut ini.
 
-<img src="assets/images/blog/14.bazel/10.host.png" alt="Process" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/14.bazel/10.host.png" alt="Process" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Okee berhasil, selanjutnya kita ingin melihat bagaimana ibazel itu bekerja. Disini saya akan mengedit file title yang awalnya cuma ngBazel app is running, saya ubah menjadi Awesome ngBazel app is running dan kemudian save file app.component.html.
 
-<img src="assets/images/blog/14.bazel/11.build.png" alt="Process" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/14.bazel/11.build.png" alt="Process" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Nah, terdapat keterangan bahwa terjadi perubahan file pada app.component.html jam 9.50 dan sedang dilakukan proses rebuilding. Keren bukan? hehe. Seperti ini tampilan setelah dilakukan proses edit.
 
-<img src="assets/images/blog/14.bazel/12.load-bzl.png" alt="Preview" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/14.bazel/12.load-bzl.png" alt="Preview" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Oke tahap installasi angular dengan bazel sudah selesai. Selanjutnya kita masuk ke tahap deployment ke github dan azure.
 

@@ -54,7 +54,7 @@ Kemudian langsung saja saya coba pull request ke master repository milik Pak Joh
 
 Sampai sekarang sudah 32 orang yang melakukan fork master repository Pak John Papa dan sudah ada 27 contributor yang ikut serta dalam project open source ini. Foto profile saya sudah muncul lho, the one and only from Indonesia, haha 😂
 
-<img src="assets/images/blog/5.first-pull-request/2.contributor.png" alt="contirbutor" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/5.first-pull-request/2.contributor.png" alt="contirbutor" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 
 Sebenarnya saya membuat dua branch yaitu meteor js dan scully dari angular. Akan tetapi karena sudah ada yang berkontribusi di scully, ya akhirnya branch saya tidak disetuju, tapi tidak apa yang penting sudah pernah merasakan bagaimana rasanya berkontribusi untuk open source.

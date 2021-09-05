@@ -1,14 +1,14 @@
 ---
-title: Menggunakan automate commit conventional linter
-description: Menggunakan automate commit conventional linter 
-published: false
+title: Menggunakan automate commit conventional linter di angular
+description: Menggunakan automate commit conventional linter di angular
+published: true
 slugs:
-    - menggunakan-automate-commit-conventional-linter
+    - menggunakan-automate-commit-conventional-linter-di-angular
 keywords: 
     - commit
     - husky
     - linter
-image: assets/images/blog/11.jquery/1.header.png
+image: assets/images/blog/15.husky/1.header.png
 categories: Tutorial
 authors: afif alfiano
 tags:
@@ -20,76 +20,139 @@ thumbnailText: Pernahkan teman-teman mendengar istilah commit conventional? Jika
 wordCount: 496
 like: 0
 ---
-Apa yang teman-teman pikirkan ketika ingin menggunakan animasi? Pasti menggunakan javascript nih kalau nggak menggunakan jquery. Lah apa bedanya javascript dengan jquery haha. Intinya jquery itu library yang diisi menggunakan javascript
+Pernahkan teman-teman mendengar istilah commit conventional? Jika belum mari kita pelajari bersama - sama apa itu commit convetinoal dan bagaimana mengautomate commit menggunakan husky untuk automate commit linter, baik untuk javascript, typescript, css ataupun scss.
 
-Oke, kali ini kita akan belajar menggunakan animasi tanpa javascript sedikit pun. Fitur ini ada pada CSS3 yaitu CSS Animation. Oke langsung saja kita buat css animation:
+Menggunakan pre-commit manfaatnya sangatlah banyak. Kita dapat menerapkan sebuah aksi sebelum sebuah message commit disetujui. Contoh kasusnya seperti ini, kita ingin code kita menjadi lebih readable atau rapi baik dari typescript, html ataupun scssnya. Nah pada kondisi ini kita dapat menerapkan pre-commit dimana sebelum message commit disetujui maka akan menjalankan linter untuk typescript dan scss/css.
 
-##### 1. Pertama — tama saya akan membuat sebuah lintasan seperti jalan raya dan lengkap dengan objeknya yaitu kotak dan lingkaran.
+Beberapa dependensi yang diperlukan untuk menjalankan fitur ini dan pastikan menggunakan --save-dev karena kita hanya memerlukan untuk development.
 
-<img src="assets/images/blog/11.jquery/2.index.png" alt="Index" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+- [@commitlint/cli](https://www.npmjs.com/package/@commitlint/cli)
+- [@commitlint/config-angular](https://www.npmjs.com/package/@commitlint/config-angular)
+- [husky](https://www.npmjs.com/package/husky)
+- [lint-staged](https://www.npmjs.com/package/lint-staged)
+- [stylelint](https://www.npmjs.com/package/stylelint)
+- [stylelint-config-standard](https://www.npmjs.com/package/stylelint-config-standard)
+- [stylelint-scss](https://www.npmjs.com/package/stylelint-scss)
 
-##### 2. Kemudian memberikan sebuah styling biasa seperti berikut ini
+<img src="assets/images/blog/15.husky/2.install.png" alt="Install" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
-<img src="assets/images/blog/11.jquery/3.style.png" alt="Style" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+Pastikan semua dependensi sudah terinstall di project yang dikerjakan.
 
-Maka akan tampil lintasan seperti berikut ini
+Kemudian jalankan perintah husky install dan dan kita buat sebuah bash untuk husky bisa menjalankan perintah yang kita definisikan di package.json
 
-<img src="assets/images/blog/11.jquery/4.tampilan.png" alt="Tampilan" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+- husky install
+- npx husky add .husky/commit-msg 'npx --no-install commitlint --edit $1'
+- npx husky add .husky/pre-commit 'npm run pre-commit'
 
-##### 3. Kemudian tambahkan objek kotak dan lingkaran yang mana nantinya akan kita berikan sebuah styling animation.
+<img src="assets/images/blog/15.husky/3.husky-init.png" alt="Husky Init" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
-Berikut ini styling untuk class circle
+Maka akan tampil folder dan file baru seperti berikut ini
 
-<img src="assets/images/blog/11.jquery/5.code.png" alt="Tampilan" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/15.husky/4.folder.png" alt="Folder" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
-dan ini untuk styling class square
+Kemudian tambahkan script berikut ini pada package.json
 
-<img src="assets/images/blog/11.jquery/6.suqare.png" alt="Tampilan" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+```javascript
+"pre-commit": "lint-staged"
+```
 
-Maka akan tampil objek seperti berikut ini :
+Setelah itu kita definisikan lint-staged dibawah sendiri pada package.json untuk aksi apa saja yang dapat dijalankan sebelum message commit disetujui.
 
-<img src="assets/images/blog/11.jquery/7.objek.png" alt="Tampilan" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+```javascript
+"lint-staged": {
+    "*.ts": [
+      "npx tslint src/**/*.ts --fix"
+    ],
+    "*.scss": [
+      "npx stylelint src/**/*.scss --fix"
+    ]
+  }
+```
 
-##### 4. Setelah itu mari kita buat sebuah css animation. Untuk membuat css animation kita memerlukan sebuah @keyframes animasi {} yang mana animasi itu nanti kita gunakan untuk sebuah objek bisa lingkaran atau kotak. Oke langsung saja buat seperti ini :
+Kemudian buat file baru yaitu commitlint.config.js untuk mengkonfigurasi commit conventional apa saja yang disetujui, isikan script berikut ini pada file tersebut
 
-<img src="assets/images/blog/11.jquery/8.animasi.png" alt="Tampilan" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+```javascript
+const types = [
+    'build',
+	'ci',
+	'docs',
+	"chore",
+	'feat',
+	'fix',
+	'perf',
+	'refactor',
+	'revert',
+	'style',
+	'test',
+    'ui',
+    'deps'
+];
+module.exports = {
+    extends: ['@commitlint/config-angular'],
+    rules: {
+        'type-enum': [2, 'always', types],
+		'header-max-length': [2, 'always', 100],
+    }
+};
+```
 
-##### 5. Kemudian kita gunakan animasi drive itu disetiap objeknya. Seperti berikut ini
+Pada konfigurasi diatas sebenarnya kita hanya meng-override konfigurasi bawaan commitlint dengan menambahkan types dan header-max-length, jadi nanti kita bisa memodifikasi konfig tersebut.
 
-a. Circle
+Setelah itu kita buat file .stylelintrc untuk mengkonfigurasi linter pada file scss ataupun css. Tambahkan script berikut ini pada file tersebut.
 
-<img src="assets/images/blog/11.jquery/9.circle-a.png" alt="Circle" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+```javascript
+{
+	"extends": "stylelint-config-standard",
+	"plugins": [
+		"stylelint-scss"
+	],
+	"rules": {
+		"declaration-block-trailing-semicolon": null,
+		"no-descending-specificity": null,
+		"no-empty-source": null,
+		"selector-type-no-unknown": null,
+		"selector-pseudo-element-no-unknown": null
+	}
+}
+```
 
-b. Square
+###Berikut ini demonya.
 
-<img src="assets/images/blog/11.jquery/10.square-b.png" alt="Circle" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+Misalnya terdapat file typescript dan scss yang berubah.
 
-Keterangan:
+<img src="assets/images/blog/15.husky/5.edit.png" alt="Edit File" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
--  Animation-name : digunakan untuk memanggil @keyframes yang telah kita buat
+Kemudian kita coba git add dan git commit untuk mencoba fitur dari commitlint
 
-- Animation-duration: ini fungsinya hampir sama seperti transition atau waktu animasinya
+a. Kondisi ketika salah commit atau tidak sesuai aturan dengan commit (aturan penamaan commit sesuai yang telah di definisikan di commitlint.config.js, berdasarkan aturan dari https://www.conventionalcommits.org/en/v1.0.0/#specification)
 
-- Animation-fill-mode: ini ada 3 kondisi yang pertama forwards, backwards dan both. Bedanya jika forwards dia akan berhenti didepan, jika backwards dia mulai dari dimana start keyframesnya dan jika both maka kedua duanya akan dipakai.
+<img src="assets/images/blog/15.husky/6.error.png" alt="Error" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
-- Animation-delay: digunakan untuk penundaan waktu animasi
+a. Kondisi ketika commit panjang dan header tidak sesuai dengan aturan conventional commit
 
-- Animation-iteration-count: digunakan untuk melakukan perulangan animasi.
+<img src="assets/images/blog/15.husky/7.commit.png" alt="Commit" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
-- Animation-direction: digunakan untuk menentukan arah dari objek ketika menggunakan animasi tersebut
+Maka hasilnya seperti gambar berikut ini
 
-- Animation-timing-function: digunakan untuk menentukan bagaimana kecepatan dari objek tersebut.
+<img src="assets/images/blog/15.husky/8.still-error.png" alt="Still Error" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
-##### 6. Maka akan menghasilkan outputan seperti berikut ini
+Kemudian berikut ini kondisi ketika benar melakukan commit baik commit cepat ataupun panjang dengan deskripsi
 
-Berikut ini full codenya untuk menggunakan css3 animation
+a. Commit singkat
 
-<img src="assets/images/blog/11.jquery/11.full.png" alt="Full Code" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/15.husky/9.success.png" alt="Success" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
-Ada tips tambahan nih biar penulisan animation tidak sebanyak itu barisnya temen-temen bisa gunakan shorthand untuk css animation, berikut ini formatnya:
+b. Commit dengan deskripsi
 
-<img src="assets/images/blog/11.jquery/12.use.png" alt="Uses" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/15.husky/10.long-commit.png" alt="Install" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
-Nah itu tinggal diisi aja dengan syntax yang digunakan, kalau ga digunakan tinggal dihapus aja.
+Maka hasilnya seperti gambar berikut ini
 
-Terimakasih, Semoga bermanfaat, oiya teman-teman bisa ngerubah listingnya supaya tau perbedaannya dan tentunya konsep dari css animation itu sendiri. Semangat :D
+<img src="assets/images/blog/15.husky/11.fix.png" alt="Fix" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
+
+ ### Referensi
+- https://commitlint.js.org/#/guides-local-setup
+
+- https://github.com/typicode/husky
+
+- https://www.conventionalcommits.org/en/v1.0.0/#specification

@@ -25,7 +25,7 @@ Oke, pada sharing kali ini kita berencana akan membuat sebuah aplikasi sederhana
 
 Oke langsung saja kita praktekkan. Pastikan teman-teman sudah menginstall node package manager supaya dapat menginstall angular. Jika belum bisa download dan install dari sini https://nodejs.org/en/
 
-<img src="assets/images/blog/13.todolist/2.node.png" alt="Node" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/13.todolist/2.node.png" alt="Node" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Kemudian install sampai selesai. Karena disini saya menggunakan windows maka selain menggunakan command prompt saya juga menggunakan git bash untuk memudahkan dalam menggunakan cli karena sudah seperti linux. Jika ingin menginstall git bash bisa kunjungi laman berikut ini https://git-scm.com/downloads
 
@@ -35,7 +35,7 @@ Selanjutnya kita install angular-cli, karena syarat untuk membuat project angula
 npm i -g @angular/cli
 ```
 
-<img src="assets/images/blog/13.todolist/3.npm.png" alt="Node" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/13.todolist/3.npm.png" alt="Node" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Tunggu proses sampai selesai dan kemudian cek versi angular yang teman-teman gunakan menggunakan perintah
 
@@ -44,7 +44,7 @@ Tunggu proses sampai selesai dan kemudian cek versi angular yang teman-teman gun
 ng — version
 ```
 
-<img src="assets/images/blog/13.todolist/4.ng.png" alt="Node" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/13.todolist/4.ng.png" alt="Node" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Nah, tampilannya seperti diatas dan kebetulan saya menggunakan angular versi 9.1.0.
 
@@ -57,19 +57,19 @@ ng new todoList
 
 Karena kita belum menggunakan routing maka pada pertanyaan add Angular routing pilih No saja, kemudian pada Styling kita gunakan yang sudah default yaitu CSS
 
-<img src="assets/images/blog/13.todolist/5.process.png" alt="Node" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/13.todolist/5.process.png" alt="Node" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Tunggu proses sampai selesai dan buka project yang telah kita buat. Berikut ini isi dari project yang telah kita buat.
 
-<img src="assets/images/blog/13.todolist/6.preview.png" alt="Node" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/13.todolist/6.preview.png" alt="Node" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Setelah itu, kita coba untuk menjalakan project default angular yang barusan kita generate menggunakan angular-cli
 
-<img src="assets/images/blog/13.todolist/7.serve.png" alt="Node" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/13.todolist/7.serve.png" alt="Node" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Kemudian kita di browser dengan url http://localhost:4200 yang merupakan port bawaan angular itu sendiri. Berikut ini tampilan default dari angular.
 
-<img src="assets/images/blog/13.todolist/8.browse.png" alt="Node" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/13.todolist/8.browse.png" alt="Node" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Setelah itu mari kita mulai untuk melakukan coding untuk membuat aplikasi sederhana todoList. Sebelumnya kita akan menggunakan bootstrap untuk styling component yang ada. Langsung saja install bootstrap dengan menjalankan perintah
 
@@ -78,7 +78,7 @@ Setelah itu mari kita mulai untuk melakukan coding untuk membuat aplikasi sederh
 npm i bootstrap
 ```
 
-<img src="assets/images/blog/13.todolist/9.bs.png" alt="Node" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/13.todolist/9.bs.png" alt="Node" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Setelah selesai proses install jangan lupa untuk melakukan konfigurasi supaya kita dapat menggunakan styling bootstrap. Buka file styles.css yang ada di folder src, kemudian tambahkan script berikut ini
 
@@ -87,13 +87,13 @@ Setelah selesai proses install jangan lupa untuk melakukan konfigurasi supaya ki
 @import “~bootstrap/dist/css/bootstrap.css”
 ```
 
-<img src="assets/images/blog/13.todolist/10.style.png" alt="Node" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/13.todolist/10.style.png" alt="Node" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Kemudian save perubahan yang ada. Sebenarnya ada beberapa cara untuk menggunakan bootstrap ini namun kita gunakan cara yang mudah ini saja.
 
 Selanjutnya kita edit app.component.html yang berada pada folder src->app menjadi seperti berikut ini. Sebenarnya untuk tampilan teman-teman bisa bervariasi sesuka hatinya yang penting prosesnya sama.
 
-<img src="assets/images/blog/13.todolist/11.index.png" alt="Node" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/13.todolist/11.index.png" alt="Node" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Pada file tersebut kita edit seperti form biasa untuk default todolist, perbedaannya mungkin disini terdapat (ngSubmit)=”todoSubmit($event)” pada form. Yap, diangular terdapat fitur ngSubmit yang mana kita akan langsung mengirim isi form dengan menekan button bertipe submit. Karena fungsi tersebut akan ketrigger dengan button submit.
 
@@ -101,7 +101,7 @@ Selanjutnya ada [(ngModel)] = “addTodo” , nah ini fitur lainnya Angular, yai
 
 Kemudian pada app.component.ts jangan lupa untuk kita edit terkait dengan penggunaan fungsi todoList. Berikut codenya.
 
-<img src="assets/images/blog/13.todolist/12.type.png" alt="Node" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/13.todolist/12.type.png" alt="Node" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Kita perlu mendeklarasikan todos, addTodo dan todoList sebagai variabel untuk aplikasi todoList. Pada constructor kita inisasi addTodo dengan string kosong dan todos dengan array.
 
@@ -112,7 +112,7 @@ Kemudian terdapat fungsi deleteTodo(index), ini berfungsi untuk menghapus data y
 Fungsi lainya yaitu deleteAll(index), ini berfungsi untuk menghapus semua data, perbendaanya terletak pada splice() jika yang deleteTodo menggunakan splice(index, 1) maka yang deleteAll ini menggunakan splice(index, todoLength) atau menghapus semua data yang ada.
 Jika dirasa sudah langsung saja jalankan ng serve dan tampilannya seperti berikut ini.
 
-<img src="assets/images/blog/13.todolist/13.done.png" alt="Node" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/13.todolist/13.done.png" alt="Node" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Selamat aplikasi todoList pertama teman-teman sudah jadi. Aplikasi inim asih sangat-sangat simpel dan tujuan Saya hanya mengenalkan penggunaan framework angular kepada teman-teman.
 

@@ -41,7 +41,7 @@ ng new reactiveFormAngular
 
 Kemudian kita buat tampilannya seperti ini
 
-<img src="assets/images/blog/12.forms/2.field.png" alt="Field" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/12.forms/2.field.png" alt="Field" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Berikut ini kode htmlnya dan pure hanya menggunakan html dan styling dari bootstrap.
 
@@ -83,7 +83,7 @@ Berikut ini kode htmlnya dan pure hanya menggunakan html dan styling dari bootst
 
 Untuk mengunakan reactive forms kita memerlukan dependensi reactive forms module. Langsung saja tinggal import di app.module seperti berikut ini.
 
-<img src="assets/images/blog/12.forms/3.typescript.png" alt="TS" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/12.forms/3.typescript.png" alt="TS" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Kemudian kita buka file app.component.ts untuk mengkonfigurasi lebih lanjut supaya form dapat dinamis.
 

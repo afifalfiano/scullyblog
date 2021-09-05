@@ -32,7 +32,7 @@ ng new myProject
 
 Kemudian kita coba jalankan di local terlebih dahulu. Pastikan tidak terdapat error.
 
-<img src="assets/images/blog/9.hosting-gh/2.init.png" alt="Init" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/9.hosting-gh/2.init.png" alt="Init" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Langkah selanjutnya adalah mengunggah project kita ke repository yang telah kita buat di github.
 
@@ -48,13 +48,13 @@ git add . && git commit -m "myProject" && git push origin master -u
 
 Kita cek repository yang telah kita sediakan untuk project yang kita unggah.
 
-<img src="assets/images/blog/9.hosting-gh/3.repo.png" alt="Repo" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/9.hosting-gh/3.repo.png" alt="Repo" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Jika sudah berhasil langkah selanjutnya adalah mengkonfigurasi github action. Jadi fungsi dari github action ini adalah supaya menerapkan continue deployment dan ke trigger ketika push ke branch master. Masih bingung? Langsung praktik saja yuk.
 
 Selanjutnya menyediakan branch khusus untuk menampung file hasil build dari github action ini. Pastikan branch kita berasal dari master dan melalui github kita (bukan dari local kita).
 
-<img src="assets/images/blog/9.hosting-gh/4.repo-gh.png" alt="Repo" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/9.hosting-gh/4.repo-gh.png" alt="Repo" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Kemudian jalankan perintah berikut ini untuk mengambil branch terbaru supaya di local kita branch sudah terupdate.
 
@@ -129,25 +129,25 @@ Jika sudah tahap selanjutnya adalah menambahkan script di file package.json
 
 Jika sudah tinggal lakukan push untuk perubahan terbaru di branch master. Kemudian kita cek di tab actions pada repository kita. Maka akan terdapat proses workflow yang sedang berjalan.
 
-<img src="assets/images/blog/9.hosting-gh/5.progress.png" alt="Progress" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/9.hosting-gh/5.progress.png" alt="Progress" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Untuk melihat proses deployment tinggal klik judul dari proses yang berjalan. Misalnya untuk kasus ini deployment yang berjalan dengan nama commit edit. Tinggal klik nama edit tersebut.
 
-<img src="assets/images/blog/9.hosting-gh/6.build.png" alt="Build" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/9.hosting-gh/6.build.png" alt="Build" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Jika sudah berhasil. Kita cek branch gh-pages yang ada di repository kita.
 
-<img src="assets/images/blog/9.hosting-gh/7.done.png" alt="Done" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/9.hosting-gh/7.done.png" alt="Done" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Seperti itulah hasil compile dan build dari angular. Selanjutnya kita tinggal setting supaya bisa diakses lewat github pages.
 
 Langsung saja klik tab settings kemudian cek pada bagian berikut ini. Pastikan sourcenya kita ganti menjadi gh-pages
 
-<img src="assets/images/blog/9.hosting-gh/8.temp.png" alt="Template" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/9.hosting-gh/8.temp.png" alt="Template" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Kemudian kita coba buka link yang muncul tersebut. Misalnya untuk kasus ini linknya adalah https://afifalfiano.github.io/myProject/
 
-<img src="assets/images/blog/9.hosting-gh/9.finish.png" alt="Finish" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/9.hosting-gh/9.finish.png" alt="Finish" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Selamat! Kamu sudah berhasil melakukan deploy project angular ke github pages menggunakan github action untuk continue deployment. Berarti setiap teman-teman melakukan perubahan dan di push ke branch master maka otomatis proses deployment berjalan.
 

@@ -33,11 +33,11 @@ Jadi pada artikel ini saya menggunakan vanilla javascript atau javascript biasa 
 
 Okee, pertama kita buat sebuah project sederhana seperti berikut ini.
 
-<img src="assets/images/blog/8.reusable/2.started.png" alt="Project" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/8.reusable/2.started.png" alt="Project" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Selanjutnya kita coba buat terlebih dahulu tanpa menggunakan web komponen. Jadi masih murni html dan css saja.
 
-<img src="assets/images/blog/8.reusable/3.non-component.png" alt="Project" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/8.reusable/3.non-component.png" alt="Project" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Berikut ini kode tampilan menggunakan html dan css pada kode commit di bawah ini.
 
@@ -48,7 +48,7 @@ Berikut ini kode tampilan menggunakan html dan css pada kode commit di bawah ini
 Selanjutnya kita coba membuat web komponen dimulai dari menu navbar terlebih dahulu.
 
 
-<img src="assets/images/blog/8.reusable/4.component.png" alt="Project" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/8.reusable/4.component.png" alt="Project" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Ringkasnya seperti gambar diatas. Jadi kita buat class NavBar dengan extends dari HTMLElement. Kemudian kita panggil constructor dari HTMLElement dengan memangil parentnya yaitu super(). Setelah itu kita buat fungsi render(), kita pindahkan style css dan element html pada fungsi ini. Setelah itu kita panggil fungsi render() ini pada fungsi connectedCallback() { //code }, nah untuk connectedCallback ini emang sudah bawaan dari sana jadi tinggal kita gunakan saja.
 
@@ -56,21 +56,21 @@ Langkah terakhir kita definisikan web komponen navbar tersebut dengan menginisia
 
 Kemudian kita tinggal memanggil komponen yang telah kita buat di index.html seperti berikut ini. Jangan lupa untuk menambahkan script dari komponen yang telah kita buat.
 
-<img src="assets/images/blog/8.reusable/5.index.png" alt="Index" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/8.reusable/5.index.png" alt="Index" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Tinggal kita buat komponen untuk lainnya supaya lebih ringkas dan reusable.
 
 Berikut ini kode untuk komponen section.
 
-<img src="assets/images/blog/8.reusable/6.section.png" alt="Index" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/8.reusable/6.section.png" alt="Index" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Jangan lupa untuk mengupdate index.html
 
-<img src="assets/images/blog/8.reusable/7.index-update.png" alt="Index" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/8.reusable/7.index-update.png" alt="Index" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Lebih ringkas bukan? yap tentu sekali. Untuk mengetest apakah komponen berhasil kita buat coba jalankan live server.
 
-<img src="assets/images/blog/8.reusable/9.new.png" alt="Index" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/8.reusable/9.new.png" alt="Index" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Oke, sampai tahap ini sudah berhasil membuat komponen. Trus gimana caranya supaya komponen tersebut stylenya tidak bisa diubah dari luar? Hmmm, kita bisa menerapkan shadow DOM. Jadi ketika komponen yang kita buat sudah terenkapsulasi maka komponen tersebut tidak bisa dirubah dari luar.
 
@@ -87,7 +87,7 @@ Tujuannya adalah kita menginisasi shadow DOM pada variabel _shadowDom. Selanjutn
 
 Untuk mengecek apakah sudah berhasil apa belum dalam menerapkan shadow dom bisa cek menggunakan inspect element komponen yang dipilih.
 
-<img src="assets/images/blog/8.reusable/10.console.png" alt="Index" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/8.reusable/10.console.png" alt="Index" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Nah jika sudah ada shadow-root berarti kita sudah berhasil menggunakan shadow dom untuk komponen kita.
 

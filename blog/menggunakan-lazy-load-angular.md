@@ -27,11 +27,11 @@ Terdapat 2 cara untuk menggunakan fitur lazy loading ini. Pertama dengan cara ge
 
 Pastikan teman-teman sudah membuat project baru. Disini saya sudah membuat project baru dengan nama lazyLoadingAngular. Kemudian juga menggunakan sedikit styling dari bootstrap supaya lebih enak dilihat (opsional).
 
-<img src="assets/images/blog/7.lazy-load-angular/2.started.png" alt="Started" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/7.lazy-load-angular/2.started.png" alt="Started" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Selanjutnya kita edit default tampilan dari angular dan tambahkan sedikit styling menggunkaan bootstrap. Simpel saja menjadi seperti ini.
 
-<img src="assets/images/blog/7.lazy-load-angular/3.next.png" alt="Started" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/7.lazy-load-angular/3.next.png" alt="Started" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 File html seperti berikut ini.
 
@@ -126,11 +126,11 @@ Nah, berikut ini file app.component.html yang telah saya edit.
 
 Kemudian coba jalankan dengan perintah ng serve. Berikut ini tampilan awalnya.
 
-<img src="assets/images/blog/7.lazy-load-angular/4.demo.png" alt="Demo" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/7.lazy-load-angular/4.demo.png" alt="Demo" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Jadi header ini tidak menggunakan lazy loading. Maka kita coba akses komponen profile yang menggunakan lazy loading.
 
-<img src="assets/images/blog/7.lazy-load-angular/5.lazy.png" alt="Lazy" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/7.lazy-load-angular/5.lazy.png" alt="Lazy" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Yap, kompnen profile yang telah terbundle muncul ketka user mengakses menu profile. Coba bayangkan ketika sudah menjadi aplikasi besar, tentu fitur ini sangat bermanfaat dan bisa mengurangi waktu load pertama kali. <strong>Ini juga berpengaruh ke experience user pertama kali mengakses website kita.</strong>
 
@@ -200,11 +200,11 @@ Jangan lupa untuk menghapus component contact di app.module.ts karena ketika kit
 
 Sebelum mengakses menu contact.
 
-<img src="assets/images/blog/7.lazy-load-angular/6.contact.png" alt="Contact" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/7.lazy-load-angular/6.contact.png" alt="Contact" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Setelah mengakses menu contact.
 
-<img src="assets/images/blog/7.lazy-load-angular/7.after.png" alt="After Contact" class="img img-responsive mb-3" style="width: 100%; border-radius: 15px;" >
+<img src="assets/images/blog/7.lazy-load-angular/7.after.png" alt="After Contact" class="img img-responsive mb-3" style="width: 100%; border-radius: 5px;" >
 
 Yap, kita berhasil mengkonfigurasi lazy loading angular baik secara otomatis ataupun manual.
 
