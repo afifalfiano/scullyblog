@@ -24,6 +24,7 @@ function userIdPlugin(route: string, config = {}): Promise<HandledRoute[]> {
     { route: '/blog/reactive-forms-on-angular' },
     { route: '/blog/reusable-component' },
     { route: '/blog/story-as-a-frontend-developer' },
+    { route: '/blog/my-experience-collaborative' },
   ]);
 }
 
