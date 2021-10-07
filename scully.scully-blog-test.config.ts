@@ -4,6 +4,7 @@ import { DisableAngular } from 'scully-plugin-disable-angular';
 import { getHttp404Plugin } from '@gammastream/scully-plugin-http404';
 import { criticalCSS } from '@scullyio/scully-plugin-critical-css';
 import '@notiz/scully-plugin-rss';
+import './scully/plugins/plugin';
 
 require ('@notiz/scully-plugin-lazy-images');
 require('@notiz/scully-plugin-medium-zoom');
@@ -28,7 +29,7 @@ export const config: ScullyConfig = {
   defaultPostRenderers: postRenderersBlog,
   routes: {
     '/blog/:slug': {
-      type: 'contentFolder',
+      type: 'contentFolder', // if still not render change the contentFolder to userIds
       slug: {
         folder: './blog'
       },
