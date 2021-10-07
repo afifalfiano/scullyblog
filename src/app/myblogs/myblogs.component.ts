@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { ArticleService } from '../shared/services/article.service';
 import { Like } from '../shared/featured-post/featured-post.component';
+import {Location} from '@angular/common';
+import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
 
 @Component({
   selector: 'app-myblogs',
@@ -11,6 +13,8 @@ import { Like } from '../shared/featured-post/featured-post.component';
   styleUrls: ['./myblogs.component.css'],
 })
 export class MyblogsComponent implements OnInit {
+  // links$: Observable<ScullyRoute[]> = this.scullySvc.available$;
+
   myblogs: any = [];
   previewBlog: any = [];
   p = 1;
@@ -53,6 +57,9 @@ export class MyblogsComponent implements OnInit {
     private router: Router,
     private articleSvc: ArticleService,
     private readonly firestoreSvc: AngularFirestore,
+    private location: Location,
+    private scullySvc: ScullyRoutesService,
+    private error: ErrorHandler,
   ) {
     this.itemCollection = this.firestoreSvc.collection<Like>('items');
     this.items = this.itemCollection.valueChanges();
@@ -64,14 +71,40 @@ export class MyblogsComponent implements OnInit {
 
   getBlog(): any {
     const dataLocal = localStorage.getItem('articles');
-    if (dataLocal) {
+    if (dataLocal !== null) {
       this.myblogs = JSON.parse(dataLocal);
       this.previewBlog.push(this.myblogs[0]);
-    }
-    if (this.myblogs) {
-      this.onUpdateLike(this.myblogs);
+
+      if (this.myblogs) {
+        this.onUpdateLike(this.myblogs);
+      }
+    } else {
+      this.router.navigateByUrl('/');
+      console.log('balik')
+      setTimeout(() => {
+        window.location.reload();
+      }, 1000);
     }
   }
+
+  // getBlogFromService(): any {
+  //     this.links$.subscribe((link) => {
+  //       const getBlog = link.map((item: any) => {
+  //         console.log(item);
+  //         if (item.route.match(/blog/g) && item.route !== '/myblogs') {
+  //             return item;
+  //         }
+  //       });
+  //       const onlyBlog = getBlog.filter(blog => {
+  //           return blog !== undefined;
+  //       });
+  //       this.myblogs = [...onlyBlog];
+  //       this.articleSvc.setData(this.myblogs);
+  //       localStorage.setItem('articles', JSON.stringify(this.myblogs));
+  //     }, (error: any) => {
+  //       this.error.handleError(error);
+  //     });
+  // }
 
   onUpdateLike(dataBlog: any): any {
     this.items.subscribe(response => {
