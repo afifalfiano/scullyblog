@@ -15,9 +15,8 @@ tags:
   - rss
 publishedAt: 2021-10-7T10:12:00.000Z
 updatedAt: 2021-10-7T10:12:00.000Z
-thumbnailText: In this blog or article, I'm going to tell a story about my collaborative experience in a working environment.
-First, I use my blog because I have this personal blog and I usually wrote some tutorials or my opinion on this website.
-wordCount: 339
+thumbnailText: In this blog or article, I'm going to tell a story about my collaborative experience in a working environment. First, I use my blog because I have this personal blog and I usually wrote some tutorials or my opinion on this website.
+wordCount: 350
 like: 0
 ---
 
