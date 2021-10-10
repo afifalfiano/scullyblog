@@ -25,6 +25,7 @@ function userIdPlugin(route: string, config = {}): Promise<HandledRoute[]> {
     { route: '/blog/reusable-component' },
     { route: '/blog/story-as-a-frontend-developer' },
     { route: '/blog/my-experience-collaborative' },
+    { route: '/blog/cara-menggunakan-cypress-di-angular' },
   ]);
 }
 
