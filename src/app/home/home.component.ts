@@ -28,7 +28,6 @@ export class HomeComponent implements OnInit {
  getBlog(): any {
   this.links$.subscribe((link) => {
     const getBlog = link.map((item: any) => {
-      console.log(item);
       if (item.route.match(/blog/g) && item.route !== '/myblogs') {
           return item;
       }

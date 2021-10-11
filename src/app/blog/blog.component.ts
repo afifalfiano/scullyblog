@@ -34,12 +34,10 @@ export class BlogComponent implements OnInit, AfterViewChecked {
   }
 
   renderComment(): any {
-    // const comment = document.getElementById('comment');
     const script = this.renderer2.createElement('script');
     script.type = 'text/javascript';
     script.repo = 'afifalfiano/scullyblog' ;
     this.currentPost$.subscribe((res) => {
-      console.log('cek');
       script.async = true;
       script.defer = true;
       script.src = 'https://utteranc.es/client.js';
@@ -52,24 +50,6 @@ export class BlogComponent implements OnInit, AfterViewChecked {
         this.renderer2.appendChild(comment, script);
       }
     });
-    // script.text = `
-    // <script src="https://utteranc.es/client.js"
-    //     repo="afifalfiano/scullyblog"
-    //     issue-term="pathname"
-    //     label="comment"
-    //     theme="github-dark"
-    //     crossorigin="anonymous"
-    //     async>
-    // </script>
-    // `;
-
-    // <script src="https://utteranc.es/client.js"
-    // repo="afifalfiano/scullyblog"
-    // issue-term="pathname"
-    // theme="github-dark"
-    // crossorigin="anonymous"
-    // async>
-    // </script>
   }
 
   addClassActive(): void {

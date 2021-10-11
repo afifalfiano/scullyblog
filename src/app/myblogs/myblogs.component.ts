@@ -80,7 +80,6 @@ export class MyblogsComponent implements OnInit {
       }
     } else {
       this.router.navigateByUrl('/');
-      console.log('balik')
       setTimeout(() => {
         window.location.reload();
       }, 1000);
@@ -90,7 +89,6 @@ export class MyblogsComponent implements OnInit {
   // getBlogFromService(): any {
   //     this.links$.subscribe((link) => {
   //       const getBlog = link.map((item: any) => {
-  //         console.log(item);
   //         if (item.route.match(/blog/g) && item.route !== '/myblogs') {
   //             return item;
   //         }

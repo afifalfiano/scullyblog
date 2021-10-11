@@ -1,0 +1,75 @@
+.jumbotron {
+  min-height: 700px;
+  text-align: center;
+  padding-bottom: 100px;
+  background: linear-gradient(254.65deg, #d80bbc 10%, #3b42e7 100%);
+  animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
+}
+
+.highlight-video {
+  min-height: 600px;
+  border-radius: 15px;
+}
+
+.wrap-video {
+  margin-top: 100px;
+}
+
+.display-4 {
+  overflow-y: hidden;
+  min-height: 44px;
+  margin-bottom: 50px;
+  color: #fff;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.card-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    linear-gradient(
+      90deg,
+      #ff3186 0.12%,
+      #ff7d5a 100%
+    );
+  padding: 8px;
+  border-radius: 10px;
+  margin-top: 15px;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.card {
+  border-radius: 15px;
+  overflow-y: hidden;
+  min-height: 450px;
+  height: 450px;
+}
+
+.card-body {
+  padding: 0;
+  min-height: 450px;
+  height: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.card-info {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  min-height: 185px;
+}
+
+.card-description {
+  font-size: 14px;
+}
