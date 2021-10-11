@@ -1,5 +1,5 @@
-import { Location } from '@angular/common';
-import {AfterViewChecked, Component, OnInit, ViewEncapsulation} from '@angular/core';
+import { DOCUMENT, Location } from '@angular/common';
+import {AfterViewChecked, Component, Inject, OnInit, Renderer2, ViewEncapsulation} from '@angular/core';
 import {ActivatedRoute, Router, ROUTES} from '@angular/router';
 import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
 import { Observable } from 'rxjs';
@@ -21,13 +21,55 @@ export class BlogComponent implements OnInit, AfterViewChecked {
   constructor(
     private router: Router,
     private scullySvc: ScullyRoutesService,
-    private highlightService: HighlightService
+    private highlightService: HighlightService,
+    private renderer2: Renderer2,
+    @Inject(DOCUMENT) private document: Document
     ) {
   }
 
   ngOnInit(): void {
     this.getAllPost();
     this.addClassActive();
+    this.renderComment();
+  }
+
+  renderComment(): any {
+    // const comment = document.getElementById('comment');
+    const script = this.renderer2.createElement('script');
+    script.type = 'text/javascript';
+    script.repo = 'afifalfiano/scullyblog' ;
+    this.currentPost$.subscribe((res) => {
+      console.log('cek');
+      script.async = true;
+      script.defer = true;
+      script.src = 'https://utteranc.es/client.js';
+      script.setAttribute('repo', 'afifalfiano/scullyblog');
+      script.setAttribute('issue-term', res.route);
+      script.setAttribute('theme', 'github-dark');
+      script.setAttribute('crossorigin', 'anonymous');
+      const comment = this.document.getElementById('comment');
+      if (comment) {
+        this.renderer2.appendChild(comment, script);
+      }
+    });
+    // script.text = `
+    // <script src="https://utteranc.es/client.js"
+    //     repo="afifalfiano/scullyblog"
+    //     issue-term="pathname"
+    //     label="comment"
+    //     theme="github-dark"
+    //     crossorigin="anonymous"
+    //     async>
+    // </script>
+    // `;
+
+    // <script src="https://utteranc.es/client.js"
+    // repo="afifalfiano/scullyblog"
+    // issue-term="pathname"
+    // theme="github-dark"
+    // crossorigin="anonymous"
+    // async>
+    // </script>
   }
 
   addClassActive(): void {
