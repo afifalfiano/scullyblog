@@ -2,6 +2,8 @@ import { NavigationEnd, Router } from '@angular/router';
 import { Component } from '@angular/core';
 import { filter } from 'rxjs/operators';
 import { Title } from '@angular/platform-browser';
+import { any } from 'cypress/types/bluebird';
+import { SocialtagsService } from './shared/socialtags.service';
 // tslint:disable-next-line:ban-types
 declare let gtag: Function;
 
@@ -16,7 +18,8 @@ export class AppComponent {
 
   constructor(
     private router: Router,
-    private titleSvc: Title
+    private titleSvc: Title,
+    private tagsService: SocialtagsService
   ) {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
@@ -27,6 +30,7 @@ export class AppComponent {
         });
       }
     });
+    this.tagsService.doUpdateMeta();
   }
 
   public setTitle(newTitle: string = 'Afif Alfiano'): any {

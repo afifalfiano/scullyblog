@@ -19,6 +19,7 @@ import { environment } from 'src/environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { SafePipe } from './pipe/safe.pipe';
 import { HighlightService } from './services/highlight.service';
+import { SocialtagsService } from './socialtags.service';
 
 
 
@@ -50,6 +51,6 @@ import { HighlightService } from './services/highlight.service';
     AngularFireModule,
     AngularFirestoreModule
   ],
-  providers: [ArticleService, HighlightService]
+  providers: [ArticleService, HighlightService, SocialtagsService]
 })
 export class SharedModule {}
