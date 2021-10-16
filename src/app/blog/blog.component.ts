@@ -64,6 +64,18 @@ export class BlogComponent implements OnInit, AfterViewChecked {
     }
   }
 
+  onClickShare(): void {
+    const href = this.document.createElement('a');
+    this.currentPost$.subscribe((res) => {
+      const title = res.title;
+      const replaceUnicode = title?.split(' ').join('%20');
+      // tslint:disable-next-line:max-line-length
+      href.href = `https://twitter.com/intent/tweet?text=${replaceUnicode}%20by%20%40afifalfiano8&url=https://afifalfiano.my.id${res.route}`;
+    });
+    href.target = '_blank';
+    href.click();
+  }
+
   ngAfterViewChecked(): any {
     this.highlightService.highlightAll();
   }

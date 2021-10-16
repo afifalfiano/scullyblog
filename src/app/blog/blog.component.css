@@ -57,6 +57,11 @@
   margin-top: 0;
 }
 
+.share {
+  display: inline;
+  cursor: pointer;
+}
+
 .distance {
   margin-bottom: 50px;
 }
