@@ -17,7 +17,7 @@ tags:
 publishedAt: 2021-11-01T10:12:00.000Z
 updatedAt: 2021-11-01T10:12:00.000Z
 thumbnailText: Selamat datang kembali teman-teman di blog saya. Pada kesempatan kali ini kita akan belajar hal baru yaitu belajar reactjs. Dimana jika pada artikel-artikel sebelumnya saya selalu menggunakan angular...
-wordCount: 314
+wordCount: 2817
 like: 0
 ---
 
