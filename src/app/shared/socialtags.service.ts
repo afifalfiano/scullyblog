@@ -22,7 +22,7 @@ export class SocialtagsService {
             if (link?.title) {
               this.meta.updateTag({ name: 'og:title', property: 'og:title', content: link.title });
               this.meta.updateTag({ name: 'og:description', property: 'og:description', content: link.thumbnailText});
-              this.meta.updateTag({ name: 'og:image', content: `${window.location.host}/${link.image}` });
+              this.meta.updateTag({ name: 'og:image', content: `${window.location.hostname}/${link.image}` });
             }
           });
       }
