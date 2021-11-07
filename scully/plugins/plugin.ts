@@ -26,6 +26,9 @@ function userIdPlugin(route: string, config = {}): Promise<HandledRoute[]> {
     { route: '/blog/story-as-a-frontend-developer' },
     { route: '/blog/my-experience-collaborative' },
     { route: '/blog/cara-menggunakan-cypress-di-angular' },
+    { route: '/blog/membuat-todolist-menggunakan-reactjs-dan-delpoy-ke-vercel' },
+    { route: '/blog/apa-itu-react-portal' },
+    { route: '/blog/kenapa-perlu-menggunakan-react-fragments' },
   ]);
 }
 
