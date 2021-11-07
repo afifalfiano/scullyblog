@@ -29,6 +29,7 @@ function userIdPlugin(route: string, config = {}): Promise<HandledRoute[]> {
     { route: '/blog/membuat-todolist-menggunakan-reactjs-dan-delpoy-ke-vercel' },
     { route: '/blog/apa-itu-react-portal' },
     { route: '/blog/kenapa-perlu-menggunakan-react-fragments' },
+    { route: '/blog/component-dan-props-pada-reactjs' },
   ]);
 }
 
