@@ -30,6 +30,8 @@ function userIdPlugin(route: string, config = {}): Promise<HandledRoute[]> {
     { route: '/blog/apa-itu-react-portal' },
     { route: '/blog/kenapa-perlu-menggunakan-react-fragments' },
     { route: '/blog/component-dan-props-pada-reactjs' },
+    { route: '/blog/usestate-pada-reactjs' },
+    { route: '/blog/list-dan-key-pada-reactjs' },
   ]);
 }
 
