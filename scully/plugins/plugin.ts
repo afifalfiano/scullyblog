@@ -32,6 +32,7 @@ function userIdPlugin(route: string, config = {}): Promise<HandledRoute[]> {
     { route: '/blog/component-dan-props-pada-reactjs' },
     { route: '/blog/usestate-pada-reactjs' },
     { route: '/blog/list-dan-key-pada-reactjs' },
+    { route: '/blog/useeffect-pada-reactjs' },
   ]);
 }
 
