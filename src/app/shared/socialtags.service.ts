@@ -20,9 +20,9 @@ export class SocialtagsService {
         this.scully.getCurrent().subscribe(
           link => {
             if (link?.title) {
-              this.meta.updateTag({ name: 'og:title', property: 'og:title', content: link.title });
-              this.meta.updateTag({ name: 'og:description', property: 'og:description', content: link.thumbnailText});
-              this.meta.updateTag({ name: 'og:image', content: `https://afifalfiano.my.id/${link.image}` });
+              this.meta.updateTag({ name: 'title', property: 'og:title', content: link.title });
+              this.meta.updateTag({ name: 'description', property: 'og:description', content: link.thumbnailText});
+              this.meta.updateTag({ name: 'image', property: 'og:image', content: `https://afifalfiano.my.id/${link.image}` });
             }
           });
       }
