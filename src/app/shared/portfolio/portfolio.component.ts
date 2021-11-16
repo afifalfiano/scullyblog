@@ -32,7 +32,7 @@ export class PortfolioComponent implements OnInit {
       url: 'https://github.com/afifalfiano/restaurant-responsive'
     },
     {
-      asset: './assets/portfolio/fast-wa.png',
+      asset: './assets/portfolio/fast-wa.jpg',
       title: 'Fast-WA',
       description: 'Simply app to contact other people with whatsapp without saving number',
       url: 'https://github.com/afifalfiano/unsave-contact-wa'
