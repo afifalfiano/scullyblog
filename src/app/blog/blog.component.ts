@@ -64,13 +64,21 @@ export class BlogComponent implements OnInit, AfterViewChecked {
     }
   }
 
-  onClickShare(): void {
+  onClickShare(social: string): void {
     const href = this.document.createElement('a');
     this.currentPost$.subscribe((res) => {
       const title = res.title;
       const replaceUnicode = title?.split(' ').join('%20');
       // tslint:disable-next-line:max-line-length
-      href.href = `https://twitter.com/intent/tweet?text=${replaceUnicode}%20by%20%40afifalfiano8&url=https://afifalfiano.my.id${res.route}`;
+      if (social === 'twitter') {
+        href.href = `https://twitter.com/intent/tweet?text=${replaceUnicode}%20by%20%40afifalfiano8&url=https://afifalfiano.my.id${res.route}`;
+      } else if (social === 'facebook') {
+        href.href = `https://facebook.com/sharer/sharer.php?u=https://afifalfiano.my.id${res.route}`;
+      } else if (social === 'whatsapp') {
+        href.href = `https://api.whatsapp.com/send?text=https://afifalfiano.my.id${res.route}`;
+      } else if (social === 'linkedin') {
+        href.href = `https://linkedin.com/sharing/share-offsite/?url=https://afifalfiano.my.id${res.route}`;
+      }
     });
     href.target = '_blank';
     href.click();

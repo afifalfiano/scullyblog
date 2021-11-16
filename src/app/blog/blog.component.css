@@ -62,6 +62,11 @@
   cursor: pointer;
 }
 
+.wrap-share {
+  display: flex;
+  gap: 20px;
+}
+
 .distance {
   margin-bottom: 50px;
 }
