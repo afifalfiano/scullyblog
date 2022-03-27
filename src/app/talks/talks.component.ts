@@ -9,6 +9,13 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 export class TalksComponent implements OnInit {
   videoList = [
     {
+      title: 'Web Accessibility',
+      description: 'Web accessibility adalah website yang kontennya dirancang agar dapat diakses dengan mudah termasuk oleh penyandang disabilitas.',
+      link: 'https://www.youtube.com/embed/bpGIUOrK7cg',
+      file: 'https://speakerdeck.com/afifalfiano/web-accessibility',
+      isFile: true
+    },
+    {
       title: 'Tutorial Menggunakan Cypress di Angular',
       description: 'Pada kesempatan kali ini kita akan belajar bersama-sama bagaimana cara menggunakan cypress di Angular khususnya untuk e2e test',
       link: 'https://www.youtube.com/embed/Ervwl-EONSc',
